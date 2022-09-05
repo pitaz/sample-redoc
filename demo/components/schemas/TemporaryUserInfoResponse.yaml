@@ -1,0 +1,118 @@
+title: Temporary user info response
+required:
+  - authorized_signatory_name
+  - bvn
+  - citizenship
+  - city
+  - company
+  - country_code
+  - date_of_birth
+  - dependents
+  - director_of
+  - email
+  - employment_status
+  - employment_type
+  - experience
+  - gender
+  - goal
+  - id
+  - liquid
+  - martial_status
+  - name
+  - net_worth
+  - password
+  - phone_number
+  - position
+  - postal_code
+  - province
+  - risk_tolerance
+  - surname
+  - yearly_income
+type: object
+properties:
+  yearly_income:
+    type: integer
+    description: 'Yearly income, available from API'
+  surname:
+    type: string
+    description: Surname
+  risk_tolerance:
+    type: string
+    description: 'Risk tolerance, available from API'
+  province:
+    type: string
+    description: Province
+  postal_code:
+    type: string
+    description: Postal code
+  position:
+    type: string
+    description: 'Position, available from API'
+  phone_number:
+    type: string
+    description: Phone number
+  password:
+    type: string
+    description: Password
+  net_worth:
+    type: integer
+    description: 'Net worth, available from API'
+  name:
+    type: string
+    description: Name
+  martial_status:
+    type: string
+    description: 'Martial status, available from API'
+  liquid:
+    type: integer
+    description: 'Liquid, available from API'
+  id:
+    type: integer
+    description: Id of saved temporary user info
+  goal:
+    type: string
+    description: 'Goal, available from API'
+  gender:
+    type: string
+    description: 'Gender options: Man/Woman'
+  experience:
+    type: string
+    description: 'Experience in investing: years'
+  employment_type:
+    type: string
+    description: 'Employment type: Art, Food etc.'
+  employment_status:
+    type: string
+    description: 'Employment status: Employed, Self-Employed etc.'
+  email:
+    type: string
+    description: Email
+  director_of:
+    type: string
+    description: >-
+      If no, send null. If yes, please list the company name and its ticker
+      symbol.
+  dependents:
+    type: integer
+    description: Number of dependents
+  date_of_birth:
+    type: string
+    description: Date in format YYYY-MM-DD
+  country_code:
+    type: string
+    description: 'Country Code: `USA`'
+  company:
+    type: string
+    description: Company name
+  city:
+    type: string
+    description: City
+  citizenship:
+    type: string
+    description: Citizenship
+  bvn:
+    type: string
+    description: BVN
+  authorized_signatory_name:
+    type: string
+    description: Authorized signatory name

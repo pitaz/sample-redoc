@@ -1,0 +1,8 @@
+title: Verify Receiver Params
+required:
+  - phone_number
+type: object
+properties:
+  phone_number:
+    type: string
+    description: Receiver's phone number

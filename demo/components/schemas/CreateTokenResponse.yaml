@@ -1,0 +1,12 @@
+title: Create Token Response
+required:
+  - access_token
+type: object
+properties:
+  expires_in:
+    type: number
+    description: Token expiration time (in seconds)
+  access_token:
+    type: string
+    description: Access Token
+description: Create Token Response

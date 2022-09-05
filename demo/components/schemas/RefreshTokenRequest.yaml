@@ -1,0 +1,9 @@
+title: Refresh token request
+required:
+  - refresh_token
+type: object
+properties:
+  refresh_token:
+    type: string
+    description: Refresh token to get a valid access token
+description: Generates new access token

@@ -1,0 +1,11 @@
+title: Available Wallets Dictionary
+type: object
+properties:
+  available_currencies:
+    type: array
+    items:
+      $ref: ./AdminAvailableWalletCurrenciesResponse.yaml
+  available_countries:
+    type: array
+    items:
+      $ref: ./AdminAvailableWalletCountiresResponse.yaml

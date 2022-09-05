@@ -1,0 +1,25 @@
+title: Account info
+type: object
+properties:
+  residence_country:
+    type: string
+    description: User's residence country code
+  phone_number:
+    type: string
+    description: User's phone number
+  last_name:
+    type: string
+    description: User's last name
+  full_name:
+    type: string
+    description: User's full name
+  first_name:
+    type: string
+    description: User's first name
+  email:
+    type: string
+    description: User's email
+  date_of_birth:
+    type: string
+    description: User's date of birth
+description: Contains user basic info

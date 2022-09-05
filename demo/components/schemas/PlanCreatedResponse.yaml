@@ -1,0 +1,22 @@
+title: fixed investment plan created details
+required:
+  - currency_symbol
+  - final_interest
+  - fixed_cash
+  - timeframe_in_days
+type: object
+properties:
+  timeframe_in_days:
+    type: integer
+    description: Length of fixed investment in days
+  fixed_cash:
+    type: number
+    description: money amount invested in fixed investment
+    format: float
+  final_interest:
+    type: number
+    description: Final interest
+    format: float
+  currency_symbol:
+    type: string
+    description: Currency symbol ($)

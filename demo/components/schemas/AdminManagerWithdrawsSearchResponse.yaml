@@ -1,0 +1,8 @@
+title: List of manager withdraws
+type: object
+properties:
+  withdraws:
+    type: array
+    description: Manager withdraws response
+    items:
+      $ref: ./AdminManagerWithdrawResponse.yaml

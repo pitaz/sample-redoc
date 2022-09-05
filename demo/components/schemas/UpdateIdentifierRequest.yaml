@@ -1,0 +1,12 @@
+title: Update Identifier Request
+required:
+  - identifier
+  - identity_document_type_name
+type: object
+properties:
+  identity_document_type_name:
+    type: string
+    description: 'The Identity document type. Ex. NIN, BVN'
+  identifier:
+    type: string
+    description: Customer's new Identity Document Identifier

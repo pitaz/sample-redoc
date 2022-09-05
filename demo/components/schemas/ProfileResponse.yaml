@@ -1,0 +1,81 @@
+title: Profile response
+required:
+  - account_number
+  - age
+  - carrot_integration_status
+  - citizenship
+  - city
+  - email
+  - email_verified
+  - engagement_status
+  - gender
+  - name
+  - phone_number
+  - postal_code
+  - province
+  - street
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Surname
+  street:
+    type: string
+    description: Street
+  province:
+    type: string
+    description: Province
+  postal_code:
+    type: string
+    description: Postal code
+  phone_number:
+    type: string
+    description: Phone number
+  next_of_kin:
+    type: string
+    description: Full name of Next of Kin
+  name:
+    type: string
+    description: Name
+  gender:
+    type: string
+    description: Gender
+  engagement_status:
+    type: string
+    description: >-
+      The User's engagement status in the system. NOTE - use it only to show
+      banner on main page.
+    example: no_trade
+    enum:
+      - no_deposit
+      - no_trade
+      - traded
+  email_verified:
+    type: boolean
+    description: Email verified
+  email:
+    type: string
+    description: Email
+  city:
+    type: string
+    description: City
+  citizenship:
+    type: string
+    description: Citizenship
+  carrot_integration_status:
+    type: string
+    description: Carrot integration status for user
+    example: available
+    enum:
+      - not_available
+      - available
+      - authorized
+  age:
+    type: integer
+    description: Age
+  account_restriction:
+    $ref: ./AccountRestrictionResponse.yaml
+  account_number:
+    type: string
+    description: Account number

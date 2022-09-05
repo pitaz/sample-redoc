@@ -1,0 +1,12 @@
+title: Featured theme stocks list
+type: object
+properties:
+  featured_theme_stocks:
+    type: array
+    description: Featured Theme Stock
+    items:
+      $ref: ./FeaturedThemeStockResponse.yaml
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+description: Result of GET request

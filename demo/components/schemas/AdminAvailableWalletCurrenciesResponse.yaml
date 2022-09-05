@@ -1,0 +1,16 @@
+title: Allowed Currencies
+required:
+  - currency_code
+  - currency_name
+  - flag_url
+type: object
+properties:
+  flag_url:
+    type: string
+    description: Link to country flag image
+  currency_name:
+    type: string
+    description: Currency name
+  currency_code:
+    type: string
+    description: Currency code

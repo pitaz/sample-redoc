@@ -1,0 +1,6 @@
+type: object
+properties:
+  stats:
+    $ref: ./Statistics.yaml
+  data:
+    $ref: ./FullTransactionResponse.yaml

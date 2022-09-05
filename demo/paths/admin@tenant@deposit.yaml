@@ -1,0 +1,89 @@
+get:
+  tags:
+    - Deposits
+  summary: Paginated list of tenant deposits
+  operationId: Web.Admin.Tenant.DepositController.index
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: authorization
+      in: header
+      description: Bearer JWT
+      required: true
+      schema:
+        type: string
+    - name: x_subject_type
+      in: header
+      description: >-
+        If standard user -> 'standard', if manager -> 'manager'. Replace '_'
+        with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+    - name: limit
+      in: query
+      description: Number of requested results default=20
+      schema:
+        type: string
+    - name: next_token
+      in: query
+      description: Next token for pagination
+      schema:
+        type: integer
+    - name: authorization
+      in: header
+      description: Bearer JWT
+      required: true
+      schema:
+        type: string
+    - name: start_date
+      in: query
+      description: Unix datetime stamp
+      schema:
+        type: string
+    - name: end_date
+      in: query
+      description: Unix datetime stamp
+      schema:
+        type: string
+    - name: status
+      in: query
+      description: "Status 'pending', 'completed', ''"
+      schema:
+        type: string
+    - name: api_consumer_ids
+      in: query
+      description: >-
+        comma seprated list of Api consumer Ids e,g '2,3,3' whose deposits are
+        required
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Deposits list
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/TenantDepositsPaginationResponse.yaml
+    '401':
+      description: Token have expired or invalid token
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml

@@ -1,0 +1,9 @@
+title: Entities List
+type: object
+properties:
+  entities:
+    type: array
+    description: Entity
+    items:
+      $ref: ./EntityResponse.yaml
+description: Result of GET request

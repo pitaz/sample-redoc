@@ -1,0 +1,11 @@
+title: Admin login response
+type: object
+properties:
+  refresh_token:
+    type: string
+    description: Refresh token to get a valid access token
+  jwt:
+    type: string
+    description: Authorization token needed in header with Bearer at beginning
+  admin:
+    $ref: ./AdminResponse.yaml

@@ -1,0 +1,13 @@
+title: Update Transaction pin request
+required:
+  - current_pin
+  - new_pin
+type: object
+properties:
+  new_pin:
+    type: string
+    description: New Pin min & max 4 length
+  current_pin:
+    type: string
+    description: Current Pin min & max 4 length
+description: Change transaction pin request

@@ -1,0 +1,99 @@
+get:
+  tags:
+    - User Profile
+  summary: Returns user profile
+  description: This operation fetches a user's profile.
+  operationId: Web.Api.ProfileController.profile
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: authorization
+      in: header
+      description: Bearer JWT
+      required: true
+      schema:
+        type: string
+    - name: x_subject_type
+      in: header
+      description: >-
+        If standard user -> 'standard', if manager -> 'manager'. Replace '_'
+        with '-'
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Profile
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProfileResponse.yaml
+    '401':
+      description: Token have expired or invalid token
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '404':
+      description: Resource not found
+      content: {}
+patch:
+  tags:
+    - User Profile
+  summary: Updates user basic info
+  operationId: Web.Api.ProfileController.update
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: authorization
+      in: header
+      description: Bearer JWT
+      required: true
+      schema:
+        type: string
+    - name: x_subject_type
+      in: header
+      description: >-
+        If standard user -> 'standard', if manager -> 'manager'. Replace '_'
+        with '-'
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: Update profile
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/UpdateProfileRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: Profile updated
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/UpdatedProfileResponse.yaml
+    '401':
+      description: Token have expired or invalid token
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '404':
+      description: Resource not found
+      content: {}
+    '422':
+      description: Incorrect params
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ErrorChangesetResponse.yaml
+  x-codegen-request-body-name: body

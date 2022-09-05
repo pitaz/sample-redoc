@@ -1,0 +1,12 @@
+title: Response for list of rewarded users
+type: object
+properties:
+  reward_list:
+    type: array
+    description: List of rewardees
+    items:
+      $ref: ./RewardResponse.yaml
+  next_token:
+    type: integer
+    description: next token
+description: rewarded user list

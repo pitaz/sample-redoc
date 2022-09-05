@@ -1,0 +1,12 @@
+title: Response payload from intermediary service  table
+type: object
+properties:
+  next_token:
+    type: integer
+    description: pagination tokane
+  data:
+    type: array
+    description: service transactions
+    items:
+      $ref: ./ServiceTransactionDataResponse.yaml
+description: Body results from intermediary service table

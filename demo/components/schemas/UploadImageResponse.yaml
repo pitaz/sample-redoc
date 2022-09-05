@@ -1,0 +1,15 @@
+title: Upload image response
+type: object
+properties:
+  media_link:
+    type: string
+    description: Download URL of uploaded image
+  image_uuid:
+    type: string
+    description: UUID of uploaded image
+  image_type:
+    type: string
+    description: Either avatar od media
+  file_ext:
+    type: string
+    description: 'Detected extension of the image. For now we detect: JPEG, PNG, GIF.'

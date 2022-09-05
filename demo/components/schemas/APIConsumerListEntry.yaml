@@ -1,0 +1,31 @@
+title: API Consumer
+required:
+  - description
+  - email
+  - id
+  - name
+  - phone_number
+type: object
+properties:
+  tenant_pubsub_topic:
+    type: string
+    description: API consumer pubsub topic created
+  status:
+    type: string
+    description: status of the API consumer
+  phone_number:
+    type: string
+    description: 'API consumer number '
+  name:
+    type: string
+    description: API Consumer name
+  id:
+    type: integer
+    description: Id of API Consumer
+  email:
+    type: string
+    description: API consumer email
+  description:
+    type: string
+    description: Description
+description: API Consumer body

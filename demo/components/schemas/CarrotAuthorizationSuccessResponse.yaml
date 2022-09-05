@@ -1,0 +1,6 @@
+title: Carrot authorization suceess response
+type: object
+properties:
+  redirect_url:
+    type: string
+    description: The redirection URL to Carrot

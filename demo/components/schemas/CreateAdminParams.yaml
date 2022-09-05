@@ -1,0 +1,32 @@
+title: Create admin params
+required:
+  - api_consumer_id
+  - email
+  - job_position
+  - name
+  - password
+  - scopes
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Admin surname
+  scopes:
+    type: array
+    description: Admin scopes in array
+  password:
+    type: string
+    description: Admin password
+  name:
+    type: string
+    description: Admin name
+  job_position:
+    type: string
+    description: Job position
+  email:
+    type: string
+    description: Admin email
+  api_consumer_id:
+    type: integer
+    description: API Consumer id

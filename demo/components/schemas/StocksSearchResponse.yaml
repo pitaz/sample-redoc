@@ -1,0 +1,9 @@
+title: Stocks search list reponse
+type: object
+properties:
+  result:
+    type: array
+    description: Searched Stock
+    items:
+      $ref: ./StockSearchResponse.yaml
+description: Result of searching query

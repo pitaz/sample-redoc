@@ -1,0 +1,12 @@
+title: user country groups
+type: object
+properties:
+  nigeria:
+    type: number
+    description: Users in Nigeria
+  kenya:
+    type: number
+    description: Users in Kenya
+  ghana:
+    type: number
+    description: Users in Ghana

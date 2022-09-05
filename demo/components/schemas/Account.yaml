@@ -1,0 +1,9 @@
+title: user funding account stats
+type: object
+properties:
+  unfunded:
+    type: number
+    description: unfunded accounts
+  funded:
+    type: number
+    description: funded accounts

@@ -1,0 +1,14 @@
+title: Linked user account info
+required:
+  - data
+type: object
+properties:
+  status:
+    type: string
+    description: stutus of request
+  message:
+    type: string
+    description: success message
+  data:
+    $ref: ./UserKycData.yaml
+description: Payload of customer information

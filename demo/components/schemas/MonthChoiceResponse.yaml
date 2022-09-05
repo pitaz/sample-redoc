@@ -1,0 +1,22 @@
+title: Month Choice Response
+type: object
+properties:
+  symbol:
+    type: string
+    description: Symbol
+  name:
+    type: string
+    description: Stock name
+  logo:
+    type: string
+    description: Stock logo
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  background_color:
+    type: string
+    description: Background color of stock in hex
+  avatar:
+    type: string
+    description: Url for avatar
+description: Month Choice informations

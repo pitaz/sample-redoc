@@ -1,0 +1,9 @@
+title: BVN Verification request
+required:
+  - bvn
+type: object
+properties:
+  bvn:
+    type: string
+    description: BVN
+description: POST request to verify bvn

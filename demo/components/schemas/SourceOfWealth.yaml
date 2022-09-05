@@ -1,0 +1,24 @@
+title: User investment source of wealth
+type: object
+properties:
+  savings:
+    type: number
+    description: number of users with source of wealth as savings
+  property:
+    type: number
+    description: number of users with source of wealth as property
+  loan:
+    type: number
+    description: number of users with source of wealth as loan
+  investments:
+    type: number
+    description: number of users with source of wealth as investments
+  inheritence:
+    type: number
+    description: number of users with source of wealth as inheritence
+  gift:
+    type: number
+    description: number of users with source of wealth as gift
+  company:
+    type: number
+    description: number of users with source of wealth as company

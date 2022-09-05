@@ -1,0 +1,109 @@
+title: Withdraw response
+required:
+  - account_number
+  - additional_instructions
+  - api_consumer_id
+  - bank_address
+  - bank_code
+  - bank_country
+  - bank_name
+  - bank_state
+  - bank_zip_code
+  - beneficiary_name
+  - created_at
+  - currency
+  - dollar_amount
+  - dollar_fees
+  - exchange_rate
+  - id
+  - intermediary_bank
+  - intermediary_bank_swift_code
+  - reference
+  - status
+  - swift_aba_code
+  - user_email
+  - user_indentifier
+  - user_name
+  - user_phone
+  - user_surname
+type: object
+properties:
+  user_surname:
+    type: string
+    description: User surname
+  user_phone:
+    type: string
+    description: User phone number
+  user_name:
+    type: string
+    description: User name
+  user_indentifier:
+    type: string
+    description: DW account id
+  user_email:
+    type: string
+    description: User email
+  swift_aba_code:
+    type: string
+    description: Swift and aba code
+  status:
+    type: string
+    description: Withdraw status
+  reference:
+    type: string
+    description: Withdraw transaction reference
+  intermediary_bank_swift_code:
+    type: string
+    description: Intermediary bank swift code
+  intermediary_bank:
+    type: string
+    description: Intermediary bank
+  id:
+    type: integer
+    description: Withdraw id
+  exchange_rate:
+    type: string
+    description: Exchange rate
+  dollar_fees:
+    type: number
+    description: Fees in dollar
+  dollar_amount:
+    type: number
+    description: Amount in dollar
+  currency:
+    type: string
+    description: Currency
+  created_at:
+    type: integer
+    description: Creation date in unix timestamp UTC
+  beneficiary_name:
+    type: string
+    description: Beneficiray name
+  bank_zip_code:
+    type: string
+    description: Bank zip code
+  bank_state:
+    type: string
+    description: Bank state
+  bank_name:
+    type: string
+    description: Bank name
+  bank_country:
+    type: string
+    description: Bank country
+  bank_code:
+    type: string
+    description: Bank code
+  bank_address:
+    type: string
+    description: Bank address
+  api_consumer_id:
+    type: integer
+    description: API Consumer ID
+  additional_instructions:
+    type: string
+    description: Additional instructions
+  account_number:
+    type: string
+    description: Account number
+description: Withdraw parameters

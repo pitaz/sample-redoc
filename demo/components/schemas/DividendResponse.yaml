@@ -1,0 +1,29 @@
+title: Dividend
+required:
+  - avatar
+  - currency_symbol
+  - description
+  - frequency
+  - payment_date
+  - stock_symbol
+type: object
+properties:
+  stock_symbol:
+    type: string
+    description: Stock symbol
+  payment_date:
+    type: number
+    description: Payment date in unix UTC
+  frequency:
+    type: string
+    description: Frequency of dividend payments
+  description:
+    type: string
+    description: Description of dividend
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  avatar:
+    type: string
+    description: Stock avatar
+description: Dividend body

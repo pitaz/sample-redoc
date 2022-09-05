@@ -1,0 +1,12 @@
+title: Update admin params
+required:
+  - id
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: admin status
+  id:
+    type: integer
+    description: Admin id

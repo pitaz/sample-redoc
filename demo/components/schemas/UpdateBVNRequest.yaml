@@ -1,0 +1,8 @@
+title: Update BVN Request
+required:
+  - bvn
+type: object
+properties:
+  bvn:
+    type: string
+    description: Customer new BVN

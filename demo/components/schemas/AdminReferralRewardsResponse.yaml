@@ -1,0 +1,13 @@
+title: Referral Rewards Data
+required:
+  - next_token
+type: object
+properties:
+  next_token:
+    type: number
+    description: The next token for pagination or `nil`
+  data:
+    type: array
+    description: The list of referral rewards details
+    items:
+      $ref: ./AdminReferralRewardDetailsResponse.yaml

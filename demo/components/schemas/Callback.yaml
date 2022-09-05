@@ -1,0 +1,8 @@
+title: Carrot callbacks
+required:
+  - liquidation
+type: object
+properties:
+  liquidation:
+    type: number
+    description: carrot liquidation callback for Bamboo

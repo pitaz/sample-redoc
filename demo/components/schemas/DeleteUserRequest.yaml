@@ -1,0 +1,13 @@
+title: Delete user request
+required:
+  - password
+  - reason
+type: object
+properties:
+  reason:
+    type: string
+    description: The user deletion reason
+  password:
+    type: string
+    description: The user's password
+description: Delete user POST request body parameters

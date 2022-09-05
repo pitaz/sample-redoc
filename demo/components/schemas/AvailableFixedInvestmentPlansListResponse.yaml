@@ -1,0 +1,14 @@
+title: predefined available fixed investment plans list
+required:
+  - currency_symbol
+  - predefined_plans
+type: object
+properties:
+  predefined_plans:
+    type: array
+    description: List of available predefined fixed investment plans
+    items:
+      $ref: ./AvailableFixedInvestmentPlansResponse.yaml
+  currency_symbol:
+    type: string
+    description: Currency symbol

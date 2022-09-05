@@ -1,0 +1,9 @@
+title: List of all withdraws
+type: object
+properties:
+  withdraws:
+    type: array
+    description: Withdraw response
+    items:
+      $ref: ./AdminWithdrawResponse.yaml
+description: List of withdraws

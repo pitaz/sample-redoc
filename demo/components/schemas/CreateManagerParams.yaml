@@ -1,0 +1,40 @@
+title: Create Manager Params
+required:
+  - department_name
+  - email
+  - entity_id
+  - job_title
+  - name
+  - number_prefix
+  - phone_number
+  - scopes
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Manager's surname
+  scopes:
+    type: array
+    description: 'Manager possbile scopes. Scopes: `supermanager`, `kyc`, `cash`, `trades`.'
+  phone_number:
+    type: string
+    description: Manager's phone number
+  number_prefix:
+    type: string
+    description: Manager's number prfix. Must start with '+'
+  name:
+    type: string
+    description: Manager's name
+  job_title:
+    type: string
+    description: Manager's job_title
+  entity_id:
+    type: integer
+    description: Entity id
+  email:
+    type: string
+    description: Manager's email
+  department_name:
+    type: string
+    description: Manager's department_name

@@ -1,0 +1,43 @@
+title: Notifications response
+required:
+  - body
+  - id
+  - image_url
+  - inserted_at
+  - read
+  - resource_id
+  - title
+  - type
+  - user_id
+type: object
+properties:
+  user_id:
+    type: integer
+    description: User ID
+  type:
+    type: string
+    description: Notification type
+  title:
+    type: string
+    description: Notification title
+  stock_symbol:
+    type: string
+    description: Stock symbol - present only if notification related to stock
+  resource_id:
+    type: integer
+    description: Resource ID
+  read:
+    type: boolean
+    description: Notification read
+  inserted_at:
+    type: integer
+    description: Date in unix timestamp UTC
+  image_url:
+    type: string
+    description: Image URL
+  id:
+    type: integer
+    description: ID
+  body:
+    type: string
+    description: Notification body

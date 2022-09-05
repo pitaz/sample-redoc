@@ -1,0 +1,22 @@
+title: Stock Graph Response
+required:
+  - data
+  - market_open
+  - usd_to_naira
+  - usd_to_user_currency
+type: object
+properties:
+  usd_to_user_currency:
+    type: number
+    description: USD to user currency exchange rate
+  usd_to_naira:
+    type: number
+    description: USD to Naira exchange rate
+  market_open:
+    type: boolean
+    description: 'Market status, false - closed, true - open'
+  data:
+    type: array
+    description: List of days
+    items:
+      $ref: ./StockGraphDataResponse.yaml

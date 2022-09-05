@@ -1,0 +1,16 @@
+title: Learn category
+required:
+  - article_ids
+  - id
+  - name
+type: object
+properties:
+  name:
+    type: string
+    description: Name of learn category
+  id:
+    type: integer
+    description: Id of learn category
+  article_ids:
+    type: array
+    description: Array of article's ids

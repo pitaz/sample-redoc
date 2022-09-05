@@ -1,0 +1,24 @@
+title: Deleted user account
+type: object
+properties:
+  user_id:
+    type: integer
+    description: The user's ID
+  last_name:
+    type: string
+    description: User's last name
+  first_name:
+    type: string
+    description: User's first name
+  email:
+    type: string
+    description: User's email address
+  deletion_reason:
+    type: string
+    description: The user deletion reason
+  deleted_at:
+    type: integer
+    description: User deletion time as a unix timestamp in UTC
+  date_of_birth:
+    type: string
+    description: Date of birth YYYY-MM-DD

@@ -1,0 +1,12 @@
+title: Update fullname request
+required:
+  - name
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Surname
+  name:
+    type: string
+    description: Name

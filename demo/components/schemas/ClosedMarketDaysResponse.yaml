@@ -1,0 +1,9 @@
+title: Closed market days List
+type: object
+properties:
+  days:
+    type: array
+    description: Closed market day
+    items:
+      $ref: ./ClosedMarketDayResponse.yaml
+description: Result of GET request

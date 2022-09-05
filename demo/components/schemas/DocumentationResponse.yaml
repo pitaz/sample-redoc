@@ -1,0 +1,6 @@
+title: Documentation password
+type: object
+properties:
+  password:
+    type: string
+    description: Documentation password

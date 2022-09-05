@@ -1,0 +1,18 @@
+title: User currency deposit status response
+type: object
+properties:
+  txref:
+    type: string
+    description: Txref
+  status:
+    type: string
+    description: Accepted/Rejected
+  currency_symbol:
+    type: string
+    description: Symbol of currency
+  currency:
+    type: string
+    description: Currency
+  amount:
+    type: number
+    description: Amount

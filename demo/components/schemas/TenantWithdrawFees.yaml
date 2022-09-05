@@ -1,0 +1,13 @@
+title: Tenant withdraw fees response
+type: object
+properties:
+  tenant_fee:
+    type: string
+    description: String value of the tenants set withdraw fees
+  bamboo_fee:
+    type: string
+    description: String value of the Bamboo  withdraw fees
+  api_consumer_id:
+    type: string
+    description: 'The id of the api consumer '
+description: Result of GET request

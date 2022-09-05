@@ -1,0 +1,12 @@
+title: User currency to usd transfer response
+required:
+  - amount
+  - currency_symbol
+type: object
+properties:
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  amount:
+    type: number
+    description: Amount in user currency

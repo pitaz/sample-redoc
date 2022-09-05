@@ -1,0 +1,9 @@
+title: Stock list toggle request
+required:
+  - active
+type: object
+properties:
+  active:
+    type: boolean
+    description: Define if stock is going live or not
+description: Activates or deactivates a list of stocks

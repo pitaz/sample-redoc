@@ -1,0 +1,34 @@
+title: Featured Theme Stock
+type: object
+properties:
+  symbol:
+    type: string
+    description: Symbol
+  price:
+    type: number
+    description: Stock price
+  percent_change:
+    type: number
+    description: Percent change
+  name:
+    type: string
+    description: Stock name
+  naira_price:
+    type: number
+    description: Stock price in Naira
+  logo:
+    type: string
+    description: Stock logo
+  id:
+    type: integer
+    description: ID
+  favourite:
+    type: boolean
+    description: True if stock is in user favourites
+  background_color:
+    type: string
+    description: Background color of stock in hex
+  avatar:
+    type: string
+    description: Url for avatar
+description: Featured theme stock informations

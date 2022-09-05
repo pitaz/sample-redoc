@@ -1,0 +1,17 @@
+title: Super Admin Stats Response
+type: object
+properties:
+  updated_at:
+    type: string
+    description: 'Record updated at timestamp '
+  statistics:
+    $ref: ./StatsticsResponse.yaml
+  id:
+    type: number
+    description: Record id for returned result
+  created_at:
+    type: string
+    description: 'Record created at timestamp '
+  api_consumer_id:
+    type: number
+    description: API Consumer whose stats are requested

@@ -1,0 +1,19 @@
+get:
+  tags:
+    - User details
+  summary: Fetch user’s portfolio balance
+  description: This endpoint enables credit companies to fetch the total balance of the user that’s not locked / collateralized by other credit companies. It provides a rough estimate of what to give out as credit to their customer who is also a Bamboo user. This balance includes the cash for withdrawal + total value of equities.
+  operationId: Web.Api.Tenant.CollateralController.balance
+  responses:
+    '200':
+      description: success
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Balance.yaml
+    '401':
+      description: Tenant doesnt have permission to access this user profile.
+      content: {}
+    '404':
+      description: Not found
+      content: {}

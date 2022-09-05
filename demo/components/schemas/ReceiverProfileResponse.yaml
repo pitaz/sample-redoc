@@ -1,0 +1,12 @@
+title: Receiver Profile Response
+required:
+  - full_name
+  - phone_number
+type: object
+properties:
+  phone_number:
+    type: string
+    description: Receiver Phone Number
+  full_name:
+    type: string
+    description: Receiver Fullname

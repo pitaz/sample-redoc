@@ -1,0 +1,28 @@
+get:
+  tags:
+    - Exchange Rate
+  summary: Return exchange rate for tenants
+  operationId: Web.Api.Tenant.ExchangeRateController.exchange_rate
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: api consumer token
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ExchangeRatesResponse.yaml
+    '404':
+      description: Not Found
+      content: {}

@@ -1,0 +1,20 @@
+title: Available Wallet For User Response
+required:
+  - currency
+  - currency_symbol
+  - name
+  - wallet_id
+type: object
+properties:
+  wallet_id:
+    type: integer
+    description: Wallet's ID
+  name:
+    type: string
+    description: Wallet's name
+  currency_symbol:
+    type: string
+    description: Wallet's currency symbol
+  currency:
+    type: string
+    description: Wallet's currency

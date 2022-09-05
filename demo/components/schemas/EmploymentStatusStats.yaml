@@ -1,0 +1,21 @@
+title: employee age groups
+type: object
+properties:
+  unemployed:
+    type: number
+    description: UnEmployed users
+  student:
+    type: number
+    description: student
+  self_employed:
+    type: number
+    description: Self employed
+  retired:
+    type: number
+    description: Retired users
+  others:
+    type: number
+    description: others
+  employed:
+    type: number
+    description: Employed users

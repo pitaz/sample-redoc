@@ -1,0 +1,13 @@
+title: Assign Variant Response
+required:
+  - variant
+type: object
+properties:
+  variant:
+    type: string
+    description: The user's deposit experiment variant
+    example: variant_a
+    enum:
+      - none
+      - variant_a
+      - variant_b

@@ -1,0 +1,17 @@
+title: Community post photo
+required:
+  - inserted_at
+  - photo_url
+  - updated_at
+type: object
+properties:
+  updated_at:
+    type: integer
+    description: Photo update time
+  photo_url:
+    type: string
+    description: URL to photo in Google Storage
+  inserted_at:
+    type: integer
+    description: Photo creation time
+description: Community Post Photo

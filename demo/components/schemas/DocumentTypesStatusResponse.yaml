@@ -1,0 +1,8 @@
+title: Update identity document type
+required:
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: Identity Document type status

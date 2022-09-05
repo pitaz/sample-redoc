@@ -1,0 +1,9 @@
+title: List of daily deposit settlements
+type: object
+properties:
+  deposit_settlements:
+    type: array
+    description: Deposit settlements response
+    items:
+      $ref: ./AdminDepositSettlementResponse.yaml
+description: List of daily deposit settlements

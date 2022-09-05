@@ -1,0 +1,14 @@
+title: Deposit multiple update params
+required:
+  - ids
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: "Deposit new status, 'Sent to DW' or 'Settlemented'"
+  ids:
+    type: array
+    description: List of deposit IDs to update
+    items:
+      type: integer

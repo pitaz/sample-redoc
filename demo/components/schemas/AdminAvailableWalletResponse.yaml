@@ -1,0 +1,38 @@
+title: Available Wallet Response
+required:
+  - currency
+  - description
+  - enabled
+  - id
+  - name
+  - terms_and_service_link
+  - type
+  - unavailable_in_countries
+type: object
+properties:
+  unavailable_in_countries:
+    type: array
+    description: >-
+      Array of strings representing countries where wallet is unavailable. To
+      fetch from /wallet_dictionary
+  type:
+    type: boolean
+    description: Wallet's type. Can be 'internal' or 'external'
+  terms_and_service_link:
+    type: string
+    description: Wallet's terms and service link
+  name:
+    type: boolean
+    description: Wallet's name
+  id:
+    type: integer
+    description: Wallet's id
+  enabled:
+    type: boolean
+    description: Wallet enabled flag
+  description:
+    type: string
+    description: Wallet's description
+  currency:
+    type: string
+    description: Wallet's currency

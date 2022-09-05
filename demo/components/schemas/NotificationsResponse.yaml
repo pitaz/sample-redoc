@@ -1,0 +1,14 @@
+title: Notifications response
+required:
+  - next_token
+  - notifications
+type: object
+properties:
+  notifications:
+    type: array
+    description: Notifications response
+    items:
+      $ref: ./NotificationResponse.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination

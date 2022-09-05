@@ -1,0 +1,10 @@
+title: Closed market day response
+type: object
+properties:
+  id:
+    type: integer
+    description: ID
+  day:
+    type: string
+    description: Day in format YYYY-MM-DD
+description: Closed market day details

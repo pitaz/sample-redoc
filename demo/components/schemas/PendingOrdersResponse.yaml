@@ -1,0 +1,14 @@
+title: List of pending orders
+required:
+  - currency_symbol
+  - pending_orders
+type: object
+properties:
+  pending_orders:
+    type: array
+    description: Pending order list
+    items:
+      $ref: ./PendingOrderResponse.yaml
+  currency_symbol:
+    type: string
+    description: Prices currency symbol

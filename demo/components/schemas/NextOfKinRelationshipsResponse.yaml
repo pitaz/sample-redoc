@@ -1,0 +1,10 @@
+title: Next of Kin Relationships response
+required:
+  - relationships
+type: object
+properties:
+  relationships:
+    type: array
+    description: Relationships
+    items:
+      $ref: ./NextOfKinRelationshipResponse.yaml

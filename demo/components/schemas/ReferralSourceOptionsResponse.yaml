@@ -1,0 +1,6 @@
+title: Referrals options
+type: object
+properties:
+  options:
+    type: array
+    description: Array with possible options

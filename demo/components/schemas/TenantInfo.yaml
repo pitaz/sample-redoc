@@ -1,0 +1,13 @@
+title: tenant basic information
+type: object
+properties:
+  name:
+    type: string
+    description: tenant name
+  image_url:
+    type: string
+    description: Image url for tenant logo
+  description:
+    type: string
+    description: Short description of tenant
+description: tenant basic information

@@ -1,0 +1,17 @@
+title: Fetch user profile response
+type: object
+properties:
+  user_id:
+    type: integer
+  last_name:
+    type: string
+  id:
+    type: integer
+  href:
+    type: string
+  first_name:
+    type: string
+  bio:
+    type: string
+  avatar_link:
+    type: string

@@ -1,0 +1,36 @@
+title: Manager account creation params
+required:
+  - department_name
+  - email
+  - job_title
+  - name
+  - number_prefix
+  - phone_number
+  - scopes
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Manager's surname
+  scopes:
+    type: array
+    description: Manager's scopes. Available scopes are in /manager/manager_scopes endpoint
+  phone_number:
+    type: string
+    description: Manager's phone number
+  number_prefix:
+    type: string
+    description: Manager's number prefix.
+  name:
+    type: string
+    description: Manager's name
+  job_title:
+    type: string
+    description: Manager's job_title
+  email:
+    type: string
+    description: Manager's email
+  department_name:
+    type: string
+    description: Manager's department name

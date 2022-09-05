@@ -1,0 +1,14 @@
+title: List of trades with pagination
+required:
+  - gifts
+  - next_token
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination
+  gifts:
+    type: array
+    description: Gifts response
+    items:
+      $ref: ./AdminGiftsResponse.yaml

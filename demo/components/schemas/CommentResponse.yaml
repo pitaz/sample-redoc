@@ -1,0 +1,25 @@
+title: Comment response
+required:
+  - body
+  - id
+  - inserted_at
+  - updated_at
+  - user_id
+type: object
+properties:
+  user_id:
+    type: integer
+    description: Id of comment creator
+  updated_at:
+    type: integer
+    description: Comment edit timestamp
+  inserted_at:
+    type: integer
+    description: Comment creation timestamp
+  id:
+    type: integer
+    description: Comment id
+  body:
+    type: string
+    description: Comment body
+description: Comment response

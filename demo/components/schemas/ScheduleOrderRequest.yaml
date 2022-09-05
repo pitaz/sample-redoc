@@ -1,0 +1,30 @@
+title: Request body to schedule a BUY order
+required:
+  - deposit_dollar_amount
+  - order_dollar_amount
+  - order_dollar_fee
+  - payment_method_id
+  - stock_symbol
+type: object
+properties:
+  stock_symbol:
+    type: string
+    description: The stock symbol to purchase
+  payment_method_id:
+    type: integer
+    description: Payment method ID. This is not required for the old payment flow
+  order_dollar_fee:
+    type: number
+    description: The order fee in USD
+  order_dollar_amount:
+    type: number
+    description: The order amonut in USD
+  deposit_method:
+    type: string
+    description: Deposit method to use
+    example: instant
+    enum:
+      - instant
+  deposit_dollar_amount:
+    type: number
+    description: The deposit amount in USD

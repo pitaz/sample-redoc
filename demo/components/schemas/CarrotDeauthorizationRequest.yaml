@@ -1,0 +1,8 @@
+title: Carrot deauthorization request
+required:
+  - mobile
+type: object
+properties:
+  mobile:
+    type: string
+    description: User's phone number

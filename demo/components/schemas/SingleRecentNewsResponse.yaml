@@ -1,0 +1,32 @@
+title: Single news response
+required:
+  - body
+  - created_at
+  - id
+  - title
+type: object
+properties:
+  video_url:
+    type: string
+    description: Link to video
+  title:
+    type: string
+    description: News title
+  thumbnail:
+    type: string
+    description: Url for thumbnail
+  source:
+    type: string
+    description: Source of article external url
+  id:
+    type: integer
+    description: ID of the article
+  external_url:
+    type: string
+    description: Link to article on external service
+  created_at:
+    type: integer
+    description: Creation date in unix timestamp UTC
+  body:
+    type: string
+    description: News body

@@ -1,0 +1,32 @@
+title: Referral Reward Participant
+required:
+  - dollar_cashback
+  - email
+  - first_name
+  - id
+  - is_cashback_pending
+  - last_name
+  - phone_number
+type: object
+properties:
+  phone_number:
+    type: string
+    description: The user's phone number
+  last_name:
+    type: string
+    description: The user's last name
+  is_cashback_pending:
+    type: boolean
+    description: "`true` if user hasn't received cashback, else `false`"
+  id:
+    type: number
+    description: The user's ID
+  first_name:
+    type: string
+    description: The user's first name
+  email:
+    type: string
+    description: The user's email address
+  dollar_cashback:
+    type: number
+    description: The user's cashback in USD

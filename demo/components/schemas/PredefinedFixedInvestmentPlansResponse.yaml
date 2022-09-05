@@ -1,0 +1,15 @@
+title: Paginated list of all predefined fixed investment plans
+required:
+  - fixed_investment_plans
+  - next_token
+type: object
+properties:
+  next_token:
+    type: integer
+    description: It may also return nil. Next token for pagination
+  fixed_investment_plans:
+    type: array
+    description: Predefined fixed investment plan
+    items:
+      $ref: ./PredefinedFixedInvestmentPlan.yaml
+description: List of predefined fixed investment plans and next_token

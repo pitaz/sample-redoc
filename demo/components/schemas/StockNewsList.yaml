@@ -1,0 +1,7 @@
+title: Stock News response
+type: object
+properties:
+  stock_news:
+    type: array
+    items:
+      $ref: ./StockNews.yaml

@@ -1,0 +1,48 @@
+title: Withdraw params
+required:
+  - account_number
+  - currency
+type: object
+properties:
+  user_id:
+    type: integer
+    description: User id
+  swift_aba_code:
+    type: string
+    description: Swift or aba code - only if currency is USD
+  intermediary_bank_swift_code:
+    type: string
+    description: Intermediary bank swift code - only if currency is USD
+  intermediary_bank:
+    type: string
+    description: Intermediary bank - only if currency is USD
+  currency:
+    type: string
+    description: USD or NGN
+  beneficiary_name:
+    type: string
+    description: Beneficiary name - only if currency is USD
+  bank_zip_code:
+    type: string
+    description: Bank zip code - only if currency is USD
+  bank_state:
+    type: string
+    description: Bank state - only if currency is USD
+  bank_name:
+    type: string
+    description: Bank name - only if currency is USD
+  bank_id:
+    type: integer
+    description: Bank id in list from withdraw_data endpoint - only if currency is NGN
+  bank_country:
+    type: string
+    description: Bank country - only if currency is USD
+  bank_address:
+    type: string
+    description: Bank address - only if currency is USD
+  additional_instructions:
+    type: string
+    description: Additional instructuons - only if currency is USD
+  account_number:
+    type: string
+    description: Account number

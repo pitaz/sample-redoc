@@ -1,0 +1,21 @@
+title: Bank Account Details request
+required:
+  - account_name
+  - account_number
+  - bank_code
+  - bank_name
+type: object
+properties:
+  bank_name:
+    type: string
+    description: Name of user's bank
+  bank_code:
+    type: string
+    description: Destination branch code of bank
+  account_number:
+    type: string
+    description: User's account number
+  account_name:
+    type: string
+    description: User account name as registered in bank
+description: POST request to store users bank account details

@@ -1,0 +1,17 @@
+title: Registration Todo List
+required:
+  - completed_steps
+  - total_steps
+type: object
+properties:
+  total_steps:
+    type: number
+    description: The total number of steps
+  steps:
+    type: array
+    description: Todo List step
+    items:
+      $ref: ./RegistrationTodoListStepResponse.yaml
+  completed_steps:
+    type: number
+    description: The number of completed steps

@@ -1,0 +1,19 @@
+title: collateral update params
+required:
+  - amount_paid
+  - collateral_id
+  - idempotency_key
+type: object
+properties:
+  idempotency_key:
+    type: string
+    description: >-
+      idempotency key to be added to the request to ensure that the request is
+      idempotent
+  collateral_id:
+    type: string
+    description: identifier of collateral to be updated
+  amount_paid:
+    type: integer
+    description: Collateral amount repayed in unit of currency. e.g cents
+description: collateral update params

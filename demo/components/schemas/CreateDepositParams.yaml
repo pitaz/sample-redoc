@@ -1,0 +1,9 @@
+title: Deposit create params
+type: object
+properties:
+  user_id:
+    type: integer
+    description: User id
+  amount:
+    type: number
+    description: Deposit amount in $

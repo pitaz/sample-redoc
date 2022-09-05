@@ -1,0 +1,6 @@
+title: Carrot liquidation response
+type: object
+properties:
+  remaining_amount:
+    type: number
+    description: the amount that remains to be gotten from the user

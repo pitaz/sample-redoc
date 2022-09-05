@@ -1,0 +1,9 @@
+title: List of current exchange rates
+type: object
+properties:
+  exchange_rate:
+    type: array
+    description: Exchange rate payload
+    items:
+      $ref: ./ExchangeRate.yaml
+description: System exchange rates GET request

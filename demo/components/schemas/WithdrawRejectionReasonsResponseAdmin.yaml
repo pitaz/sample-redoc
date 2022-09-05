@@ -1,0 +1,3 @@
+title: Withdraw rejection reasons Response
+type: object
+description: Possible Withdraw rejection reasons to choose

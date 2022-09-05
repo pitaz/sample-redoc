@@ -1,0 +1,8 @@
+title: Mobile money withdraw fetch params
+required:
+  - next_token
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination

@@ -1,0 +1,18 @@
+title: Withdrawal methods informations
+required:
+  - account_number
+  - withdrawal_cash
+  - withdrawal_methods
+type: object
+properties:
+  withdrawal_methods:
+    type: array
+    description: List of withdrawal methods
+    items:
+      $ref: ./WithdrawalsMethods.yaml
+  withdrawal_cash:
+    type: string
+    description: Cash available to withdraw
+  account_number:
+    type: string
+    description: DW account number

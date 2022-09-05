@@ -1,0 +1,6 @@
+title: Withdraw fetch params
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination

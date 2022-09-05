@@ -1,0 +1,52 @@
+title: Portfolio breakdown response
+required:
+  - available_to_invest
+  - base_wallet_balance
+  - currency_symbol
+  - equity_value
+  - number_of_violations
+  - restricted_by_dw
+  - total_aum
+  - total_invested
+  - total_percent_change
+  - total_return
+  - value
+  - withdrawable_cash
+type: object
+properties:
+  withdrawable_cash:
+    type: number
+    description: Maximum amount that can be withdrawn
+  value:
+    type: number
+    description: Value of portfolio
+  total_return:
+    type: number
+    description: Total return
+  total_percent_change:
+    type: number
+    description: Total portfolio change
+  total_invested:
+    type: number
+    description: Total invested
+  total_aum:
+    type: number
+    description: Total AUM
+  restricted_by_dw:
+    type: boolean
+    description: Restricted by DW
+  number_of_violations:
+    type: number
+    description: Number of GFV for account
+  equity_value:
+    type: number
+    description: Equity value
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+  base_wallet_balance:
+    type: number
+    description: Base wallet Balance
+  available_to_invest:
+    type: number
+    description: Buying power

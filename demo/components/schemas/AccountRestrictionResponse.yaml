@@ -1,0 +1,9 @@
+title: User restriction details
+type: object
+properties:
+  restricted:
+    type: boolean
+    description: 'true if account is restricted, false if not'
+  reason:
+    type: string
+    description: reason of account restriction

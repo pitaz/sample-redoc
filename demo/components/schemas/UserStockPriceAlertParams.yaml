@@ -1,0 +1,32 @@
+title: User stock price alert params
+required:
+  - alert_type
+  - stock_symbol
+type: object
+properties:
+  week_52_value:
+    type: string
+    description: 'Week 52 value. Available entries: "high", "low"'
+  stock_symbol:
+    type: string
+    description: Stock symbol e.g. APPL
+  price_value:
+    type: number
+    description: Alert will be triggered when the stock value will reach a price value
+  percent_value:
+    type: number
+    description: Float value between -1 and 1 (e.g. 0.15)
+  alert_type:
+    type: string
+    description: >-
+      It defines a type of alert. Available values: "price", "percent",
+      "week_52"
+description: >
+  User stock price alert body must contain all required fields and one
+  semi-optional field:
+
+                Payload with "alert_type" == "price" has to contain a "price_value" field.
+
+                Payload with "alert_type" == "percent" has to contain a "percent_value" field.
+
+                Payload with "alert_type" == "week_52" has to contain a "week_52_value" field.

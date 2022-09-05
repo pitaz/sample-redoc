@@ -1,0 +1,10 @@
+title: Search user profile request
+required:
+  - query
+type: object
+properties:
+  query:
+    type: string
+    description: >-
+      Query to search user. Might be first_name + last_name or href. Case
+      insensitive

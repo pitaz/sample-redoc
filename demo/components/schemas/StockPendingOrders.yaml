@@ -1,0 +1,39 @@
+title: Pending order for ownership response
+required:
+  - avatar
+  - creation_timestamp
+  - id
+  - name
+  - side
+  - status
+  - symbol
+  - type
+type: object
+properties:
+  type:
+    type: string
+    description: Order Type
+  symbol:
+    type: string
+    description: Stock symbol
+  status:
+    type: string
+    description: Order status
+  side:
+    type: string
+    description: Buy/Sell
+  order_expiration_timestamp:
+    type: number
+    description: 'Order expiration timestamp, unix UTC, for limit type only'
+  name:
+    type: string
+    description: Stock name
+  id:
+    type: string
+    description: Order ID
+  creation_timestamp:
+    type: number
+    description: 'Order creation timestamp, unix UTC'
+  avatar:
+    type: string
+    description: Stock avatar

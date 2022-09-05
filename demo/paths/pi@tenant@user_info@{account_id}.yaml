@@ -1,0 +1,41 @@
+get:
+  tags:
+    - User details
+  summary: Fetch user’s KYC details
+  description: This is an endpoint to fetch user’s KYC information on demand. Typically, the endpoint to be provided to the API consumer should be
+  operationId: Web.Api.Tenant.CollateralController.user_info
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: success
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/UserAccountInfo.yaml
+    '401':
+      description: Token have expired or invalid token
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '404':
+      description: Not found
+      content: {}

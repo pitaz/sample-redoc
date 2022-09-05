@@ -1,0 +1,75 @@
+title: Pending order details
+required:
+  - avatar
+  - avg_price
+  - background_color
+  - created_at
+  - creation_timestamp
+  - id
+  - limit_expiration
+  - logo
+  - name
+  - number
+  - order_price
+  - price_per_share
+  - quantity
+  - side
+  - status
+  - symbol
+  - type
+type: object
+properties:
+  type:
+    type: string
+    description: 'Order type: Market, Limit, Stop'
+  symbol:
+    type: string
+    description: Stock symbol
+  status:
+    type: string
+    description: 'Order status: New, Partial Fill, Fill, Canceled, Rejected'
+  side:
+    type: string
+    description: Order side Buy/Sell
+  quantity:
+    type: number
+    description: Quantity of shares requested up to 6 decimal places
+  price_per_share:
+    type: number
+    description: Price per 1.0 stock
+  order_price:
+    type: number
+    description: Order price
+  order_expiration_timestamp:
+    type: integer
+    description: 'Order expiration timestamp, unix UTC, for limit type only'
+  number:
+    type: string
+    description: Order number
+  name:
+    type: string
+    description: Stock name
+  logo:
+    type: string
+    description: Stock logo
+  limit_expiration:
+    type: string
+    description: Expiration of order (limits only) ISO 8601
+  id:
+    type: string
+    description: Order ID
+  creation_timestamp:
+    type: number
+    description: Order creation date in UTC unix timestamp
+  created_at:
+    type: string
+    description: Date in ISO 8601
+  background_color:
+    type: string
+    description: Background color of stock in hex
+  avg_price:
+    type: number
+    description: Average price
+  avatar:
+    type: string
+    description: Stock avatar

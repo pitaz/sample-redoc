@@ -1,0 +1,14 @@
+title: Deposit request
+type: object
+properties:
+  payment_method_id:
+    type: integer
+    description: Payment method ID
+  amount:
+    type: number
+    description: Amount to pay
+  accounts_to_credit:
+    type: array
+    description: Account to credit
+    items:
+      $ref: ./AccountToCredit.yaml

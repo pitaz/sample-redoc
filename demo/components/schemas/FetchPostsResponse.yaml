@@ -1,0 +1,11 @@
+title: Paginated posts response
+required:
+  - posts
+type: object
+properties:
+  posts:
+    type: array
+    description: List of community posts
+    items:
+      $ref: ./CommunityPost.yaml
+description: Fetch posts with pagination

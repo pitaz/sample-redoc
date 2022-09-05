@@ -1,0 +1,39 @@
+title: API Consumer
+required:
+  - app_key
+  - description
+  - email
+  - id
+  - name
+  - password
+  - username
+type: object
+properties:
+  username:
+    type: string
+    description: Generated user name
+  tenant_pubsub_topic:
+    type: string
+    description: API consumer pubsub topic created
+  status:
+    type: string
+    description: status of the API consumer
+  password:
+    type: string
+    description: Password
+  name:
+    type: string
+    description: API Consumer name
+  id:
+    type: integer
+    description: Id of API Consumer
+  email:
+    type: string
+    description: API consumer email
+  description:
+    type: string
+    description: Description
+  app_key:
+    type: string
+    description: Application key
+description: API Consumer body

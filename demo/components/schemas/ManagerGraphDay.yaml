@@ -1,0 +1,12 @@
+title: Graph day data
+required:
+  - date
+  - value
+type: object
+properties:
+  value:
+    type: number
+    description: Performance value
+  date:
+    type: string
+    description: Date in format YYYY-MM-DD

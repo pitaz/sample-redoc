@@ -1,0 +1,6 @@
+title: Create fee discount params
+type: object
+properties:
+  user_id:
+    type: integer
+    description: Customer id

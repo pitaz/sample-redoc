@@ -1,0 +1,14 @@
+title: Historical plans response.
+required:
+  - currency_symbol
+  - historical_plans
+type: object
+properties:
+  historical_plans:
+    type: array
+    description: List of historical plans
+    items:
+      $ref: ./HistoricalPlanResponse.yaml
+  currency_symbol:
+    type: string
+    description: Currency symbol ($)

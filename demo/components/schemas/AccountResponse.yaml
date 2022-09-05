@@ -1,0 +1,18 @@
+title: Active Account Response
+type: object
+properties:
+  surname:
+    type: string
+    description: User's surname
+  risk_tolerance:
+    type: string
+    description: "User's risk tolerance e.g. LOW, MODERATE, HIGH"
+  name:
+    type: string
+    description: User's name
+  id:
+    type: integer
+    description: Account Id
+  gender:
+    type: string
+    description: "User's gender e.g. Man, Woman"

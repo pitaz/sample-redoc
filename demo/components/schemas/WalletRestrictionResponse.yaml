@@ -1,0 +1,22 @@
+title: Object response of wallet restriction
+type: object
+properties:
+  wallet_id:
+    type: integer
+    description: wallet id
+  user_id:
+    type: integer
+    description: users id
+  updated_at:
+    type: string
+    description: update updated_at
+  reason:
+    type: string
+    description: restriction reason
+  id:
+    type: integer
+    description: record id
+  api_consumer_id:
+    type: integer
+    description: API consumer id for the tenant to which the wallet belongs
+description: List of deposits

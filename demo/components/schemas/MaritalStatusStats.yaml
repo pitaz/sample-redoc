@@ -1,0 +1,18 @@
+title: marital status stats
+type: object
+properties:
+  widowed:
+    type: number
+    description: widowed
+  single:
+    type: number
+    description: single status
+  partner:
+    type: number
+    description: partner status
+  married:
+    type: number
+    description: married status
+  divorced:
+    type: number
+    description: Divorced users

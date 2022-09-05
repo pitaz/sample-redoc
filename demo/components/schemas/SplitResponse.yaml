@@ -1,0 +1,33 @@
+title: Split
+required:
+  - avatar
+  - description
+  - execution_date
+  - from_factor
+  - split_ratio
+  - stock_symbol
+  - to_factor
+type: object
+properties:
+  to_factor:
+    type: number
+    description: Split's to-factor
+  stock_symbol:
+    type: string
+    description: Stock symbol
+  split_ratio:
+    type: number
+    description: Split ratio
+  from_factor:
+    type: number
+    description: Split's from-factor
+  execution_date:
+    type: integer
+    description: Execution date in unix timestamp UTC
+  description:
+    type: string
+    description: Split description
+  avatar:
+    type: string
+    description: Stock avatar
+description: "Split body. 'https://iexcloud.io/docs/api/#dividends-basic'"

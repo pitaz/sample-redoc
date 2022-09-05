@@ -1,0 +1,54 @@
+post:
+  tags:
+    - Collateral
+  summary: Create collateral
+  description:
+    At the point where the user wants to obtain credit , the credit company sends a post request to our endpoint and we then return a response of status "pending". However, before a collateral can be created, a user has to approve the mandate. The mandate is an agreement made by the user that they consent to having their Bamboo holdings as collateral. To create this mandate, when we receive a request to lock a user’s holdings as collateral, we send an OTP code to the user’s phone, and request that they input the code to approve the action. If the users approves, we assume that they have issued the mandate for that particular collateral creation action, a collateral entity is created in the table, we lock that money on behalf of the API consumer for the user, and send a success webhook event to the API consumer’s webhook url. If the user doesn't approve, no collateral entity is created, and we subsequently send a failure webhook event to the API consumer’s webhook url.
+    Ps. There should be in-app notification after this event
+  operationId: Web.Api.Tenant.CollateralController.initialize_collateral
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: Collateral initiation payload
+    content:
+      '*/*':
+        schema:
+          $ref: ../components/schemas/InitiateCollateral.yaml
+    required: true
+  responses:
+    '200':
+      description: success
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/CollateralInitiation.yaml
+    '401':
+      description: Token has expired or invalid token
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '404':
+      description: Resource not found
+      content: {}
+    '422':
+      description: Bad request
+      content: {}
+  x-codegen-request-body-name: body

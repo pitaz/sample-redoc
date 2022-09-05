@@ -1,0 +1,42 @@
+post:
+  tags:
+    - Liquidate user’s portfolio
+  summary: Liquidate user’s portfolio
+  description:
+    This is the way to recover collateral money that the user owes to a credit company. This happens in two steps
+    Step 1- First the Credit company initiates a liquidation request by specifying the user and the amount to liquidate. Bamboo will check against the outstanding amount on the collateral if less or equal to the requested amount the collateral request is logged and the liquidation process initiated.
+    Step 2- Next the credit company Initiates liquidation. This process calls the liquidation functionality and first requests for the users portfolio, checks for the amount available for withdrawal, then checks for users held funds.
+    If the amount available after subtracting held funds can cover the luidation amount, a withdrawal is initiated from the users account to the tenants bank account. The liquidation is updated to processed, when the withdrawal is complete, the collateral status is marked Liquidated
+  operationId: Web.Api.CarrotController.liquidate
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: authorization
+      in: header
+      description: Bearer JWT
+      required: true
+      schema:
+        type: string
+    - name: application_loan_id
+      in: path
+      description: Application loan id
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Liquidation success response
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/CarrotLiquidationResponse.yaml
+    '400':
+      description: Bad request
+      content: {}
+    '401':
+      description: Carrot token is invalid
+      content: {}

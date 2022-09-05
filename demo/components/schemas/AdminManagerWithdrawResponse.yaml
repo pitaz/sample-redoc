@@ -1,0 +1,95 @@
+title: Withdraw response
+required:
+  - account_number
+  - accounts_to_debit
+  - additional_instructions
+  - bank_address
+  - bank_code
+  - bank_country
+  - bank_name
+  - bank_state
+  - bank_zip_code
+  - beneficiary_name
+  - created_at
+  - currency
+  - dollar_amount
+  - dollar_fees
+  - entity_name
+  - exchange_rate
+  - id
+  - intermediary_bank
+  - intermediary_bank_swift_code
+  - manager_email
+  - status
+  - swift_aba_code
+type: object
+properties:
+  swift_aba_code:
+    type: string
+    description: Swift and aba code
+  status:
+    type: string
+    description: Deposit status
+  manager_email:
+    type: string
+    description: Manager email
+  intermediary_bank_swift_code:
+    type: string
+    description: Intermediary bank swift code
+  intermediary_bank:
+    type: string
+    description: Intermediary bank
+  id:
+    type: integer
+    description: Deposit id
+  exchange_rate:
+    type: string
+    description: Exchange rate
+  entity_name:
+    type: string
+    description: Entity name
+  dollar_fees:
+    type: number
+    description: Dollar fees
+  dollar_amount:
+    type: number
+    description: Dollar amount
+  currency:
+    type: string
+    description: Currency
+  created_at:
+    type: integer
+    description: Creation date in unix timestamp UTC
+  beneficiary_name:
+    type: string
+    description: Beneficiray name
+  bank_zip_code:
+    type: string
+    description: Bank zip code
+  bank_state:
+    type: string
+    description: Bank state
+  bank_name:
+    type: string
+    description: Bank name
+  bank_country:
+    type: string
+    description: Bank country
+  bank_code:
+    type: string
+    description: Bank code
+  bank_address:
+    type: string
+    description: Bank address
+  additional_instructions:
+    type: string
+    description: Additional instructions
+  accounts_to_debit:
+    type: array
+    description: Accounts to debit
+    items:
+      $ref: ./AccountToDebit.yaml
+  account_number:
+    type: string
+    description: Account number
+description: Withdraw parameters

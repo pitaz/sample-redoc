@@ -1,0 +1,13 @@
+title: Identity Verification request based on identifier
+required:
+  - identification_document_type
+  - identifier
+type: object
+properties:
+  identifier:
+    type: string
+    description: User identifier (e.g NIN in this case) digits
+  identification_document_type:
+    type: string
+    description: Type of id document
+description: POST request to verify identity

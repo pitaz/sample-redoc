@@ -1,0 +1,10 @@
+title: Daily Activity
+required:
+  - date
+type: object
+properties:
+  date:
+    type: array
+    description: Activity Response
+    items:
+      $ref: ./ActivityResponse.yaml

@@ -1,0 +1,76 @@
+post:
+  tags:
+    - Stock Trading
+  summary: Calculate order
+  description: Calculations take place to know if a user can make the BUY or SELL order that they wish to.This endpoint returns the result of that calculation.
+  operationId: Web.Api.OrderController.calculate_order
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: authorization
+      in: header
+      description: Bearer JWT
+      required: true
+      schema:
+        type: string
+    - name: x_subject_type
+      in: header
+      description: >-
+        If standard user -> 'standard', if manager -> 'manager'. Replace '_'
+        with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+    - name: currency
+      in: header
+      description: NGN - to order in Naira
+      schema:
+        type: string
+    - name: x_user_id
+      in: header
+      description: Required if subject type is 'manager'. Replace '_' with '-'
+      schema:
+        type: string
+  requestBody:
+    description: Order params
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CalculateOrderRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: Calculated order
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CalculatedOrderResponse.yaml
+    '401':
+      description: Token have expired or invalid token
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '422':
+      description: Error response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ErrorResponse.yaml
+  x-codegen-request-body-name: body

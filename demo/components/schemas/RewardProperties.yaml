@@ -1,0 +1,25 @@
+title: 'data properties for user rewards '
+required:
+  - duration
+  - has_restriction
+  - phone_number
+  - reward_type
+  - stock
+type: object
+properties:
+  stock:
+    type: string
+    description: " '' or stock symbol rewarded"
+  reward_type:
+    type: string
+    description: CASH or STOCK
+  phone_number:
+    type: string
+    description: 'users phone number, should already by signed up '
+  has_restriction:
+    type: string
+    description: yes or no if the reward has a time restriction
+  duration:
+    type: integer
+    description: duration of the reward restriction in days
+description: This is structure for the data to provision users for rewards

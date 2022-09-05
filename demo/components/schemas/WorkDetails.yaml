@@ -1,0 +1,9 @@
+title: Collection of Work details status
+type: object
+properties:
+  occupatation:
+    $ref: ./OccupationStats.yaml
+  marital_status:
+    $ref: ./MaritalStatusStats.yaml
+  employment_status:
+    $ref: ./EmploymentStatusStats.yaml

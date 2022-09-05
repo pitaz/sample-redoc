@@ -1,0 +1,9 @@
+title: Create comment request
+required:
+  - body
+type: object
+properties:
+  body:
+    type: string
+    description: Comment's body
+description: Create comment request

@@ -1,0 +1,26 @@
+title: User currency withdrawal calculation response
+required:
+  - amount
+  - amount_with_fee
+  - bank_list
+  - currency_symbol
+  - fee
+type: object
+properties:
+  fee:
+    type: number
+    description: Calculated fee
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  bank_list:
+    type: array
+    description: List of available banks to withdraw in naira
+    items:
+      $ref: ./BanksList.yaml
+  amount_with_fee:
+    type: number
+    description: Amount to withdraw with calculated fee
+  amount:
+    type: number
+    description: Amount to withdraw

@@ -1,0 +1,60 @@
+title: Withdrawal methods
+required:
+  - box_title
+  - currency
+  - currency_symbol
+  - fee_label
+  - fees
+  - flag_logo
+  - logo
+  - name
+  - partial_restriction
+  - timeline
+  - withdrawal_cash
+  - withdrawal_cash_value
+type: object
+properties:
+  withdrawal_cash_value:
+    type: number
+    description: Value of Withdrawal cash to method
+  withdrawal_cash:
+    type: string
+    description: Withdrawal cash to method
+  timeline:
+    type: string
+    description: Timeline
+  partial_restriction:
+    type: boolean
+    description: User is in partial restriction and cannot withdraw
+  name:
+    type: string
+    description: Name
+  logo:
+    type: string
+    description: Logo
+  flag_logo:
+    type: string
+    description: Flag logo
+  fees:
+    type: string
+    description: Fees as a string
+  fee_label:
+    type: string
+    description: Fee label
+  exchange_rate:
+    type: string
+    description: Exchange rate. Only for not USD withdrawal methods
+  currency_symbol:
+    type: string
+    description: 'Withdrawal currency symbol: $, â‚¦, Ksh, GHâ‚µ'
+  currency:
+    type: string
+    description: 'Withdrawal currency: NGN, KES, GHS'
+  box_title:
+    type: string
+    description: Method name to use in box
+  banks_list:
+    type: array
+    description: List of banks only for not USD withdrawal methods
+    items:
+      $ref: ./BanksList.yaml

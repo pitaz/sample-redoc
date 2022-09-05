@@ -1,0 +1,11 @@
+title: KYC Dashboard
+type: object
+properties:
+  user_data:
+    type: array
+    description: User Data
+    items:
+      $ref: ./UserDataResponse.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination

@@ -1,0 +1,9 @@
+title: Create transaction pin request
+required:
+  - pin
+type: object
+properties:
+  pin:
+    type: string
+    description: New pin min & max 4 length
+description: POST request body parameters

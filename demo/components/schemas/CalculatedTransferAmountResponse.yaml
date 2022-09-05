@@ -1,0 +1,12 @@
+title: Calculated Transfer Amount Response
+required:
+  - amount
+  - currency_symbol
+type: object
+properties:
+  currency_symbol:
+    type: string
+    description: Amount currency symbol
+  amount:
+    type: number
+    description: Calculated amount

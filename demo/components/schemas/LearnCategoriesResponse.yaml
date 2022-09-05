@@ -1,0 +1,10 @@
+title: List of all learn categories
+required:
+  - learn_categories
+type: object
+properties:
+  learn_categories:
+    type: array
+    description: Learn category response
+    items:
+      $ref: ./LearnCategoryResponse.yaml

@@ -1,0 +1,32 @@
+title: Basic info params
+required:
+  - citizenship
+  - country_code
+  - date_of_birth
+  - email
+  - gender
+  - name
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Customer surname
+  name:
+    type: string
+    description: Customer name
+  gender:
+    type: string
+    description: Customer gender
+  email:
+    type: string
+    description: Customer email
+  date_of_birth:
+    type: string
+    description: Customer date of birth
+  country_code:
+    type: string
+    description: Customer country code
+  citizenship:
+    type: string
+    description: Customer citizenship

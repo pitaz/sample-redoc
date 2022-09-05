@@ -1,0 +1,6 @@
+title: Creates stock short description
+type: object
+properties:
+  description:
+    type: string
+    description: Description

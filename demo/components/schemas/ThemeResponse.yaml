@@ -1,0 +1,22 @@
+title: Theme
+type: object
+properties:
+  name:
+    type: string
+    description: Name
+  id:
+    type: integer
+    description: ID
+  hex_color:
+    type: string
+    description: Color in hex format without `#`
+  description:
+    type: string
+    description: Description
+  color:
+    type: string
+    description: Color
+  avatar:
+    type: string
+    description: Avatar
+description: theme informations

@@ -1,0 +1,12 @@
+title: List of manager withdraws with pagination
+type: object
+properties:
+  withdraws:
+    type: array
+    description: Manager withdraws response
+    items:
+      $ref: ./AdminManagerWithdrawResponse.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination
+description: List of withdraws and next_token

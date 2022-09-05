@@ -1,0 +1,8 @@
+title: Exchange rate response
+required:
+  - exchange_rate
+type: object
+properties:
+  exchange_rate:
+    type: number
+    description: Exchange rate for requested currency

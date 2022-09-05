@@ -1,0 +1,39 @@
+title: App Banners
+required:
+  - active
+  - activity_name
+  - description
+  - destination_type
+  - destination_url
+  - id
+  - position
+type: object
+properties:
+  position:
+    type: integer
+    description: 'Position of the banner in the app , 1 is first'
+  load_in_webview:
+    type: boolean
+    description: true to load in an external browser and false to load in app browser
+  image:
+    type: string
+    description: Firebase link to image
+  id:
+    type: integer
+    description: record id
+  destination_url:
+    type: string
+    description: url the image should lead to
+  destination_type:
+    type: string
+    description: Web or In app activity
+  description:
+    type: string
+    description: message if any
+  activity_name:
+    type: string
+    description: In app activity to open to
+  active:
+    type: boolean
+    description: Stauts of the banner
+description: APP Banners body

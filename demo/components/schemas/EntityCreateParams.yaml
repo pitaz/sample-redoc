@@ -1,0 +1,33 @@
+title: Create Entity params
+required:
+  - authorized_signatory_email
+  - authorized_signatory_name
+  - bamboo_fee
+  - entity_fee
+  - fees_type
+  - fund_name
+  - name
+type: object
+properties:
+  name:
+    type: string
+    description: Name of entity
+  fund_name:
+    type: string
+    description: Name of fund
+  fees_type:
+    type: string
+    description: Type of fee. `amount` or `percent`
+  entity_fee:
+    type: number
+    description: Value of entity fee.
+  bamboo_fee:
+    type: number
+    description: Value of bamboo fee for entity
+  authorized_signatory_name:
+    type: string
+    description: Name of autorized signatory
+  authorized_signatory_email:
+    type: string
+    description: Email of autorized signatory
+description: Entity params

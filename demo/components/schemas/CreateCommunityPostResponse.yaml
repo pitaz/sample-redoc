@@ -1,0 +1,6 @@
+title: Create post response
+type: object
+properties:
+  result:
+    $ref: ./CommunityPost.yaml
+description: Create post response

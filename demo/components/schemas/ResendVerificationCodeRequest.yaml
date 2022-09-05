@@ -1,0 +1,8 @@
+title: Resend Verification Code Request
+required:
+  - phone_number
+type: object
+properties:
+  phone_number:
+    type: string
+    description: Phone number

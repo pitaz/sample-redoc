@@ -1,0 +1,8 @@
+title: Document Url
+required:
+  - url
+type: object
+properties:
+  url:
+    type: string
+    description: Document url

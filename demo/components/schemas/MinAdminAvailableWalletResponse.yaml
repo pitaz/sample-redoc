@@ -1,0 +1,15 @@
+required:
+  - enabled
+  - name
+  - type
+type: object
+properties:
+  type:
+    type: boolean
+    description: Wallet's type. Can be 'internal' or 'external'
+  name:
+    type: boolean
+    description: Wallet's name
+  enabled:
+    type: boolean
+    description: Wallet enabled flag

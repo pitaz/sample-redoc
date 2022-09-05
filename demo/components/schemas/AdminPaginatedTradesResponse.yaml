@@ -1,0 +1,14 @@
+title: List of trades with pagination
+required:
+  - next_token
+  - trades
+type: object
+properties:
+  trades:
+    type: array
+    description: Trade response
+    items:
+      $ref: ./AdminTradeResponse.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination

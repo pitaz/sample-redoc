@@ -1,0 +1,16 @@
+title: ' Wallet response For User Response'
+required:
+  - restricted
+  - status
+  - transaction_pin_set
+type: object
+properties:
+  transaction_pin_set:
+    type: boolean
+    description: Returns true if the user has set their transaction PIN
+  status:
+    type: string
+    description: 'active, pending, flagged, default is flagged'
+  restricted:
+    type: boolean
+    description: Is wallet restricted

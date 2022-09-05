@@ -1,0 +1,11 @@
+title: List of user currency deposits with pagination
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination
+  deposits:
+    type: array
+    description: User currency deposit response
+    items:
+      $ref: ./AdminUserCurrencyDepositResponse.yaml

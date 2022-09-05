@@ -1,0 +1,55 @@
+title: Investment Profile request
+required:
+  - company
+  - dependents
+  - employment_status
+  - experience
+  - goal
+  - liquid
+  - martial_status
+  - net_worth
+  - risk_tolerance
+  - source_of_wealth
+  - yearly_income
+type: object
+properties:
+  yearly_income:
+    type: integer
+    description: 'Yearly income, available from API'
+  source_of_wealth:
+    type: string
+    description: 'source of wealth, available from API'
+  risk_tolerance:
+    type: string
+    description: 'Risk tolerance, available from API'
+  position:
+    type: string
+    description: 'Position, available from API'
+  net_worth:
+    type: integer
+    description: 'Net worth, available from API'
+  martial_status:
+    type: string
+    description: 'Martial status, available from API'
+  liquid:
+    type: integer
+    description: 'Liquid, available from API'
+  goal:
+    type: string
+    description: 'Goal, available from API'
+  experience:
+    type: string
+    description: 'Experience, available from API'
+  employment_type:
+    type: string
+    description: 'Employment type, available from API'
+  employment_status:
+    type: string
+    description: 'Employment status, available from API'
+  dependents:
+    type: integer
+    description: Number of dependents
+  company:
+    type: string
+    description: Company name
+description: POST request to create investment profile

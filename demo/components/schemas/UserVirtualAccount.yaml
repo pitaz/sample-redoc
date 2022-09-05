@@ -1,0 +1,16 @@
+title: 'Flutterwave virtual account '
+type: object
+properties:
+  user_id:
+    type: integer
+    description: Users bamboo id
+  currency:
+    type: string
+    description: Account currency
+  api_consumer_id:
+    type: string
+    description: Api consumer to which the user belong
+  account:
+    type: string
+    description: Flutterwave virtual account
+description: Virtual account to receive deposits on tenants end

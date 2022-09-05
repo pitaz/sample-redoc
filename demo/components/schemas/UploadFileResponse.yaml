@@ -1,0 +1,8 @@
+title: Uploaded file url
+required:
+  - url
+type: object
+properties:
+  url:
+    type: string
+    description: Url to uploaded file

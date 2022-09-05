@@ -1,0 +1,12 @@
+title: List of all active stocks response
+type: object
+properties:
+  stocks:
+    type: array
+    description: Stock response
+    items:
+      $ref: ./StockResponse.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination
+description: List of all active stocks

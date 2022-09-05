@@ -1,0 +1,28 @@
+title: Calculate Order Response
+required:
+  - currency_symbol
+  - entity_fee
+  - order_price
+  - quantity
+  - total_fee
+  - total_price
+type: object
+properties:
+  total_price:
+    type: number
+    description: Order total price (fee included)
+  total_fee:
+    type: number
+    description: Total fee
+  quantity:
+    type: number
+    description: Quantity
+  order_price:
+    type: number
+    description: Order price (fee not included)
+  entity_fee:
+    type: number
+    description: Entity fee - fee which is for entity
+  currency_symbol:
+    type: string
+    description: Prices currency symbol

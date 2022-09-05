@@ -1,0 +1,10 @@
+title: api consumer
+type: object
+properties:
+  name:
+    type: string
+    description: Api consumer name
+  description:
+    type: string
+    description: Description for api consumer
+description: api consumer details

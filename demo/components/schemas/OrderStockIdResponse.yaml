@@ -1,0 +1,8 @@
+title: Order id response
+required:
+  - order_id
+type: object
+properties:
+  order_id:
+    type: string
+    description: Order ID to fetch status by REST

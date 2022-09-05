@@ -1,0 +1,18 @@
+title: External links
+type: object
+properties:
+  manager_agreement:
+    type: string
+    description: Url to manager document agreement
+  dw_privacy_policy:
+    type: string
+    description: Url used for DW privacy policy
+  dw_disclosures:
+    type: string
+    description: Url used for DW disclosures
+  dw_agreement_disclosure:
+    type: string
+    description: Url used for DW agreements disclosures
+  bamboo_legal:
+    type: string
+    description: Url used for Bamboo legal page

@@ -1,0 +1,18 @@
+title: User investment goal stats
+type: object
+properties:
+  new:
+    type: number
+    description: Number of users with new goal
+  long_term:
+    type: number
+    description: Number of users with long term investment goal
+  infrequent:
+    type: number
+    description: Number of users with infrequent goal
+  frequent:
+    type: number
+    description: Number of users with frequent goal
+  active:
+    type: number
+    description: Number of users with active goal

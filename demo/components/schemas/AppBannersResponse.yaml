@@ -1,0 +1,9 @@
+title: App Banners
+type: object
+properties:
+  app_banners:
+    type: array
+    description: App banners response
+    items:
+      $ref: ./AppBannerResponse.yaml
+description: List of app banners

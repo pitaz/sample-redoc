@@ -1,0 +1,25 @@
+title: Stock News
+type: object
+properties:
+  url:
+    type: string
+    description: URL to article
+  symbol:
+    type: string
+    description: Stock symbol
+  summary:
+    type: string
+    description: Article body
+  source:
+    type: string
+    description: Article source
+  image:
+    type: string
+    description: URL to image
+  headline:
+    type: string
+    description: Article headline
+  datetime:
+    type: number
+    description: Millisecond epoch of time of article
+description: Result of GET request

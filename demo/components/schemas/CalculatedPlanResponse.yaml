@@ -1,0 +1,27 @@
+title: Calculated fixed investment plan details
+required:
+  - cash_due
+  - currency_symbol
+  - due_date_utc_unix_timestamp
+  - final_interest
+  - fixed_cash
+type: object
+properties:
+  fixed_cash:
+    type: number
+    description: Money amount to put in fixed investment
+    format: float
+  final_interest:
+    type: number
+    description: Final interest
+    format: float
+  due_date_utc_unix_timestamp:
+    type: integer
+    description: Due date in UTC unix timestamp
+  currency_symbol:
+    type: string
+    description: Currency symbol ($)
+  cash_due:
+    type: number
+    description: Cash due for fixed investment
+    format: float

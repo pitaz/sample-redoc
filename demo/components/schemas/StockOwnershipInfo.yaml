@@ -1,0 +1,2 @@
+title: Stock ownership for user. Nil if user doesnt' own it.
+type: object

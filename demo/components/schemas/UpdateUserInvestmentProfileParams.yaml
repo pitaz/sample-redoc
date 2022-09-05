@@ -1,0 +1,41 @@
+title: Update fee discount params
+required:
+  - dependents
+  - experience
+  - goal
+  - liquid
+  - martial_status
+  - net_worth
+  - risk_tolerance
+  - source_of_wealth
+  - yearly_income
+type: object
+properties:
+  yearly_income:
+    type: integer
+    description: 'Yearly income, available from API'
+  source_of_wealth:
+    type: string
+    description: 'Source of wealth, available from API'
+  risk_tolerance:
+    type: string
+    description: 'Risk tolerance, available from API'
+  net_worth:
+    type: integer
+    description: 'Net worth, available from API'
+  martial_status:
+    type: string
+    description: Martial status
+  liquid:
+    type: integer
+    description: 'Liquid, available from API'
+  goal:
+    type: string
+    description: 'Goal, available from API'
+  experience:
+    type: string
+    description: 'Experience, available from API'
+  dependents:
+    type: integer
+    description: Number of dependents
+description: 'On updating the user investment profile, use the dictionary endpoint'

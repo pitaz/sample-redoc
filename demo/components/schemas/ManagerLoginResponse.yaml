@@ -1,0 +1,15 @@
+title: Manager login response
+required:
+  - jwt
+  - manager
+  - refresh_token
+type: object
+properties:
+  refresh_token:
+    type: string
+    description: Refresh token to get a valid access token
+  manager:
+    $ref: ./ManagerResponse.yaml
+  jwt:
+    type: string
+    description: Authorization token needed in header with Bearer at beginning

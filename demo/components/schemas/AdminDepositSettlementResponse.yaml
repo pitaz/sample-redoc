@@ -1,0 +1,35 @@
+title: Deposit settlement response
+required:
+  - category
+  - created
+  - date
+  - drivewealth_id
+  - status
+  - status_comment
+  - updated
+type: object
+properties:
+  updated:
+    type: integer
+    description: The datetime of last update of a record as a unix timestamp
+  status_comment:
+    type: string
+    description: The current status message
+  status:
+    type: string
+    description: >-
+      Current status of the settlement: PENDING, APPROVED, PROCESSING,
+      SUCCESSFUL, FAILED
+  drivewealth_id:
+    type: string
+    description: A unique identifier of a DW resource
+  date:
+    type: integer
+    description: Date of the deposit settlement as a unix timestamp
+  created:
+    type: integer
+    description: The datetime of creation of a record as a unix timestamp
+  category:
+    type: string
+    description: Category of an operation
+description: Deposit settlement parameters

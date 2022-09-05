@@ -1,0 +1,16 @@
+title: Learn Article Params
+required:
+  - body
+  - cover_photo
+  - title
+type: object
+properties:
+  title:
+    type: string
+    description: Article's title
+  cover_photo:
+    type: string
+    description: Cover photo url
+  body:
+    type: string
+    description: Body of article

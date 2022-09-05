@@ -1,0 +1,18 @@
+title: Activities response
+required:
+  - activities
+  - currency_symbol
+  - exchange_rate
+type: object
+properties:
+  exchange_rate:
+    type: number
+    description: Exchange rate
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+  activities:
+    type: array
+    description: List of activities
+    items:
+      $ref: ./ActivityResponse.yaml

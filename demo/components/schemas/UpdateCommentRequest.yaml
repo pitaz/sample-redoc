@@ -1,0 +1,9 @@
+title: Update comment request
+required:
+  - body
+type: object
+properties:
+  body:
+    type: string
+    description: New comment's body
+description: Update comment request

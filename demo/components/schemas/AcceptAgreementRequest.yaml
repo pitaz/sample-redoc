@@ -1,0 +1,12 @@
+title: Accept agreement request
+required:
+  - acceptance_hash
+  - signature_full_name
+type: object
+properties:
+  signature_full_name:
+    type: string
+    description: Customer full name
+  acceptance_hash:
+    type: string
+    description: Acceptance hash which is provided in url as code

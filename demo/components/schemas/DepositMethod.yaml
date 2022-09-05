@@ -1,0 +1,42 @@
+title: Deposit Method
+type: object
+properties:
+  type:
+    type: string
+    description: 'Deposit method type e.g. instant, standard'
+  timeline:
+    type: string
+    description: Time line of deposit
+  min_fee_value:
+    type: number
+    description: Minimum fee value
+  max_fee_value:
+    type: number
+    description: Maximum fee value
+  logo:
+    type: string
+    description: Logo of deposit method
+  is_fee_free:
+    type: boolean
+    description: Flag which informs if user has reached the fee_free_total_deposits
+  fee_percent:
+    type: number
+    description: Percentage used for fee calculation (0.1 == 0.1%)
+  fee_free_total_deposits:
+    type: number
+    description: Sum of all user deposits required for fee free instant deposits
+  fee:
+    type: number
+    description: Fee to pay
+  description:
+    type: string
+    description: Description
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  available:
+    type: boolean
+    description: Deposit availability
+  amount:
+    type: number
+    description: Amount to pay

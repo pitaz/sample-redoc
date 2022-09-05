@@ -1,0 +1,16 @@
+title: Login response
+required:
+  - jwt
+  - refresh_token
+  - user
+type: object
+properties:
+  user:
+    $ref: ./UserResponse.yaml
+  refresh_token:
+    type: string
+    description: Refresh token to get a valid access token
+  jwt:
+    type: string
+    description: Authorization token needed in header with Bearer at beginning
+description: Result of POST request on login user

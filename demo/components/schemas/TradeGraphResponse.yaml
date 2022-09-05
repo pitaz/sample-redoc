@@ -1,0 +1,11 @@
+title: graph data for user currency deposits
+type: object
+properties:
+  total_value:
+    type: number
+    description: Total value of user currency deposits in the duration
+  total_count:
+    type: number
+    description: Total count of the user currency deposits in the duration
+  data:
+    $ref: ./DurationData.yaml

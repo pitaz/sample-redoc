@@ -1,0 +1,17 @@
+title: Identity Verification request based on smile job id
+required:
+  - identification_document_type
+  - job_id
+  - user_id
+type: object
+properties:
+  user_id:
+    type: string
+    description: user id provided by smile
+  job_id:
+    type: string
+    description: job_id provided by smile
+  identification_document_type:
+    type: string
+    description: Type of id document
+description: POST request to verify identity

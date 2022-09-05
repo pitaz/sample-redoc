@@ -1,0 +1,43 @@
+post:
+  tags:
+    - Account Linking and unlinking
+  summary: Login user on linking page
+  description: Endpoint to verify the user credentials on tenant linking page
+  operationId: Web.Api.Tenant.VerificationController.verify_user
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: Login credentials
+    content:
+      '*/*':
+        schema:
+          $ref: ../components/schemas/AuthorizationRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: ''
+      content: {}
+    '422':
+      description: Error response
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+  x-codegen-request-body-name: body

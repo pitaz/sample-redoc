@@ -1,0 +1,8 @@
+title: Unregister device request
+required:
+  - token
+type: object
+properties:
+  token:
+    type: string
+    description: Firebase device token

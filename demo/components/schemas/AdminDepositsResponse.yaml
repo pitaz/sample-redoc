@@ -1,0 +1,9 @@
+title: List of all deposits
+type: object
+properties:
+  deposits:
+    type: array
+    description: Deposit response
+    items:
+      $ref: ./AdminDepositResponse.yaml
+description: List of deposits

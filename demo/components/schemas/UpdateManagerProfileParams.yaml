@@ -1,0 +1,16 @@
+title: Manager Profile Update
+required:
+  - email
+  - name
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Manger surname
+  name:
+    type: string
+    description: Manger name
+  email:
+    type: string
+    description: Manager email

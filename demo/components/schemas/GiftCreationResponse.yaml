@@ -1,0 +1,13 @@
+title: Gift creation response
+required:
+  - gift_id
+type: object
+properties:
+  payment_methods:
+    type: array
+    description: Deposit Payment Channels
+    items:
+      $ref: ./GiftDepositMethod.yaml
+  gift_id:
+    type: integer
+    description: Gift id

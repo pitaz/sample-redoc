@@ -1,0 +1,11 @@
+title: Mobile money providers response
+required:
+  - providers
+type: object
+properties:
+  providers:
+    type: array
+    description: >-
+      Arary of string denoting the mobile money providers supported by the
+      residence country: e.g [MTN, Visafone, Airtel/tigo] for GHA
+description: GET response array with mobile money providers names

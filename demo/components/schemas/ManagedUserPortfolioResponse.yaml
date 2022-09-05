@@ -1,0 +1,68 @@
+title: Portfolio response
+required:
+  - cash
+  - currency_code
+  - currency_name
+  - currency_symbol
+  - pending_deposit
+  - processing_withdrawal
+  - reserved_cash
+  - total_cash
+  - unsettled_cash
+  - usd_to_user_currency
+  - user_currency_symbol
+  - user_currency_to_usd
+  - value
+  - value_change
+  - value_percent_change
+  - withdrawal_cash
+type: object
+properties:
+  withdrawal_cash:
+    type: number
+    description: Withdrawal cash
+  value_percent_change:
+    type: number
+    description: Equity value percent change
+  value_change:
+    type: number
+    description: Equity value change
+  value:
+    type: number
+    description: Portfolio value cash + equity value
+  user_currency_to_usd:
+    type: number
+    description: User currency to USD exchange rate
+  user_currency_symbol:
+    type: string
+    description: User currency symbol based on residence country
+  usd_to_user_currency:
+    type: number
+    description: USD to user currency exchange rate
+  unsettled_cash:
+    type: number
+    description: Unsettled cash
+  total_cash:
+    type: number
+    description: Total cash
+  reserved_cash:
+    type: number
+    description: Reserved cash
+  processing_withdrawal:
+    type: number
+    description: Processing withdrawal money
+  pending_deposit:
+    type: number
+    description: Pending deposit money
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+  currency_name:
+    type: string
+    description: 'Naira, Shilling or Cedi'
+  currency_code:
+    type: string
+    description: 'NGN, KES or GHS'
+  cash:
+    type: number
+    description: Cash available to invest aka buying power

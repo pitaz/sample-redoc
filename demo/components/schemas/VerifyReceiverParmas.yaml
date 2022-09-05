@@ -1,0 +1,8 @@
+title: Receiver Profile Params
+required:
+  - phone_number
+type: object
+properties:
+  phone_number:
+    type: string
+    description: Receiver Phone Number

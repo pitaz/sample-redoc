@@ -1,0 +1,38 @@
+title: Active plan
+required:
+  - annual_percent_interest
+  - cash_due
+  - due_date_utc_unix_timestamp
+  - fixed_cash
+  - id
+  - start_date
+  - status
+  - timeframe_in_days
+type: object
+properties:
+  timeframe_in_days:
+    type: integer
+    description: Length of plan in days
+  status:
+    type: string
+    description: status Active/Finished
+  start_date:
+    type: integer
+    description: Date plan was created
+  id:
+    type: integer
+    description: fixed investment plan id
+  fixed_cash:
+    type: number
+    description: Money amount put in fixed investment
+    format: float
+  due_date_utc_unix_timestamp:
+    type: integer
+    description: Due date in UTC unix timestamp
+  cash_due:
+    type: number
+    description: Cash due for fixed investment
+    format: float
+  annual_percent_interest:
+    type: number
+    description: Plan's annual percent interest

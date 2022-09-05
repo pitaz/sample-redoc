@@ -1,0 +1,6 @@
+title: Reverse transaction Request Payload
+type: object
+properties:
+  tx_ref:
+    type: string
+    description: The transaction reference

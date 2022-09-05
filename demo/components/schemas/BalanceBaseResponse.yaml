@@ -1,0 +1,14 @@
+title: Linked account balance/portfolio balance
+required:
+  - data
+type: object
+properties:
+  status:
+    type: string
+    description: stutus of request
+  message:
+    type: string
+    description: success message
+  data:
+    $ref: ./Balance.yaml
+description: Users actual value less held fees

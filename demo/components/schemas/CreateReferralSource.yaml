@@ -1,0 +1,8 @@
+title: Create source of referral params
+required:
+  - source
+type: object
+properties:
+  source:
+    type: string
+    description: Source of referral from /api/referral_source/options

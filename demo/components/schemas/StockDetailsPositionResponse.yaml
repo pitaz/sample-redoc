@@ -1,0 +1,27 @@
+title: Your position for stock details
+type: object
+properties:
+  total_return_percent:
+    type: number
+    description: Total return in percent
+  total_return:
+    type: number
+    description: Total return
+  todays_return_percent:
+    type: number
+    description: Todays return in percent
+  todays_return:
+    type: number
+    description: Todays return
+  shares:
+    type: number
+    description: Shares
+  portfolio_diversity:
+    type: number
+    description: Portfolio diversity in percent
+  equity:
+    type: number
+    description: Equity
+  avg_cost:
+    type: number
+    description: Average cost

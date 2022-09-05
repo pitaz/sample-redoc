@@ -1,0 +1,33 @@
+title: Feature Flags Response
+required:
+  - deposit_experiment_variant
+  - fixed_returns_enabled
+  - gifting_enabled
+  - lock_enabled
+  - notifications_enabled
+  - wallet_system_enabled
+type: object
+properties:
+  wallet_system_enabled:
+    type: boolean
+    description: Feature flag for wallet system
+  notifications_enabled:
+    type: boolean
+    description: Feature flag for notifications
+  lock_enabled:
+    type: boolean
+    description: Feature flag for lock
+  gifting_enabled:
+    type: boolean
+    description: Feature flag for stock gifting
+  fixed_returns_enabled:
+    type: boolean
+    description: Feature flag for fixed returns
+  deposit_experiment_variant:
+    type: string
+    description: The user's deposit experiment variant
+    example: variant_a
+    enum:
+      - none
+      - variant_a
+      - variant_b

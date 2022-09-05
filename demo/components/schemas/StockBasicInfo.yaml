@@ -1,0 +1,32 @@
+title: Stock Basic Info
+required:
+  - avatar
+  - currency_symbol
+  - data_source
+  - is_favourite
+  - latest_price_update
+  - name
+  - symbol
+type: object
+properties:
+  symbol:
+    type: string
+    description: Stock's symbol
+  name:
+    type: string
+    description: Stock's name
+  latest_price_update:
+    type: integer
+    description: Timestamp(in miliseconds) of latest update
+  is_favourite:
+    type: boolean
+    description: Information if stock is favourite for user
+  data_source:
+    type: string
+    description: Source of data
+  currency_symbol:
+    type: string
+    description: Currency symbol for given currency in header
+  avatar:
+    type: string
+    description: Stock's avatar

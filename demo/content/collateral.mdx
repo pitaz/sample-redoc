@@ -1,0 +1,581 @@
+# Documentation: Collaterization
+
+## Introduction
+
+This document is intended to help you integrate with our Collaterization API with ease
+
+The API is intended to allow you to use digital assets as collateral from your users and in return, offer them financial services\* To make this happen, our API offers the following high level features:
+
+- API Authorization (API keys)
+- Webhooks
+- Account Linking & unlinking
+- 2-FA
+- user KYC details
+- Portfolio Balance
+- Lock/Collateral (CRUD)
+- Reminders & Notifications
+- Liquidation
+
+## API Authorization
+
+To use this service, you will need to create an API consumer account but with an additional label of **credit_company**
+
+After creating an account, the API consumer you will be taken to your dashboard where you can generate your **API key**
+
+_An API key can be used to authenticate all requests coming from the API consumer, hence you must include it as a **Bearer token** in the authorization header of every request made to the Collaterization API_
+
+After authorizing a request (via a plug) the API consumer ID is passed to the construct for easy identification of the API consumer\*
+
+## Webhooks
+
+To receive webhook events as an API consumer, you are expected to provide a webhook url\* The data sent from Bamboo to the API consumer’s webhook url is in the following format;
+
+```
+1.{
+2.  "event": "event*account linking successful",
+3.  "data": {
+4.      "first_name": "Harry",
+5.      "last_name": "Potter",
+6.      "email": "harry@email*com",
+7.      "phone_number": "+2347085295313",
+8.      "collateralized_user_id": 1
+9.  },
+10.  message: "success", #can be success or failure
+11.  status: 200
+12.}
+```
+
+## Account Linking & unlinking
+
+This is the beginning of any interaction that would happen between Bamboo and the API consumer with a credit-company type on behalf of a user* To create a link for a user between Bamboo and the API consumer, a request has to made to Bamboo from the API consumer to get the url to a linking page* The API consumer gives a redirect_url\*
+
+The linking page is basically a web page/view displayed to the user to collect their bamboo login details (phone_number and password + email used on the API consumer platform)_ Upon submission of the details, Bamboo checks whether the user is an existing bamboo user; if not, an error is displayed to the user on the page_ If the user exists, Bamboo goes further to check if the user has been linked already to the API consumer; if the user has been linked, a response is sent to the user making them aware that they’ve been linked already (a webhook event should be sent also)_ If the user hasn’t been linked, then linking happens at this stage_
+
+There’s a table that represents collateralized/linked users (we call this the collateralized_users table / collateralized_linked_accounts) This table contains the following fields:
+
+- `user_id: integer`
+- `collateralized_linked_account_id: integer`
+- `api_consumer_id: integer`
+- `linked: boolean (true/false)`
+
+Linking is basically adding the user to this table and adding the appropriate api_consumer_id to the list of api_consumer_ids
+
+Once linking is done, a webhook event is sent to the API consumer’s webhook to inform of the successful account linking\* The event sent is written below:
+
+```
+1.{
+2.  "event": "event*account linking successful",
+3.  "data": {
+4.      "first_name": "Harry",
+5.      "last_name": "Potter",
+6.      "email": "harry@email*com",
+7.      "phone_number": "+2347085295313",
+8.      "collateralized_linked_account_id": 1
+9.  },
+10.  message: "success", #can be success or failure
+11.  status: 200
+12.}
+```
+
+Unlinking an account is basically marking the entity as unlinked (collateralized_linked_account table)_ But before an unlinking can occur, we must ensure that the user doesn’t have any active money locked as collateral_
+
+**In summary**, the sequence of API calls is as follows:
+
+- API consumer calls **GET base_url/collateralized-linked-account/link**, this returns a page specifically for the api_consumer
+- API consumer displays this page; user inputs fields and clicks submit
+- Submit triggers **POST base_url/collateralized-linked-account/authenticate** (request parameters are api_consumer_id, phone_number, password, email)
+- Once successfully linked, a webhook event is triggered to the API consumer’s webhook url\*
+- To unlink a user, the API consumer must make a request to **POST base_url/ collateralized-linked-account/{collateralized--linked-account-id}/unlink**
+
+## User details
+
+This is an endpoint to fetch user’s KYC information on demand\* Typically, the endpoint to be provided to the API consumer should be:
+
+`GET base_url/collateralized-linked-account/{collateralized-linked-account-id};`
+
+and the response should be relevant user information\*
+
+```
+1. {
+2.  "data": {
+3.    "first_name": "Harry",
+4.    "last_name": "Potter",
+5.    "phone_number": "+2341234567890",
+6.    "email": "harry@email*com",
+7.    "address": "Lekki, Lagos",
+8.    "residence_country": "Nigeria"
+9.  }
+10. }
+```
+
+## Portfolio balance
+
+This endpoint enables our API consumers to fetch the total balance of the user that’s not locked / collateralized by other API consumers* It helps them get a rough estimate of what to give out as credit to their customer who is also a Bamboo user* This balance includes the cash for withdrawal + total value of equities\*
+
+The API endpoint for the API consumer to get this is:
+
+`GET base_url/colateralized-linked-account/:collateralized--linked-account-id/balance*`
+
+Response data will be in the following format:
+
+```
+1. {
+2.  "data": {
+3.    "value": 1_000_000_000, #value in cents
+4.    "collateralized_linked_account_id": 1
+5.  },
+6.  "status": 200,
+7.  "message": "success"
+8.}
+```
+
+## Lock/Collateral Creation
+
+This is perhaps the most crucial part of the entire implementation* It basically allows the API consumers to use a portion of the user’s assets as collateral for obtaining a loan/credit* At the point where the user want to obtain credit from the API consumer, the API consumer sends a post request to our endpoint\* we return a response of status "pending" The collateral table has the following fields;
+
+- `collateralized-linked-account-id: integer`
+- `user-approved: true/false`
+- `collateral_amount: integer(in cents)`
+- `redline_amount: integer (in cents; this is the actual amount locked as collateral to handle cases of volatility)`
+- `repayment: integer (in cents, defaults to 0) amount_left`
+- `duration: integer (in days)`
+- `status: string (pending/active/completed/liquidated) timestamp()`
+
+_Ps. There should be in-app notification after this event_
+
+**The mandate** is an agreement made by the user that they consent to having their Bamboo holdings as collateral* To create this mandate, when we receive a request to lock a user’s holdings as collateral, we send an OTP code to the user’s phone, and request that they input the code to approve the action*
+
+If the users approves, we assume that they have issued the mandate for that particular collateral creation action, a collateral entity is created in the table, we lock that money on behalf of the API consumer for the user, and send a success webhook event to the API consumer’s webhook url\*
+
+If the user doesn't approve, no collateral entity is created, and we subsequently send a failure webhook event to the API consumer’s webhook url\*
+
+The format of the webhook for this action is
+
+```
+1. {
+2.  "event": "event*collateral creation success/failure",
+3.  "data": {
+4.    "collateralized_user_id": 1,
+5.    "collateral_id": 1/nil(in case of failure),
+6.    "collateral_amount": 1_000_000,
+7.  },
+8.  "message": "user approved the collateralization/user declined the collateralization",
+9.  "status": 200/300+
+10. }
+```
+
+The endpoint for this entire action is
+
+`POST base_url/collateralized-user/{collateralized-user-id}/collateral`
+
+with the following request parameters:
+_ collateralized-user-id: integer
+_ collateral_amount: integer(in cents)
+_ daily_interest: float (in % )
+_ duration: integer (in days)
+
+_Ps. There should be in-app notification after this event_
+
+## Fetching
+
+For some reasons, the API consumer may want to fetch all the collateral locked for a specific user under them*
+`GET base_url/collateralized-user/{collateralized-user-id}/collateral`
+Also, the API consumer may only be interested in fetching a specific collateral locked*
+`GET base_url/collateral/{collateral-id}`
+Or fetch all collateral created by an API consumer regardless of the user\*
+`GET base_url/collateral`
+
+_Ps. There should be in-app notification after this event_
+
+## Updating
+
+When repayments happen on the API consumer’s end, it is expected that a request is sent to Bamboo to adjust the collateral object on our end for the user that made the repayment* We add the amount to the repayment field and check if it equals collateral-amount + interest-accrued* If it is equal, we update the repayment, and change status to completed; if not, we only update the repayment field\*
+
+`PATCH base_url/collateralized-user/{collateralized-user-id}/collateral/{collateral-id}`
+
+the required request parameter is as follows:
+
+- repayment: integer (in cents)
+
+And the response is the newly updated collateral (This has to be an idempotent request)\*
+
+_Ps. There should be in-app notification after this event_
+
+## Liquidation
+
+This is the final piece of the puzzle*
+Liquidation can happen for 2 reasons: - A user defaults on the repayment; and - A user’s portfolio balance approaches the redline*
+
+Liquidation is a means through which the API consumers can retrieve their funds from a user they’ve given a credit/loan to\* It involves selling the collateralized user’s stocks if they don’t have enough cash balance, and these liquidation events are triggered via a REST API endpoint;
+
+`POST base_url/collateralized-user/{collateralized-user-id}/collateral/{collateral-id}/liquidate* `
+
+At Bamboo we have people dedicated to running periodical checks to assess when a user's portfolio value reaches:
+
+    - 10% above the redline amount
+    - 5% above the redline amount
+    - the redline amount
+
+When the collateralized user’s portfolio balance reaches any of the thresholds above, a webhook event is sent to the API consumer* Then the API consumer can decide to call the liquidation endpoint*
+
+The process for liquidation is given below:
+
+    1. We check if a user’s cash balance can cover the loan/credit amount If it can cover it, we jump to step 7, if not, we continue with step 2
+    2. We check how much cash balance a user has and sell stocks for only the remaining amount((collateral_amount - repayment) + (collateral_amount  loan interest) - (cash balance))
+    3. After placing SELL orders for stocks worth the remaining loan amount, we create a lock for the user’s cash balance and the liquidated amount of stocks
+    4. If we were able to recover the full loan amount, we mark the collateral status as completed , if not, we just update the repayment with the amount of recovered funds
+    5. After the process, we send webhook event of this liquidation to the webhook url of the API consumer, referencing the collateral/lock that the liquidation was for, and also the remaining amount to be gotten (if any)
+    6. Because orders are not instantly fulfilled, we have a worker which runs periodically, checking when the user has enough balance matching the created collateral/lock record
+    7. We create a withdrawal on the user’s account using the API consumer’s settlement wallet account
+
+## Before liquidating the user’s portfolio, in-app notifications will be sent to the user
+
+** Developer Endpoint documentation for PBB collateralization feature:** Registering Tenants/API Consumer
+
+## 1. Create Tenant/API consumer
+
+Currently registration of tenants is an admin task. Please refer to Bamboo Swagger docs to register a tenant and Bamboo user. Bamboo Swagger doc [here](https://bamboo-backend.appunite.net/api_docs/index.html#/Admin/Web_Admin_APIConsumerController_create)
+
+## 2. Test Sandbox API consumer
+
+```
+1{
+2    "app_key": "d868f314-4e4e-4a8d-9b9c-b5abd52e2cea",
+3    "description": "Walk through API consumer creation test",
+4    "email": "walkthrough1@investbambo.com",
+5    "id": 8,
+6    "name": "walkThrough",
+7    "password": "wng-mL9VxXx3160ie_YP7HSBVAkg2ny7uUvE-bDkvBmAvk46RD3Zyrc6hte3lpaR",
+8    "phone_number": "+2531221224",
+9    "status": "enabled",
+10    "tenant_pubsub_topic": "staging-walkthrough-trades-topic",
+11    "username": "walkthrough"
+12}
+```
+
+## 3. GET API Consumer Credentials
+
+```
+1curl --location --request GET 'http://powered-by-bamboo-sandbox.investbamboo.com/admin/api_consumer/3' \
+2--header 'Authorization: Bearer YOUR-ADMI-AUTH-TOKEN' \
+3--header 'accept: application/json' \
+4--header 'app_key: bamboo-app-key'
+```
+
+## 4. Test User
+
+    1.  "phone_number": "+234011998",
+    2.  "password": "qwertyui"
+
+## 5. User Linking and Validation
+
+**Initiate Linking:** This is the endpoint to initiate the linking of a user’s Bamboo account with a tenant:
+
+```
+1curl --request POST \
+2  --url http://powered-by-bamboo-sandbox.investbamboo.com/api/tenant/initiate-linking \
+3  --header 'accept: application/json' \
+4  --header 'accept_language: en' \
+5  --header 'content-type: application/json' \
+6  --header 'x-client-token: TENANT-X-CLIENT-TOKEN' \
+7  --header 'x-request-source: TENANTS-NAME' \
+8  --header 'x-subject-type: standard' \
+9  --data '{}
+```
+
+The expected response is
+
+```
+1{
+2  "data": {
+3    "linking_page": LINKING PAGE URL,
+4    "linking_request_identifier": UNIQUE IDENTIFIER OF LINKING REQUEST
+5  }
+6}
+```
+
+## Validate User Credentials
+
+This is the endpoint for receiving and validating user credentials entered from the linking page, when the credentials are valid, an OTP is sent to a users phone number for 2FA authentication.
+
+On sandbox and staging the OTP is _111111_.
+
+Before calling this endpoint, ensure you have registered a bamboo user and an API consumer.
+This endpoint returns 200 STATUS CODE
+
+```
+1curl --request POST \
+2  --url http://powered-by-bamboo-sandbox.investbamboo.com/api/tenant/verify_user \
+3  --header 'accept: application/json' \
+4  --header 'accept_language: en' \
+5  --header 'content-type: application/json' \
+6  --header 'x-request-source: bamboo' \
+7  --header 'x-subject-type: standard' \
+8  --data '{
+9	"request_identifier": "UNIQUE-RI-FROM LINKING REQUEST",
+10	"phone_number": "+234123456687",
+11	"password": "daniel123#"
+12}'
+```
+
+## Verify user OTP
+
+This endpoint receives a request payload including the OTP and original request id. This endpoint returns 200 with user account details when linking is successful or error, OTP validation response
+
+```
+1curl --request POST \
+2  --url http://powered-by-bamboo-sandbox.investbamboo.com/api/tenant/verify_user_otp \
+3  --header 'accept: application/json' \
+4  --header 'accept_language: en' \
+5  --header 'content-type: application/json' \
+6  --header 'x-request-source: bamboo' \
+7  --header 'x-subject-type: standard' \
+8  --data '{
+9	"verification_code": "111111",
+10	"request_identifier": "UNIQUE-RI-FROM LINKING REQUEST",
+11	"phone_number": "+234123456687"
+12}'
+```
+
+The expected response is
+
+```
+1{
+2    "data": {
+3        "collateralized_linked_account_id": "bf3c7ff1-4d40-42a5-a618-686914c1b1aa",
+4        "email": "Tobin_Lang@hotmail.com",
+5        "first_name": "Nienow",
+6        "last_name": "Nienow",
+7        "phone_number": "+2340112021"
+8    },
+9    "message": "account linked",
+10    "status": 200
+11}
+```
+
+## 6. User KYC endpoint
+
+This endpoint returns the KYC for the customer, the user should have completed the authorisation steps above before doing this
+
+```
+1curl --request GET \
+2  --url http://localhost:4000/api/tenant/user/collateralized_account_id \
+3  --header 'accept: application/json' \
+4  --header 'accept_language: en' \
+5  --header 'x-client-token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ikx6aTZoUVRwc2gtS21BNjdzbXdCWiJ9.eyJodHRwczovL2V4YW1wbGUuY29tL2NsYWltIjoiYmFyIiwiaXNzIjoiaHR0cHM6Ly9pbnZlc3RiYW1ib28uYXV0aDAuY29tLyIsInN1YiI6InhoSFIwM0FZcnhmY1RRSWpxbWF1eFFEVUpzTjN0SlBTQGNsaWVudHMiLCJhdWQiOiJodHRwczovL2JhbWJvby1iYWNrZW5kLmFwcHVuaXRlLm5ldC8iLCJpYXQiOjE2MzYwMzAxNTMsImV4cCI6MTYzNjExNjU1MywiYXpwIjoieGhIUjAzQVlyeGZjVFFJanFtYXV4UURVSnNOM3RKUFMiLCJzY29wZSI6InJlYWQ6YmFtYm9vX2RhdGEgZXh0cmEiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.MV0_FTbDOIdCC1EOCYveTHzRkzbaH-_nxVVo2A4FyMUuF_LkzRyFfJUjguFlfOsHfK4W6dMNeKJ-Rank6PaL_LnDypZiddu7-1dsPbMo_whkcRnuy42Sk2qmHDQHA01Z5RP4yWNlb76UnT3pQW9W4lJ99rpb7Zi9_dHbU9Qj6EBA3TBzueZz-sRAk1k4keRXQbTxC7YJ5JEmBAbU6WIQYIJUKTeNMlDKrUCEgQOsnmhXjHcbjHkV3YjKAiLu-zFJ3Yl8kFU0Zrux0ceYEeh9wJslpdH55ltbEjbFugT4B_HF2chav3cyk9LhnHpHfzBAfnN5ZRb41Fz0Meloz6Sj-Q' \
+6  --header 'x-request-source: juice' \
+7  --header 'x-subject-type: standard' \
+```
+
+Response:
+
+```
+1{
+2  "data": {
+3    "address": null,
+4    "email": "Hope27@yahoo.com",
+5    "first_name": "Blakesauer",
+6    "last_name": "Ivahaufderhar",
+7    "phone_number": "+2341234567888",
+8    "residence_country": "NGA"
+9  },
+10  "message": "user account info",
+11  "status": 200
+12}
+```
+
+## 7. User Unlinking endpoint
+
+This endpoint is for unlinking a user’s bamboo account from the tenant.
+
+```
+1curl --request POST \
+2  --url http://powered-by-bamboo-sandbox.investbamboo.com/api/tenant/unlink \
+3  --header 'accept: application/json' \
+4  --header 'accept_language: en' \
+5  --header 'content-type: application/json' \
+6  --header 'x-client-token: TENANT-X-CLIENT-TOKEN' \
+7  --header 'x-request-source: TENANTS-NAME' \
+8  --header 'x-subject-type: standard' \
+9  --data '{"linked_account_id": LINKED ACCOUNT IDENTIFIER}
+```
+
+## Use Portfolio Balance
+
+This endpoint is responsible to returning a linked user’s portfolio balance. The balance is less any held withdraw amounts.
+
+Request:
+
+```
+1curl --request GET \
+2  --url http://localhost:4000/api/tenant/user/collateralized_account_id/balance \
+3  --header 'accept: application/json' \
+4  --header 'accept_language: en' \
+5  --header 'x-client-token: X-CLIENT-TOKEN' \
+6  --header 'x-request-source: juice' \
+7  --header 'x-subject-type: standard' \
+```
+
+Response
+
+```
+1{
+2  "data": {
+3    "collateralized_account_id": "e4fee7bc-7e9e-4257-9ab6-9ee65f84416b",
+4    "value": 0.0
+5  },
+6  "message": "portfolio"
+7}
+```
+
+## Set Loan Difference
+
+This is an admin endpoint to set the amount to add to portfolio balance to determine whether user can collateralize
+
+```
+1curl --request POST \
+2  --url http://localhost:4000/admin/tenant/loan_difference \
+3  --header 'Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJ3ZWIiLCJleHAiOjE2Mzg2MjQ2NzIsImlhdCI6MTYzNjAzMjY3MiwiaXNzIjoid2ViIiwianRpIjoiZWQyMzNmYzUtNWJjNS00Y2Y2LWFkNjUtYjJjZTdkZTExOTc1IiwibmJmIjoxNjM2MDMyNjcxLCJzdWIiOjEsInR5cCI6ImFjY2VzcyJ9.CJ4QGCFmEegNByVEskSKt9t1CEudGLeKOEJXrdpvO61QG2JX6q8g2qsmZVi7lK8kFHrHcvF8TjyIBP3shnU9fw' \
+4  --header 'Content-Type: application/json' \
+5  --data '{
+6	"amount": 10
+7}'
+8
+```
+
+```
+1{
+2  "amount": 10.0
+3}
+```
+
+## 8. Liquidation.
+
+This is the way to recover collateral money that the user owes the tenants, its a 3 step process
+
+> ** . Liquidation Request**
+
+     The tenants initiate a liquidation request by specify the user and the amount to liquidate, PBB will check against the outstanding amount on the collateral if less or equal to the requested amount the collateral request is logged and liquidation process initiated.
+
+```
+1curl --request POST \
+2  --url http://localhost:4000/api/tenant/collateral/{collateralized_account_id}/liquidate/1 \
+3  --header 'Content-Type: application/json' \
+4  --header 'x-client-token: X-CLIENT-TOKEN' \
+5  --data '{
+6	"amount": 10
+7}'
+8
+9Response:[success]
+10{
+11  "message": "initiated"
+12}
+13[Unprocessible: 422]
+14{
+15  "message": "Liquidation already initiated"
+16}
+```
+
+> - Initiate Liquidation.
+
+    This process calls the liquidation functionality, first requests for the users portfolio, check for amount available for withdraw, then checks for users   held funds.
+    if amount available after subtracting held funds can cover the luidation amount,  a withdraw is initiated from the users account to the tenants bank account.
+    The liquidation is updated to processed, when the withdraw is complete, the collateral status is marked  Liquidated
+
+> - Add tenant bank: To be able to withdraw to tenants account we, need to have a record of their bank account, this can be a step during the sign up process or checked at liquidation request initiation
+
+## Adding Bank Details:
+
+```
+1curl --request POST \
+2  --url http://localhost:4000/api/tenant/bank_details \
+3  --header 'Content-Type: application/json' \
+4  --header 'x-client-token: X-Client-TOKEN' \
+5  --data '{
+6        "account_number": "62691803",
+7        "additional_instructions" : "Voluptatum voluptates delectus minima qui pariatur harum quibusdam voluptas.",
+8        "bank_address" : "Lagos",
+9        "bank_country" : "Nigeria",
+10        "bank_name" : "Sterling",
+11        "bank_state" : "LAGOS",
+12        "bank_zip_code" : "44155-0358",
+13        "beneficiary_name":  "Sarina",
+14        "currency" : "NGN",
+15        "intermediary_bank": "intermediary_bank",
+16        "swift_aba_code": "SM44L9506300189249038136590"
+17}'
+```
+
+## Get Bank Details
+
+Fetch bank details for tenant by api consumer id. This api_consumer_id is decoded from the x-client token and not the one passed in the request.
+
+```
+1curl --request GET \
+2  --url http://localhost:4000/api/tenant/bank_details/{api_consumer_id} \
+3  --header 'x-client-token: X-CLIENT-TOKEN' \
+4  --cookie JSESSIONID=D73D3A9F146B0E049B6A487532A7DADC
+5
+6
+7  Response, 200
+8  {
+9  "account_number": "59836813",
+10  "additional_instructions": "Labore voluptas repellendus doloremque quae ducimus at.",
+11  "bank_address": "Kampala Uganda",
+12  "bank_country": "Nigeria",
+13  "bank_name": "Sterling",
+14  "bank_state": "LAGOS",
+15  "bank_zip_code": "06089-0642",
+16  "beneficiary_name": "Donnell",
+17  "currency": "NGN",
+18  "intermediary_bank": "intermediary_bank",
+19  "swift_aba_code": "GI09UTIJ1S4810254S3W02O"
+20}
+```
+
+## Update
+
+Updates bank details for the current api consumer
+
+```
+1curl --request PUT \
+2  --url http://localhost:4000/api/tenant/bank_details/3 \
+3  --header 'Content-Type: application/json' \
+4  --header 'x-client-token: X-CLIENT_TOKEN' \
+5  --data '{
+6        "account_number": "79593881",
+7        "additional_instructions" : "Voluptas laboriosam nemo ipsam mollitia voluptatem porro accusamus architecto.",
+8        "bank_address" : "Kampala Uganda",
+9        "bank_country" : "Nigeria",
+10        "bank_name" : "Sterling",
+11        "bank_state" : "LAGOS",
+12        "bank_zip_code" : "05828",
+13        "beneficiary_name":  "Brielle",
+14        "currency" : "NGN",
+15        "intermediary_bank": "intermediary_bank",
+16        "swift_aba_code": "AD890605006739DS641528D4"
+17}'
+```
+
+Fetch tenant information by request identifier:
+
+```
+1curl --request GET \
+2  --url http://localhost:4000/api/tenant/fetch_tenant/{request_identifier} \
+3  --header 'x-request-source: bamboo' \
+4  --header 'x-subject-type: standard'
+```
+
+Response:
+
+```
+1{
+2	"data": {
+3		"description": "Natus harum eum maxime delectus ex occaecati dolores.",
+4		"image_url": null,
+5		"name": "exploit"
+6	},
+7	"message": "tenant profile",
+8	"status": 200
+9}
+```

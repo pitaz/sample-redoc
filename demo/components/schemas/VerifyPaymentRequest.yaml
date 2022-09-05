@@ -1,0 +1,9 @@
+title: Deposit verification request
+required:
+  - reference
+type: object
+properties:
+  reference:
+    type: string
+    description: The transaction reference
+description: Re-verify deposit status from provider

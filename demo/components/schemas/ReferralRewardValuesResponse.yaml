@@ -1,0 +1,30 @@
+title: Referral reward values response
+required:
+  - minimum_amount_currency_symbol
+  - minimum_amount_value
+  - referree_amount_currency_symbol
+  - referree_amount_value
+  - referrer_amount_currency_symbol
+  - referrer_amount_value
+type: object
+properties:
+  referrer_amount_value:
+    type: number
+    description: The amount the user can receive when they refer their others
+  referrer_amount_currency_symbol:
+    type: string
+    description: The currency symbol for the amount the user can receive
+  referree_amount_value:
+    type: number
+    description: >-
+      The amount the referred user can receive when they trade over the minimum
+      amount
+  referree_amount_currency_symbol:
+    type: string
+    description: The currency symbol for the amount the referred user can receive
+  minimum_amount_value:
+    type: number
+    description: The minimum USD amount required for a trade to be rewarded
+  minimum_amount_currency_symbol:
+    type: string
+    description: The currency symbol for the minimum amount value

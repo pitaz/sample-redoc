@@ -1,0 +1,40 @@
+title: Manager account response
+required:
+  - department_name
+  - email
+  - id
+  - job_title
+  - name
+  - number_prefix
+  - phone_number
+  - scopes
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Manager's surname
+  scopes:
+    type: array
+    description: Manager's scopes. Available scopes are in /manager/manager_scopes endpoint
+  phone_number:
+    type: string
+    description: Manager's phone number
+  number_prefix:
+    type: string
+    description: Manager's number prefix.
+  name:
+    type: string
+    description: Manager's name
+  job_title:
+    type: string
+    description: Manager's job_title
+  id:
+    type: integer
+    description: Manager's id
+  email:
+    type: string
+    description: Manager's email
+  department_name:
+    type: string
+    description: Manager's department name

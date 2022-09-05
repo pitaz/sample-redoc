@@ -1,0 +1,12 @@
+title: User stock price alerts response
+type: object
+properties:
+  stock_alerts:
+    type: array
+    description: Stock alerts
+    items:
+      $ref: ./UserStockPriceAlert.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination
+description: User stock price alerts response body

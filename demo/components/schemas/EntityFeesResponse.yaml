@@ -1,0 +1,16 @@
+title: Entity Fees Response
+required:
+  - bamboo_fee
+  - entity_fee
+  - fees_type
+type: object
+properties:
+  fees_type:
+    type: string
+    description: Fees type. `amount` or `percent`
+  entity_fee:
+    type: number
+    description: Entity Fee
+  bamboo_fee:
+    type: number
+    description: Bamboo Fee for entity

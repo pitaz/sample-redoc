@@ -1,0 +1,43 @@
+title: User response
+required:
+  - application_id
+  - date_of_birth
+  - email
+  - id
+  - name
+  - phone_number
+  - registration_step
+  - residence_country
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: User's surname
+  residence_country:
+    type: string
+    description: User's residence country
+  registration_step:
+    type: string
+    description: >-
+      Registration step:
+      Affilations/Agreements/BVN/Identity/Completed/Investment Profile/Address
+  phone_number:
+    type: string
+    description: Phone No.
+  name:
+    type: string
+    description: User's name
+  id:
+    type: integer
+    description: User ID
+  email:
+    type: string
+    description: User's email
+  date_of_birth:
+    type: string
+    description: User's date of birth
+  application_id:
+    type: integer
+    description: User appliccation_id
+description: Returns info about user

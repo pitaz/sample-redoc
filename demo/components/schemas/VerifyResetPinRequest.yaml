@@ -1,0 +1,13 @@
+title: Verify Reset transaction pin sent OTP request
+required:
+  - new_pin
+  - otp
+type: object
+properties:
+  otp:
+    type: string
+    description: Reset OTP
+  new_pin:
+    type: string
+    description: New Pin min & max 4 length
+description: POST request body parameters

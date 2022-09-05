@@ -1,0 +1,85 @@
+title: Favourite Stock Response
+required:
+  - avatar
+  - avg_price
+  - background_color
+  - cost_basis
+  - div_yield
+  - eps
+  - favourite
+  - logo
+  - market_cap
+  - market_price
+  - name
+  - pe_ratio
+  - percent_change
+  - percent_change_since_added_to_watchlist
+  - price
+  - symbol
+  - volume
+type: object
+properties:
+  volume:
+    type: number
+    description: Volume of stock
+  value_change:
+    type: number
+    description: Todays return
+  total_return:
+    type: number
+    description: Total return
+  symbol:
+    type: string
+    description: Symbol
+  quantity:
+    type: number
+    description: Quantity of shares if user have any
+  price:
+    type: number
+    description: Stock price
+  percent_change_since_added_to_watchlist:
+    type: number
+    description: Percent change since added to watchlist
+  percent_change:
+    type: number
+    description: Percent change
+  pe_ratio:
+    type: number
+    description: PE ratio for stock
+  name:
+    type: string
+    description: Stock name
+  market_price:
+    type: number
+    description: Market price for stock
+  market_cap:
+    type: number
+    description: Market cap for stock
+  logo:
+    type: string
+    description: Stock logo
+  favourite:
+    type: boolean
+    description: True if stock is in user favourites
+  eps:
+    type: number
+    description: EPS statistic for stock
+  div_yield:
+    type: number
+    description: Dividend/yield statistic for stock
+  cost_basis:
+    type: number
+    description: Basic cost of stock if it's in user equity
+  background_color:
+    type: string
+    description: Background color of stock in hex
+  avg_price:
+    type: number
+    description: Average price of stock if it's in user equity
+  avatar:
+    type: string
+    description: Url for avatar
+  adding_to_watchlist_timestamp:
+    type: number
+    description: Adding to watchlist in unix timestamp UTC
+description: Favourite Stock informations

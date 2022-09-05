@@ -1,0 +1,35 @@
+title: Initialized collateral pending user approval
+type: object
+properties:
+  user_approved:
+    type: boolean
+    description: User's approval of collateral
+  status:
+    type: string
+    description: >-
+      Status of the collateral. can be Pending, Active, Completed, Liquidated or
+      Partially liquidated
+  repayed_amount:
+    type: integer
+    description: Total amount payed back by user
+  redline_amount:
+    type: integer
+    description: Collateral's redline amount for volatility monitoring
+  outstanding_amount:
+    type: integer
+    description: Amount left to be payed by user
+  linked_account_id:
+    type: string
+    description: Linked user account's identifier
+  duration:
+    type: integer
+    description: Collateral's duration in days
+  collateral_id:
+    type: string
+    description: id of initialised collateral
+  collateral_amount:
+    type: integer
+    description: Collateral amount in cents
+description: >-
+  The created collateral with status of pending and user approved status of
+  false

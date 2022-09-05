@@ -1,0 +1,165 @@
+openapi: 3.0.1
+info:
+  version: ''
+  title: ''
+  x-logo:
+    url: 'bamboo-logo.png'
+  altText: Petstore logo
+  description:
+    $ref: content/header.md
+servers:
+  - url: 'https://powered-by-bamboo-sandbox.investbamboo.com'
+tags:
+  - name: Bank details
+  - name: Registration
+    description: |
+      This is the first step before an end-user can access Bamboo. 
+      In the registration process, the user will have to provide their basic information, verify their BVN, complete an Affiliations questionnaire and complete their investment profile. 
+      After registration, a user's account still needs to be funded and approved by the admin to be able to use all of the app's functionalities.
+  - name: Deposits
+    description:
+      A deposit is the sum of money paid by a user into their Bamboo Wallet to make use of on the platform. After making a deposit, a user will then be able to buy stocks and make trades.
+      This section covers the different endpoints, sample requests & responses for crediting a bamboo user’s account, fetching & filtering deposits, pulling a user's virtual account details, etc.
+  - name: Admin
+  - name: Transactions
+  - name: Payment Instruments
+  - name: Payment Tokens
+  - name: Payment Cards
+  - name: Manager transactions
+  - name: Stock Trading
+    description:
+      Trades refer to the action of buying or selling stocks. This module contains the process for buying a stock, selling it, calculating the order, and everything in-between. The value of an order is first calculated, before the order is placed. All orders have a unique id that can be used to track them and retrieve their details.
+      Trade status changed via Google PubSub Queue, every client has a dedicated topic to which status updates in change of trades are published, clients can subscribe to this topic and equally update their users deposits status.
+  - name: Portfolio
+  - name: Profile
+  - name: Stocks
+    description: Stocks endpoint allows a client to fetch all the information pertaining to  stocks available on Bamboo. Stocks can be categorized into themes, and each stock has its own details.
+  - name: Withdrawal
+    description: From a user's standpoint, the only action they take is to place a withdrawal request. The rest is handled by the admin (sending money to the user and marking it as done or rejected).
+  - name: One-Step Registration
+    description:
+      $ref: content/one-step.md
+  - name: User Authentication
+  - name: User Profile
+    description: |
+      The profile section houses the personal and financial information we collect from each user.With these operations, an admin can fetch and update the information of a user  (such as the username, email address, password, etc.)
+  - name: Exchange Rate
+    description: This operation creates an endpoint that fetches exchange rates for tenants.
+  - name: Account Linking and unlinking
+    description:
+      $ref: content/link-unlink.md
+  - name: User details
+  - name: Collateral
+    description: This is perhaps the most crucial part of the entire implementation. It basically allows the credit companies to use a portion of the user’s assets as collateral for obtaining a loan/credit.
+  - name: Liquidate user’s portfolio
+x-tagGroups:
+  - name: Getting Started
+    tags:
+      - Bank details
+  - name: Stock Trading Service
+    tags:
+      - Registration
+      - One-Step Registration
+      - User Authentication
+      - User Profile
+      - Exchange Rate
+      - Deposits
+      - Stocks
+      - Stock Trading
+      - Portfolio
+      - Withdrawal
+  - name: Collateralization
+    tags:
+      - Account Linking and unlinking
+      - User details
+      - Collateral
+      - Liquidate user’s portfolio
+paths:
+  /api/registration_step:
+    $ref: paths/api@registration_step.yaml
+  /api/login:
+    $ref: paths/api@login.yaml
+  /api/deposit/deposit_methods:
+    $ref: paths/api@deposit@deposit_methods.yaml
+  /api/manager/deposit/payment_methods:
+    $ref: paths/api@manager@deposit@payment_methods.yaml
+  api/deposit/wire_transfer_data:
+    $ref: paths/pi@deposit@wire_transfer_data.yaml
+  /api/deposit:
+    $ref: paths/api@deposit.yaml
+  /api/tenant/virtual_account/:
+    $ref: paths/api@tenant@virtual_account@.yaml
+  '/api/tenant/virtual_account/{user_id}':
+    $ref: 'paths/api@tenant@virtual_account@{user_id}.yaml'
+  /api/tenant/deposit:
+    $ref: paths/api@tenant@deposit.yaml
+  /api/bank_account_details:
+    $ref: paths/api@bank_account_details.yaml
+  '/api/tenant/bank_details/{id}':
+    $ref: 'paths/pi@tenant@bank_details@{id}.yaml'
+  /api/withdraw:
+    $ref: paths/api@withdraw.yaml
+  /api/withdraw/withdraw_data:
+    $ref: paths/api@withdraw@withdraw_data.yaml
+  /api/tenant/initiate-linking:
+    $ref: paths/pi@tenant@initiate-linking.yaml
+  /api/tenant/unlink:
+    $ref: paths/pi@tenant@unlink.yaml
+  /api/tenant/verify_user:
+    $ref: paths/api@tenant@verify_user.yaml
+  /api/tenant/verify_user_otp:
+    $ref: paths/api@tenant@verify_user_otp.yaml
+  '/api/tenant/user_info/{account_id}':
+    $ref: 'paths/pi@tenant@user_info@{account_id}.yaml'
+  '/api/tenant/user/{collateralized_account_id}/balance':
+    $ref: 'paths/pi@tenant@user@{collateralized_account_id}@balance.yaml'
+  /api/tenant/create_collateral:
+    $ref: paths/pi@tenant@create_collateral.yaml
+  /api/tenant/update_collateral:
+    $ref: paths/pi@tenant@update_collateral.yaml
+  '/api/carrot/loan/{application_loan_id}/liquidate':
+    $ref: 'paths/api@carrot@loan@{application_loan_id}@liquidate.yaml'
+  /admin/tenant/loan_difference:
+    $ref: paths/admin@tenant@loan_difference.yaml
+  /admin/tenant/deposit:
+    $ref: paths/admin@tenant@deposit.yaml
+  /admin/tenant/deposit_stats/:
+    $ref: paths/admin@tenant@deposit_stats@.yaml
+  /api/tenant/exchange_rate:
+    $ref: paths/api@tenant@exchange_rate.yaml
+  /api/profile:
+    $ref: paths/api@profile.yaml
+  /api/profile/fullname:
+    $ref: paths/api@profile@fullname.yaml
+  /api/profile/password:
+    $ref: paths/api@profile@password.yaml
+  /api/portfolio:
+    $ref: paths/api@portfolio.yaml
+  /api/portfolio/breakdown:
+    $ref: paths/api@portfolio@breakdown.yaml
+  /api/investment_profile:
+    $ref: paths/pi@investment_profile.yaml
+  /api/stocks:
+    $ref: paths/api@stocks.yaml
+  '/api/stock/{symbol}/about':
+    $ref: 'paths/api@stock@{symbol}@about.yaml'
+  '/admin/trade_fees/:id':
+    $ref: 'paths/admin@trade_fees@:id.yaml'
+  /api/order/calculate:
+    $ref: paths/api@order@calculate.yaml
+  /api/order:
+    $ref: paths/api@order.yaml
+  '/api/order/{id}/status':
+    $ref: 'paths/api@order@{id}@status.yaml'
+  /api/pending_orders:
+    $ref: paths/api@pending_orders.yaml
+  /api/register:
+    $ref: paths/api@register.yaml
+  /api/verify_bvn:
+    $ref: paths/api@verify_bvn.yaml
+  /api/affiliations:
+    $ref: paths/api@affiliations.yaml
+  /api/dictionary:
+    $ref: paths/api@dictionary.yaml
+  '/api/tenant/withdraw/status/{reference}':
+    $ref: 'paths/api@tenant@withdraw@status@{reference}.yaml'

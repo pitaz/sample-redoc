@@ -1,0 +1,8 @@
+title: Withdraw send params
+required:
+  - mobile_money_withdraw_id
+type: object
+properties:
+  mobile_money_withdraw_id:
+    type: integer
+    description: mobile_money_withdraw_id of the withdrawal

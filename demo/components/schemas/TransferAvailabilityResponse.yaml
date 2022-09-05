@@ -1,0 +1,14 @@
+title: Info about availability of transfer
+required:
+  - available
+type: object
+properties:
+  opening_time:
+    type: integer
+    description: 'Open date in unix timestamp UTC, (available if available is false)'
+  closing_time:
+    type: integer
+    description: 'Open date in unix timestamp UTC, (available if available is false)'
+  available:
+    type: boolean
+    description: Is transfer available

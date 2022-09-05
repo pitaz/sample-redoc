@@ -1,0 +1,14 @@
+title: Recent News response
+required:
+  - news
+  - next_token
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination
+  news:
+    type: array
+    description: List of news
+    items:
+      $ref: ./SingleRecentNewsResponse.yaml

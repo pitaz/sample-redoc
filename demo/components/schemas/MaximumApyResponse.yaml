@@ -1,0 +1,7 @@
+required:
+  - maximum_annual_percent_interest
+type: object
+properties:
+  maximum_annual_percent_interest:
+    type: number
+    description: maximum possible Annual percent interest

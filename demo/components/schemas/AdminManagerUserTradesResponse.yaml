@@ -1,0 +1,10 @@
+title: List of trades
+required:
+  - manager_user_trades
+type: object
+properties:
+  manager_user_trades:
+    type: array
+    description: manager_user Trade response
+    items:
+      $ref: ./AdminManagerUserTradeResponse.yaml

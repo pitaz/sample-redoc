@@ -1,0 +1,12 @@
+title: Themes List
+type: object
+properties:
+  themes:
+    type: array
+    description: Theme
+    items:
+      $ref: ./ThemeResponse.yaml
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+description: Result of GET request

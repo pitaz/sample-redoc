@@ -1,0 +1,9 @@
+title: Deposit Link
+type: object
+properties:
+  txref:
+    type: string
+    description: Txref of deposit
+  deposit_link:
+    type: string
+    description: Link to open webview with deposit payment

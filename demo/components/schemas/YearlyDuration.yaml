@@ -1,0 +1,39 @@
+title: Aggregation of the data for the 12 month peroid.
+type: object
+properties:
+  month9:
+    type: number
+    description: Sum of data in month 9  of the 12 months in a year
+  month8:
+    type: number
+    description: Sum of data in month 8  of the 12 months in a year
+  month7:
+    type: number
+    description: Sum of data in month 7  of the 12 months in a year
+  month6:
+    type: number
+    description: Sum of data in month 6  of the 12 months in a year
+  month5:
+    type: number
+    description: Sum of data in month 5  of the 12 months in a year
+  month4:
+    type: number
+    description: Sum of data in month 4  of the 12 months in a year
+  month3:
+    type: number
+    description: Sum of data in month 3  of the 12 months in a year
+  month2:
+    type: number
+    description: Sum of data in month 2  of the 12 months in a year
+  month12:
+    type: number
+    description: Sum of data in month 12  of the 12 months in a year
+  month11:
+    type: number
+    description: Sum of data in month 11  of the 12 months in a year
+  month10:
+    type: number
+    description: Sum of data in month 10  of the 12 months in a year
+  month1:
+    type: number
+    description: Sum of data in month 1  of the 12 months in a year

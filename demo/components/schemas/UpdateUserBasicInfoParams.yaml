@@ -1,0 +1,32 @@
+title: Update fee discount params
+required:
+  - citizenship
+  - country_code
+  - date_of_birth
+  - email
+  - gender
+  - name
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Surname
+  name:
+    type: string
+    description: Name
+  gender:
+    type: string
+    description: Gender Man/Woman
+  email:
+    type: string
+    description: Email
+  date_of_birth:
+    type: string
+    description: Date of birth YYYY-MM-DD
+  country_code:
+    type: string
+    description: Country code
+  citizenship:
+    type: string
+    description: Citizenship

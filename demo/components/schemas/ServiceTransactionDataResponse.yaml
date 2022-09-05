@@ -1,0 +1,12 @@
+title: records from intermediary table
+type: object
+properties:
+  wallet:
+    $ref: ./Wallet.yaml
+  user:
+    $ref: ./User.yaml
+  transaction:
+    $ref: ./Transaction.yaml
+  basic_info:
+    $ref: ./BasicProfile.yaml
+description: componens of the each recoed.

@@ -1,0 +1,43 @@
+required:
+  - amount
+  - currency
+  - currency_symbol
+  - deposit_type
+  - free_fee_total_deposits
+  - free_fee_triggered
+  - has_scheduled_recommendation_order
+  - receiver_name
+  - status
+  - txref
+type: object
+properties:
+  txref:
+    type: string
+    description: Txref
+  status:
+    type: string
+    description: Accepted/Rejected
+  receiver_name:
+    type: string
+    description: Receiver name
+  has_scheduled_recommendation_order:
+    type: boolean
+    description: To check if the deposit has a scheduled recommendation order
+  free_fee_triggered:
+    type: boolean
+    description: Instant deposit free fee triggered
+  free_fee_total_deposits:
+    type: number
+    description: Total amount of deposits after which fees for instant deposit are 0
+  deposit_type:
+    type: string
+    description: "Deposit type, one of ['instant', 'standard']"
+  currency_symbol:
+    type: string
+    description: Symbol of currency
+  currency:
+    type: string
+    description: Currency
+  amount:
+    type: number
+    description: Amount

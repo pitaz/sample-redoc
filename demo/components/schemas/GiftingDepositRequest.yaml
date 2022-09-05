@@ -1,0 +1,12 @@
+title: Deposit request
+type: object
+properties:
+  payment_method_id:
+    type: integer
+    description: Payment Channel ID
+  gift_id:
+    type: number
+    description: Gift id
+  amount:
+    type: number
+    description: Amount to pay in USD

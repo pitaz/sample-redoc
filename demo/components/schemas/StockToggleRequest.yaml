@@ -1,0 +1,13 @@
+title: Toggle request
+required:
+  - active
+  - symbol
+type: object
+properties:
+  symbol:
+    type: string
+    description: Stock symbol
+  active:
+    type: boolean
+    description: Define if stock is going live or not
+description: Define to activate or disactivate stock

@@ -1,0 +1,11 @@
+title: Affiliations request
+required:
+  - director_of
+type: object
+properties:
+  director_of:
+    type: string
+    description: >-
+      If no, send null. If yes, please list the company name and its ticker
+      symbol.
+description: POST request to create affiliations

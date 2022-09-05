@@ -1,0 +1,8 @@
+title: Category article params
+required:
+  - position
+type: object
+properties:
+  position:
+    type: integer
+    description: Article position

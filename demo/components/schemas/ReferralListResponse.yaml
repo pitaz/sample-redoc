@@ -1,0 +1,28 @@
+title: Referral list
+type: object
+properties:
+  user_cashback:
+    type: number
+    description: Total USD amount the user has received since referral system 2.0
+  total_referrals_count:
+    type: number
+    description: Number of referrals both traded and untraded
+  referrals_count:
+    type: number
+    description: Number of referrals who have traded
+  referrals:
+    type: array
+    description: List of users referred
+    items:
+      $ref: ./ReferralResponse.yaml
+  referral_code:
+    type: string
+    description: The user's referral code
+  pending_user_cashback:
+    type: number
+    description: >-
+      Total USD amount that has not yet been sent to the user since referral
+      system 2.0
+  currency_symbol:
+    type: string
+    description: The cashback currency symbol

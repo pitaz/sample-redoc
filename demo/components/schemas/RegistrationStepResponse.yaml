@@ -1,0 +1,15 @@
+title: Registration step
+required:
+  - funded_account
+  - registration_step
+type: object
+properties:
+  registration_step:
+    type: string
+    description: Registration step
+  message:
+    type: string
+    description: Registration step message
+  funded_account:
+    type: boolean
+    description: Defines if user has funded account

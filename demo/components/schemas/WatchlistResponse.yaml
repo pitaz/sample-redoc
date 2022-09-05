@@ -1,0 +1,15 @@
+title: Watchlist
+required:
+  - currency_symbol
+  - watchlist
+type: object
+properties:
+  watchlist:
+    type: array
+    description: List of favourite stocks
+    items:
+      $ref: ./FavouriteStockResponse.yaml
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+description: User stocks that he follows

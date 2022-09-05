@@ -1,0 +1,93 @@
+title: Stock details response
+type: object
+properties:
+  wk_52_low:
+    type: number
+    description: Weak 52 low
+  wk_52_high:
+    type: number
+    description: Weak 52 high
+  symbol:
+    type: string
+    description: Symbol
+  story:
+    type: string
+    description: Stock story
+  short_description:
+    type: string
+    description: Short description
+  price_change:
+    type: number
+    description: Price change
+  price:
+    type: number
+    description: Price
+  position:
+    $ref: ./StockDetailsPositionResponse.yaml
+  percent_change:
+    type: number
+    description: Percent change
+  pe_ratio:
+    type: number
+    description: Pe Ratio
+  orders:
+    type: array
+    description: Pending orders
+    items:
+      $ref: ./StockDetailsOrderResponse.yaml
+  opinion:
+    $ref: ./StockOpinion.yaml
+  open:
+    type: number
+    description: Open price
+  name:
+    type: string
+    description: name
+  market_cap:
+    type: number
+    description: Market cap
+  low:
+    type: number
+    description: Low price
+  logo:
+    type: string
+    description: Logo url
+  latest_volume:
+    type: number
+    description: Latest volume
+  latest_update:
+    type: integer
+    description: Timestamp(in miliseconds) of latest update
+  high:
+    type: number
+    description: High price
+  favourite:
+    type: boolean
+    description: True if stock is in user favourites
+  earnings:
+    type: array
+    description: Earnings response
+    items:
+      $ref: ./StockDetailsEarningsResponse.yaml
+  data_source:
+    type: string
+    description: Source of data
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+  categories:
+    type: array
+    description: List of categories where stock belongs to
+    items:
+      $ref: ./ThemeResponse.yaml
+  background_color:
+    type: string
+    description: Stock background color in hex
+  avg_volume:
+    type: number
+    description: Average total volume
+  avatar:
+    type: string
+    description: Avatar
+  about:
+    $ref: ./CompanyDetailsResponse.yaml

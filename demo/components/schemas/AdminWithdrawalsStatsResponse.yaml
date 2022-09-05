@@ -1,0 +1,15 @@
+title: Withdrawals stats
+type: object
+properties:
+  total_count:
+    type: number
+    description: Total withdrawals count
+  total_amount:
+    type: number
+    description: Total withdrawals amount
+  daily_count:
+    type: number
+    description: Daily withdrawals count
+  daily_amount:
+    type: number
+    description: Daily withdrawals amount

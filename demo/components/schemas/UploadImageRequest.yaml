@@ -1,0 +1,13 @@
+title: Upload image request
+required:
+  - data
+type: object
+properties:
+  image_type:
+    type: boolean
+    description: 'Type of image: either `avatar` or `media`'
+  data:
+    type: string
+    description: >-
+      Image encoded in Base64. Please be informed that for now we support only
+      JPG, PNG and GIF images.

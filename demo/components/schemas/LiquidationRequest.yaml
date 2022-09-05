@@ -1,0 +1,13 @@
+title: Liquidation request body
+type: object
+properties:
+  reason:
+    type: string
+    description: reason for liquidation request
+  idempotency_key:
+    type: string
+    description: idempotency key for each collateral liquidation request
+  collateral_id:
+    type: string
+    description: collateral to liquidate
+description: POST request body parameters

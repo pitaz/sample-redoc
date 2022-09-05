@@ -1,0 +1,43 @@
+title: Deposit response
+required:
+  - created_at
+  - entity_name
+  - exchange_rate
+  - id
+  - manager_email
+  - source
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: Deposit status
+  source:
+    type: string
+    description: Deposit source
+  manager_email:
+    type: string
+    description: Manager's email
+  id:
+    type: integer
+    description: Deposit id
+  exchange_rate:
+    type: string
+    description: Exchange rate
+  entity_name:
+    type: string
+    description: Manager's entity name
+  deposit_timestamps:
+    type: array
+    description: Deposit status timestamps in unix timestamp UTC
+    items:
+      $ref: ./deposit_timestamps.yaml
+  created_at:
+    type: integer
+    description: Creation date in unix timestamp UTC
+  accounts_to_credit:
+    type: array
+    description: Account to credit
+    items:
+      $ref: ./AccountToCreditResponse.yaml
+description: Deposit parameters

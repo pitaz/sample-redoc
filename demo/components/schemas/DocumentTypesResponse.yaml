@@ -1,0 +1,12 @@
+title: Document type response
+required:
+  - types
+type: object
+properties:
+  types:
+    type: array
+    description: >-
+      Arary of string denoting the identity document types supported by the
+      residence country: e.g [Voter's ID, Driver's License, Passport] for GHA;
+      [National ID] for KEN; and [BVN] for NGA
+description: GET response array with document type names

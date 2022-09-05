@@ -1,0 +1,54 @@
+title: Deposit Payment Channels
+required:
+  - available_balance
+  - available_balance_currency_symbol
+  - type
+type: object
+properties:
+  type:
+    type: string
+    description: The type of payment channel
+  timeline:
+    type: string
+    description: Timeline of payment
+  supports:
+    type: object
+    properties: {}
+    description: Array of string of supporters logos
+  processing_fee:
+    type: number
+    description: Processing fee - fee charged by payment provider
+  name:
+    type: string
+    description: Name of payment
+  logo:
+    type: string
+    description: Logo of payment option
+  id:
+    type: integer
+    description: Payment method ID
+  fee:
+    type: number
+    description: Fee to pay
+  exchange_rate:
+    type: string
+    description: Exchange rate text (optional)
+  deposit_method_fee:
+    type: number
+    description: Deposit method fee
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  currency:
+    type: string
+    description: Currency NGN/USD
+  available_balance_currency_symbol:
+    type: string
+    description: The currency symbol for the user's balance
+  available_balance:
+    type: number
+    description: The user's balance for this channel
+  amount:
+    type: number
+    description: Amount to pay (float)
+    format: float

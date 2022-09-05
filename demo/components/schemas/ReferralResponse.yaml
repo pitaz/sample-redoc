@@ -1,0 +1,15 @@
+title: Referral response
+type: object
+properties:
+  valid:
+    type: boolean
+    description: Referral valid
+  last_name:
+    type: string
+    description: User last name
+  joining_date:
+    type: string
+    description: 'Date when user joined Bamboo.format: RRRR-MM-DD'
+  first_name:
+    type: string
+    description: User first name

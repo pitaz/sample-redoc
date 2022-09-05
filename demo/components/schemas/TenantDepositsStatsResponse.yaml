@@ -1,0 +1,15 @@
+title: Deposits stats
+type: object
+properties:
+  total_count:
+    type: number
+    description: Total deposits count
+  total_amount:
+    type: number
+    description: Total deposits amount
+  daily_count:
+    type: number
+    description: Daily deposits count
+  daily_amount:
+    type: number
+    description: Daily deposits amount

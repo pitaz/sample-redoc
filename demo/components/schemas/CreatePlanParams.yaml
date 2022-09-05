@@ -1,0 +1,15 @@
+title: Patameters to create a fixed investment plan
+required:
+  - amount
+  - predefined_plan_id
+type: object
+properties:
+  predefined_plan_id:
+    type: integer
+    description: >-
+      Identification number of predefined fixed investment plan made available
+      by admin
+  amount:
+    type: number
+    description: Money amount in USD to invest
+    format: float

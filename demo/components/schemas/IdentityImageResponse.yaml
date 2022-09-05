@@ -1,0 +1,12 @@
+title: User Identity image
+required:
+  - card_id_image
+  - face_image
+type: object
+properties:
+  face_image:
+    type: string
+    description: Face image in Base64 format
+  card_id_image:
+    type: string
+    description: Card ID image in Base64 format

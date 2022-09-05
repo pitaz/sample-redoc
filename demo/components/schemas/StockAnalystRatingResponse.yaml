@@ -1,0 +1,19 @@
+title: Stock Analyst Rating
+type: object
+properties:
+  symbol:
+    type: string
+    description: Stock symbol
+  rating_sell:
+    type: number
+    description: Sell Rating  - value between 0 and 100
+  rating_hold:
+    type: number
+    description: Hold Rating - value between 0 and 100
+  rating_buy:
+    type: number
+    description: Buy Rating - value between 0 and 100
+  number_of_recommendations:
+    type: number
+    description: Sum of all recommendations
+description: Result of GET request

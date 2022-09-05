@@ -1,0 +1,26 @@
+title: Manager Profile
+required:
+  - email
+  - id
+  - name
+  - scopes
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Manger surname
+  scopes:
+    type: array
+    description: >-
+      Manager scopes. String in array. ['manager', 'supermanager', 'kyc',
+      'cash', 'trades']
+  name:
+    type: string
+    description: Manger name
+  id:
+    type: integer
+    description: Manager id
+  email:
+    type: string
+    description: Manager email

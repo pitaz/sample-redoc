@@ -1,0 +1,9 @@
+title: List of all wallet restriction on the users id
+type: object
+properties:
+  wallet_restriction:
+    type: array
+    description: wallet restrction
+    items:
+      $ref: ./WalletRestrictionResponse.yaml
+description: list of existing wallet restrictions

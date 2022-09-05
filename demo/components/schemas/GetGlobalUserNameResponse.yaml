@@ -1,0 +1,9 @@
+title: Get global user name
+type: object
+properties:
+  last_name:
+    type: string
+    description: User last name
+  first_name:
+    type: string
+    description: User first name

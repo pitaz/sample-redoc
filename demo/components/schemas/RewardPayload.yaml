@@ -1,0 +1,8 @@
+title: payload for the reward
+required:
+  - users
+type: object
+properties:
+  users:
+    $ref: ./RewardProperties.yaml
+description: This is structure for the data to provision users for rewards

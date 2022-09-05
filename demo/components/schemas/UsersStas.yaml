@@ -1,0 +1,11 @@
+title: UsersStas  Stats Response
+type: object
+properties:
+  stats:
+    $ref: ./Stats.yaml
+  country:
+    $ref: ./Country.yaml
+  age:
+    $ref: ./AgeGroup.yaml
+  account:
+    $ref: ./Account.yaml

@@ -1,0 +1,9 @@
+title: Account to credit
+type: object
+properties:
+  managed_user_id:
+    type: number
+    description: Manager user account id
+  amount:
+    type: number
+    description: Amount to credit on account

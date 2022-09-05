@@ -1,0 +1,12 @@
+title: Update description request
+type: object
+properties:
+  story:
+    type: string
+    description: Story
+  opinion_text:
+    type: string
+    description: Opinion text
+  opinion_points:
+    type: array
+    description: Array of bullet points for opinion

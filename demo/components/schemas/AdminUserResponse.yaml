@@ -1,0 +1,24 @@
+title: User basic info
+required:
+  - account_number
+  - id
+  - name
+  - phone_number
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: User surname
+  phone_number:
+    type: string
+    description: User phone number
+  name:
+    type: string
+    description: User name
+  id:
+    type: integer
+    description: User id
+  account_number:
+    type: string
+    description: DW account number

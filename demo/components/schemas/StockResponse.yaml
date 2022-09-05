@@ -1,0 +1,13 @@
+title: Stock response
+type: object
+properties:
+  symbol:
+    type: string
+    description: Stock symbol
+  name:
+    type: string
+    description: Stock name
+  logo:
+    type: string
+    description: Stock logo URL
+description: Stock basic details

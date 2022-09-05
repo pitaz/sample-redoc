@@ -1,0 +1,55 @@
+patch:
+  tags:
+    - Collateral
+  summary: >-
+    Update collateral for repayment
+  description:
+    When repayments happen on the API consumer’s end, it is expected that a request is sent to Bamboo to adjust the collateral object on our end for the user that made the repayment We add the amount to the repayment field and check if it equals collateral-amount + interest-accrued If it is equal, we update the repayment, and change status to completed; if not, we only update the repayment field.
+    Ps. There should be in-app notification after this event
+  operationId: Web.Api.Tenant.CollateralController.update_collateral
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: Collateral update payload
+    content:
+      '*/*':
+        schema:
+          $ref: ../components/schemas/UpdateCollateral.yaml
+    required: true
+  responses:
+    '200':
+      description: success
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/CollateralActivation.yaml
+    '401':
+      description: Token has expired or invalid token
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '404':
+      description: Resource not found
+      content: {}
+    '422':
+      description: Bad request
+      content: {}
+  x-codegen-request-body-name: body

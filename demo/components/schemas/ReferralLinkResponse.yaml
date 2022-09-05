@@ -1,0 +1,9 @@
+title: Referral link
+type: object
+properties:
+  referral_link:
+    type: string
+    description: Unique referral link for user
+  referral_code:
+    type: string
+    description: Unique referral code for user

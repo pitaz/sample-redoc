@@ -1,0 +1,25 @@
+title: Admin account
+type: object
+properties:
+  surname:
+    type: string
+    description: Admin surname
+  scopes:
+    type: array
+    description: >-
+      List of admin scopes. Possible scopes are: action, admin, api_consumers,
+      application_acceptance, bvn_management, deposits, exchange_rate,
+      fee_discount, gifts, kyc, learn, managers, news, read_only,
+      reject_deposits_and_withdrawals, stocks, trades, withdrawals.
+  name:
+    type: string
+    description: Admin name
+  job_position:
+    type: string
+    description: Admin job position
+  id:
+    type: integer
+    description: Admin id
+  email:
+    type: string
+    description: Admin email

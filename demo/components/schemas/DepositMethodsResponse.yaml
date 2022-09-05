@@ -1,0 +1,8 @@
+title: List of deposit methods
+type: object
+properties:
+  deposit_methods:
+    type: array
+    description: Deposit Methods
+    items:
+      $ref: ./DepositMethod.yaml

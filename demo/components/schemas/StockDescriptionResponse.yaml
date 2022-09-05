@@ -1,0 +1,15 @@
+title: Stock description response
+type: object
+properties:
+  symbol:
+    type: string
+    description: Stock symbol
+  story:
+    type: string
+    description: Story
+  opinion_text:
+    type: string
+    description: Opinion text
+  opinion_points:
+    type: array
+    description: Array of strings - bullet points for opinion

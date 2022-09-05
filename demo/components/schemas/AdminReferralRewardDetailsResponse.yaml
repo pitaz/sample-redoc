@@ -1,0 +1,16 @@
+title: Referral Reward Details
+required:
+  - created_at
+  - referral_id
+type: object
+properties:
+  user:
+    $ref: ./AdminReferralRewardParticipantResponse.yaml
+  referrent:
+    $ref: ./AdminReferralRewardParticipantResponse.yaml
+  referral_id:
+    type: number
+    description: The referral ID
+  created_at:
+    type: number
+    description: UTC DateTime in unix format

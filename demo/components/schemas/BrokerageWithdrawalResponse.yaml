@@ -1,0 +1,66 @@
+title: Brokerage withdrawal request payload
+required:
+  - amount
+  - broker
+  - brokerage_account_id
+  - brokerage_request_id
+  - currency
+  - id
+  - inserted_at
+  - reference
+  - status
+  - updated_at
+  - user_email
+  - user_fullname
+  - user_id
+  - user_phone_number
+  - user_type
+type: object
+properties:
+  user_type:
+    type: string
+    description: 'The type of user. customer, api_consumer'
+  user_phone_number:
+    type: string
+    description: The user's phone number
+  user_id:
+    type: integer
+    description: The ID of the user who initiated the withdrawal request
+  user_fullname:
+    type: string
+    description: The user's full name
+  user_email:
+    type: string
+    description: The user's email address
+  updated_at:
+    type: integer
+    description: >-
+      Time in UTC unix timestamp that the withdrawal request was last last
+      updated
+  status:
+    type: string
+    description: The withdrawal status
+  reference:
+    type: string
+    description: The unique withdrawal reference
+  inserted_at:
+    type: integer
+    description: Time in UTC unix timestamp that the withdrawal request was created
+  id:
+    type: integer
+    description: The withdrawal request ID
+  currency:
+    type: string
+    description: The withdrawal currency
+  brokerage_request_id:
+    type: string
+    description: The broker name
+  brokerage_account_id:
+    type: string
+    description: The broker name
+  broker:
+    type: string
+    description: The broker name
+  amount:
+    type: number
+    description: The amount to be withdrawn

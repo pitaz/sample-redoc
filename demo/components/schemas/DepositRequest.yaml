@@ -1,0 +1,19 @@
+title: Deposit request
+required:
+  - amount
+  - deposit_type
+  - payment_method_id
+type: object
+properties:
+  predefined_plan_id:
+    type: integer
+    description: Predefined fixed investment plan that the user want's to pay for
+  payment_method_id:
+    type: integer
+    description: Payment method ID
+  deposit_type:
+    type: string
+    description: Deposit type
+  amount:
+    type: number
+    description: Amount to pay

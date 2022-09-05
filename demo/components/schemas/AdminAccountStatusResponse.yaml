@@ -1,0 +1,12 @@
+title: Update admin status
+required:
+  - scopes
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: admin status
+  scopes:
+    type: array
+    description: Admin scopes in array

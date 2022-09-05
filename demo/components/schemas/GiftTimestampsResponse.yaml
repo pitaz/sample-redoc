@@ -1,0 +1,16 @@
+title: Gift Timestamps response
+required:
+  - accepted_at
+  - completed_at
+  - created_at
+type: object
+properties:
+  created_at:
+    type: integer
+    description: Date the gift was created in unix timestamp UTC
+  completed_at:
+    type: integer
+    description: Date the gift was completed in unix timestamp UTC
+  accepted_at:
+    type: integer
+    description: Date the gift was accepted in unix timestamp UTC

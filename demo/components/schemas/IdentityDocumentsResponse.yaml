@@ -1,0 +1,16 @@
+title: User identity documents
+required:
+  - address_proof_image
+  - identity_proof_image
+  - identity_proof_type
+type: object
+properties:
+  identity_proof_type:
+    type: string
+    description: Identity proof image type
+  identity_proof_image:
+    type: string
+    description: Identity proof image in base 64 format
+  address_proof_image:
+    type: string
+    description: Address proof image in base64 format

@@ -1,0 +1,21 @@
+title: Predefined fixed investment plan
+required:
+  - active
+  - created_at
+  - id
+  - timeframe_in_days
+type: object
+properties:
+  timeframe_in_days:
+    type: integer
+    description: Length of plan
+  id:
+    type: integer
+    description: Predefined plan id
+  created_at:
+    type: integer
+    description: Creation date in unix timestamp UTC
+  active:
+    type: boolean
+    description: Active status
+description: Predefined fixed investment plan response

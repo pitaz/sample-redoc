@@ -1,0 +1,19 @@
+title: Order stock params
+required:
+  - order_type
+  - side
+  - symbol
+type: object
+properties:
+  symbol:
+    type: string
+    description: Stock symbol to `BUY` or `SELL`
+  side:
+    type: string
+    description: 'Order side options: `BUY` or `SELL`'
+  price:
+    type: number
+    description: Price for either `STOP` or `LIMIT` order types
+  order_type:
+    type: string
+    description: 'Order type options: `MARKET`, `STOP`, `LIMIT`'

@@ -1,0 +1,10 @@
+title: List of all learn articles
+required:
+  - learn_articles
+type: object
+properties:
+  learn_articles:
+    type: array
+    description: Learn article response
+    items:
+      $ref: ./LearnArticleResponse.yaml

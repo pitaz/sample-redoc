@@ -1,0 +1,41 @@
+type: object
+properties:
+  user_phone_number:
+    type: string
+    description: User phone number
+  timeline:
+    type: string
+    description: Timeline of payment
+  swift_code:
+    type: string
+    description: Swift code
+  name:
+    type: string
+    description: Method name
+  fees:
+    type: string
+    description: Information about fees
+  email:
+    type: string
+    description: Email to send transaction confirmation
+  beneficiary_name:
+    type: string
+    description: Beneficiary Name
+  beneficiary_address:
+    type: string
+    description: Beneficiary Address
+  beneficiary_account_number:
+    type: string
+    description: Beneficiary Account Number
+  bank_name:
+    type: string
+    description: Bank Name
+  bank_address:
+    type: string
+    description: Bank Address
+  avatar:
+    type: string
+    description: Wire Transfer Avatar url
+  aba_routing_number:
+    type: string
+    description: ABA/ROUTING number

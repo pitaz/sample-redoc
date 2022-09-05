@@ -1,0 +1,35 @@
+title: Stock Financial Info
+required:
+  - currency_symbol
+type: object
+properties:
+  wk_52_low:
+    type: number
+    description: Weak 52 low
+  wk_52_high:
+    type: number
+    description: Weak 52 high
+  volume:
+    type: number
+    description: Latest volume
+  pe_ratio:
+    type: number
+    description: Pe Ratio
+  open:
+    type: number
+    description: Open price
+  market_cap:
+    type: number
+    description: Market cap
+  low:
+    type: number
+    description: Low price
+  high:
+    type: number
+    description: High price
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+  average_volume:
+    type: number
+    description: Average total volume

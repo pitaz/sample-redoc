@@ -1,0 +1,14 @@
+title: Withdrawal multiple update params
+required:
+  - ids
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: "Withdrawal new status, 'Deducted' 'Sent', or 'Rejected'"
+  ids:
+    type: array
+    description: List of withdrawal IDs to update
+    items:
+      type: integer

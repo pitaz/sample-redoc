@@ -1,0 +1,17 @@
+title: Wallet Transactions Response
+required:
+  - balance
+  - wallet_transactions
+type: object
+properties:
+  wallet_transactions:
+    type: array
+    description: Paginated list of wallet transaction records
+    items:
+      $ref: ./WalletTransactionRecord.yaml
+  next_token:
+    type: integer
+    description: The next token to use for pagination
+  balance:
+    type: number
+    description: The wallet balance

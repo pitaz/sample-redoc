@@ -1,0 +1,10 @@
+title: Available Wallets Response
+required:
+  - available_wallets
+type: object
+properties:
+  available_wallets:
+    type: array
+    description: Available Wallets List
+    items:
+      $ref: ./MinAdminAvailableWalletResponse.yaml

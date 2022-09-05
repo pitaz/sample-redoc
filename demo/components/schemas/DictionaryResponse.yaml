@@ -1,0 +1,47 @@
+title: Dictionary response
+required:
+  - assets_range
+  - dependents
+  - employment_status
+  - employment_type
+  - experience
+  - goal
+  - martial_status
+  - position
+  - risk_tolerance
+type: object
+properties:
+  risk_tolerance:
+    type: array
+    description: 'Arary of object with risk tolerance: low, hight etc.'
+  position:
+    type: object
+    properties: {}
+    description: 'Position in Company: agent, administrator etc.'
+  martial_status:
+    type: object
+    properties: {}
+    description: 'Martial status: Single, Divorced etc.'
+  goal:
+    type: object
+    properties: {}
+    description: 'Goal in investing: active, frequent etc.'
+  experience:
+    type: array
+    description: 'Arary of object with experience in investing: years ranges'
+  employment_type:
+    type: object
+    properties: {}
+    description: 'Employment type: Art, Food etc.'
+  employment_status:
+    type: object
+    properties: {}
+    description: 'Employment status: Employed, Self-Employed etc.'
+  dependents:
+    type: object
+    properties: {}
+    description: 'Dependents 0,1,2..9'
+  assets_range:
+    type: array
+    description: 'Arary of object with assets ranges: $0-$24,999 etc.'
+description: GET response with key-values

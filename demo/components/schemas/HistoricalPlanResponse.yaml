@@ -1,0 +1,34 @@
+title: Historical plan details
+required:
+  - annual_percent_interest
+  - cash_due
+  - end_date_utc_unix_timestamp
+  - fixed_cash
+  - id
+  - status
+  - timeframe_in_days
+type: object
+properties:
+  timeframe_in_days:
+    type: integer
+    description: Length of fixed investment plan in days
+  status:
+    type: string
+    description: status Active/Finished
+  id:
+    type: integer
+    description: fixed investment plan id
+  fixed_cash:
+    type: number
+    description: Money in fixed investment
+    format: float
+  end_date_utc_unix_timestamp:
+    type: integer
+    description: Due date - when fixed investment plan will be finished
+  cash_due:
+    type: number
+    description: Cash due for fixed investment
+    format: float
+  annual_percent_interest:
+    type: number
+    description: Plan's annual percent interest

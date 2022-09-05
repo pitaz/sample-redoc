@@ -1,0 +1,34 @@
+title: Portfolio graph response
+required:
+  - currency_symbol
+  - data
+  - percent_change
+  - show_graph
+  - usd_to_naira
+  - usd_to_user_currency
+  - value_change
+type: object
+properties:
+  value_change:
+    type: number
+    description: Value change in given period of time in given currency
+  usd_to_user_currency:
+    type: number
+    description: USD to user currency exchange rate
+  usd_to_naira:
+    type: number
+    description: Exchange rate usd to naira
+  show_graph:
+    type: boolean
+    description: Flag determining true/false to show graph
+  percent_change:
+    type: number
+    description: Percent change in given period of time
+  data:
+    type: array
+    description: Graph day
+    items:
+      $ref: ./PortfolioGraphDay.yaml
+  currency_symbol:
+    type: string
+    description: Currency symbol

@@ -1,0 +1,12 @@
+title: Bank data
+type: object
+properties:
+  name:
+    type: string
+    description: Bank name
+  id:
+    type: integer
+    description: Bank id
+  code:
+    type: string
+    description: Bank code

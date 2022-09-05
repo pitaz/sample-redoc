@@ -1,0 +1,12 @@
+title: List of all transactions records with pagination
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination
+  data:
+    type: array
+    description: Transaction Response List response
+    items:
+      $ref: ./FullTransactionResponse.yaml
+description: List of transactions and next_token

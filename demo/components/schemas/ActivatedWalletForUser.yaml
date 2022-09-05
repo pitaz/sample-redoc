@@ -1,0 +1,28 @@
+title: Activated Wallet For User Response
+required:
+  - currency
+  - currency_symbol
+  - description
+  - id
+  - name
+  - terms_and_service_link
+type: object
+properties:
+  terms_and_service_link:
+    type: string
+    description: Wallet's T&S link
+  name:
+    type: string
+    description: Wallet's name
+  id:
+    type: integer
+    description: Available wallet's ID
+  description:
+    type: string
+    description: Available wallet's description
+  currency_symbol:
+    type: string
+    description: Available wallet's currency symbol
+  currency:
+    type: string
+    description: Available wallet's currency

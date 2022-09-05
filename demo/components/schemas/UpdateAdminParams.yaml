@@ -1,0 +1,20 @@
+title: Update admin params
+required:
+  - job_position
+  - name
+  - scopes
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Admin surname
+  scopes:
+    type: array
+    description: Admin scopes in array
+  name:
+    type: string
+    description: Admin name
+  job_position:
+    type: string
+    description: Job position

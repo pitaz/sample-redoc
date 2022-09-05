@@ -1,0 +1,9 @@
+title: Applicant decision repsonse
+type: object
+properties:
+  registration_step:
+    type: string
+    description: Registration step
+  id:
+    type: integer
+    description: User id

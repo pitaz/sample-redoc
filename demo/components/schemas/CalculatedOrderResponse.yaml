@@ -1,0 +1,20 @@
+title: Calculated order response
+required:
+  - blocked_quantity
+  - currency_symbol
+  - gfv_occurs
+  - number_of_violations
+type: object
+properties:
+  number_of_violations:
+    type: integer
+    description: Number of violations
+  gfv_occurs:
+    type: boolean
+    description: GFV occurs
+  currency_symbol:
+    type: string
+    description: Currency symbol based on currency passed in header
+  blocked_quantity:
+    type: number
+    description: Blocked quantity for position

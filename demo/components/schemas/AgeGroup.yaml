@@ -1,0 +1,21 @@
+title: user age groups
+type: object
+properties:
+  below25:
+    type: number
+    description: users below 25 years
+  above50:
+    type: number
+    description: users above 50 years
+  above40:
+    type: number
+    description: users above 40 years
+  above35:
+    type: number
+    description: users above 35 years
+  above30:
+    type: number
+    description: users above 30 years
+  above25:
+    type: number
+    description: users above 25 years

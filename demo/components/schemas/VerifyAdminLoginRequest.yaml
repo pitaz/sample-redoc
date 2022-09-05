@@ -1,0 +1,16 @@
+title: Verify admin
+required:
+  - email
+  - password
+  - verification_code
+type: object
+properties:
+  verification_code:
+    type: integer
+    description: Verification code
+  password:
+    type: string
+    description: Password
+  email:
+    type: string
+    description: Email

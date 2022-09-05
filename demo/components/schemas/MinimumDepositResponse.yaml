@@ -1,0 +1,12 @@
+required:
+  - currency
+  - minimum_deposit
+type: object
+properties:
+  minimum_deposit:
+    type: number
+    description: minimum deposit amount
+    format: float
+  currency:
+    type: string
+    description: currency; USD

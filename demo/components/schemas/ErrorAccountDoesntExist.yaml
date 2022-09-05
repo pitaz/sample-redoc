@@ -1,0 +1,10 @@
+title: Account doesn't exist
+required:
+  - message
+type: object
+properties:
+  message:
+    type: string
+    description: >-
+      User hasn't been found. If you wish to gift the stock, invite the user to
+      Bamboo.

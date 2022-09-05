@@ -1,0 +1,8 @@
+title: User's portfolio value response
+required:
+  - amount
+type: object
+properties:
+  amount:
+    type: number
+    description: User's portfolio value

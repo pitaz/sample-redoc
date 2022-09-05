@@ -1,0 +1,31 @@
+title: Deposit Payment Method
+type: object
+properties:
+  timeline:
+    type: string
+    description: Timeline of payment
+  supports:
+    type: object
+    properties: {}
+    description: Array of string of supporters logos
+  name:
+    type: string
+    description: Name of payment
+  logo:
+    type: string
+    description: Logo of payment option
+  id:
+    type: integer
+    description: Payment method ID
+  fee:
+    type: number
+    description: Fee to pay
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  currency:
+    type: string
+    description: Currency NGN/USD
+  amount:
+    type: number
+    description: Amount to pay

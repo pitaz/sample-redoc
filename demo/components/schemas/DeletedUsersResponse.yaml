@@ -1,0 +1,11 @@
+title: Deleted user accounts
+type: object
+properties:
+  result:
+    type: array
+    description: Deleted users
+    items:
+      $ref: ./DeletedUserResponse.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination

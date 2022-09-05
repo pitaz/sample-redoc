@@ -1,0 +1,40 @@
+title: Top Mover Stock
+type: object
+properties:
+  value_change:
+    type: number
+    description: Todays return
+  user_equity:
+    type: number
+    description: User equity value
+  total_return:
+    type: number
+    description: Total return
+  symbol:
+    type: string
+    description: Symbol
+  quantity:
+    type: number
+    description: Quantity of shares if user have any
+  price:
+    type: number
+    description: Stock price
+  percent_change:
+    type: number
+    description: Percent change
+  name:
+    type: string
+    description: Stock name
+  logo:
+    type: string
+    description: Stock logo
+  favourite:
+    type: boolean
+    description: Is stock on watch list
+  background_color:
+    type: string
+    description: Background color of stock in hex
+  avatar:
+    type: string
+    description: Url for avatar
+description: Top Mover Stock details

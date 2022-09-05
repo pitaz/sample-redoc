@@ -1,0 +1,8 @@
+title: Multiple deposit partial update response
+type: object
+properties:
+  failed_deposit_ids:
+    type: array
+    description: List of deposit IDs
+    items:
+      type: integer

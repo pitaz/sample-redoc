@@ -1,0 +1,10 @@
+title: Activated Wallets For User Response
+required:
+  - wallets
+type: object
+properties:
+  wallets:
+    type: array
+    description: List of all activated wallets.
+    items:
+      $ref: ./ActivatedWalletForUser.yaml

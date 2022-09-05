@@ -1,0 +1,21 @@
+title: Order details for stock details
+type: object
+properties:
+  type:
+    type: string
+    description: Order Type
+  status:
+    type: string
+    description: Order status
+  side:
+    type: string
+    description: Buy/Sell
+  quantity:
+    type: number
+    description: Quantity of shares requested up to 4 decimal places
+  id:
+    type: string
+    description: Order ID
+  created_at:
+    type: string
+    description: Date in ISO 8601

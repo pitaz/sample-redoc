@@ -1,0 +1,47 @@
+post:
+  tags:
+    - Registration
+  summary: Sign up
+  description: |
+    In this step, the user will be required to provide their credentials. This includes name, email, password, phone number, etc.
+  operationId: Web.Api.RegisterController.register
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: api consumer token
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: Register credentials
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/RegisterRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: Unverified account created
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/AccountInfoReponse.yaml
+    '409':
+      description: Account exists. Please log in
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ErrorResponse.yaml
+    '422':
+      description: Referral code is invalid
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ErrorChangesetResponse.yaml
+  x-codegen-request-body-name: body

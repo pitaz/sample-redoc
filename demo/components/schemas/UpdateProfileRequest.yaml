@@ -1,0 +1,8 @@
+title: Update profile request
+required:
+  - email
+type: object
+properties:
+  email:
+    type: string
+    description: Email

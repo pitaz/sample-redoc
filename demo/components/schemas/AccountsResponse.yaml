@@ -1,0 +1,10 @@
+title: Active Accounts Response
+required:
+  - accounts
+type: object
+properties:
+  accounts:
+    type: array
+    description: List of active accounts
+    items:
+      $ref: ./AccountResponse.yaml

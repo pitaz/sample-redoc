@@ -1,0 +1,17 @@
+title: Comment params
+required:
+  - body
+  - inserted_at
+  - manager_user_id
+type: object
+properties:
+  manager_user_id:
+    type: integer
+    description: Manager user's id
+  inserted_at:
+    type: integer
+    description: Creation date in unix timestamp UTC
+  body:
+    type: string
+    description: Comment body
+description: Contains comment params

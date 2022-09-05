@@ -1,0 +1,13 @@
+title: Deposit verification response
+type: object
+properties:
+  status:
+    type: string
+    description: Deposit status
+  reference:
+    type: string
+    description: reference
+  id:
+    type: integer
+    description: Deposit id
+description: Deposit parameters

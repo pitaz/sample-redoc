@@ -1,0 +1,12 @@
+title: Top Mover Stocks List
+type: object
+properties:
+  top_mover_stocks:
+    type: array
+    description: Top Mover Stocks
+    items:
+      $ref: ./TopMoverStockResponse.yaml
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+description: Result of GET request

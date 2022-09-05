@@ -1,0 +1,20 @@
+title: Brokerage withdrawal response data
+required:
+  - amount
+  - currency
+  - reference
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: The withdrawal status
+  reference:
+    type: string
+    description: The unique withdrawal reference
+  currency:
+    type: string
+    description: The withdrawal currency
+  amount:
+    type: number
+    description: The amount to be withdrawn

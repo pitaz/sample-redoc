@@ -1,0 +1,21 @@
+title: Entity params
+required:
+  - authorized_signatory_email
+  - authorized_signatory_name
+  - fund_name
+  - name
+type: object
+properties:
+  name:
+    type: string
+    description: Name of entity
+  fund_name:
+    type: string
+    description: Name of fund
+  authorized_signatory_name:
+    type: string
+    description: Name of autorized signatory
+  authorized_signatory_email:
+    type: string
+    description: Email of autorized signatory
+description: Entity params

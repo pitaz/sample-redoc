@@ -1,0 +1,18 @@
+title: Documents Params
+required:
+  - address_proof_image
+  - identity_proof_image
+  - identity_proof_type
+type: object
+properties:
+  identity_proof_type:
+    type: string
+    description: >-
+      Identity proof image type. Types: 'passport', 'driving_license',
+      'identity_card'
+  identity_proof_image:
+    type: string
+    description: Identity proof image in base64
+  address_proof_image:
+    type: string
+    description: Address proof image in base64

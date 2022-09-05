@@ -1,0 +1,8 @@
+title: Manager withdraw update params
+required:
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: "Deposit new status, 'Received', 'Deducted' or 'Sent'"

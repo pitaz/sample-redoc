@@ -1,0 +1,21 @@
+title: Succefully verify_user_otp
+required:
+  - api_consumer_id
+  - phone_number
+  - request_identifier
+  - verification_code
+type: object
+properties:
+  verification_code:
+    type: string
+    description: user otp shared via mobile
+  request_identifier:
+    type: string
+    description: 'tenant request identifier from linking request '
+  phone_number:
+    type: string
+    description: "User's number "
+  api_consumer_id:
+    type: string
+    description: Api consumer id
+description: 'Linked Account '

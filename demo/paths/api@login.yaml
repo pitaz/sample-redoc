@@ -1,0 +1,41 @@
+post:
+  tags:
+    - User Authentication
+  summary: Login user
+  description: |
+    After signing up, this API will be used to authenticate and log users in. A JSON Web Token is generated for the user's authorization.
+  operationId: Web.Api.AuthController.login
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: Login credentials
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/LoginRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: Correct login
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/LoginResponse.yaml
+    '401':
+      description: Invalid credentials
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '422':
+      description: Incorrect params
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ErrorChangesetResponse.yaml
+  x-codegen-request-body-name: body

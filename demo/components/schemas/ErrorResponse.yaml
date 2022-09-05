@@ -1,0 +1,9 @@
+title: Error response
+required:
+  - message
+type: object
+properties:
+  message:
+    type: string
+    description: Message why request didn't suceed
+description: Error response for external or internal errors not connected to data

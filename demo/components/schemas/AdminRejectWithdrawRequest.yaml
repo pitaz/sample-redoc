@@ -1,0 +1,12 @@
+title: Withdraw rejection params
+required:
+  - comment
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: "Deposit new status, 'Received', 'Deducted', 'Rejected', or 'Sent'"
+  comment:
+    type: string
+    description: Admin's comment

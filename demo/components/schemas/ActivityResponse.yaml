@@ -1,0 +1,37 @@
+title: Activity
+required:
+  - amount
+  - customer_name
+  - customer_surname
+  - inserted_at
+  - status
+  - type
+type: object
+properties:
+  type:
+    type: string
+    description: 'Type of resource. Trade, deposit or withdrawal'
+  stock_symbol:
+    type: string
+    description: Order stock symbol. Only if type is Trade
+  status:
+    type: string
+    description: Status of resource. 'Processing' or 'Complete'
+  side:
+    type: string
+    description: Order side. Only if type is Trade
+  order_type:
+    type: string
+    description: Order type. Only if type is Trade
+  inserted_at:
+    type: string
+    description: Creation date in ISO 8601 format
+  customer_surname:
+    type: string
+    description: Customer surname
+  customer_name:
+    type: string
+    description: Customer name
+  amount:
+    type: number
+    description: Amount of resource

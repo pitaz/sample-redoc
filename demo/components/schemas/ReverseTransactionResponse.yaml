@@ -1,0 +1,6 @@
+title: Reverse transaction Response Payload
+type: object
+properties:
+  tx_count:
+    type: string
+    description: The number of transactions reversed

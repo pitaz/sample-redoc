@@ -1,0 +1,25 @@
+title: Address Verification request
+required:
+  - city
+  - country
+  - state
+  - street
+  - utility_bill
+type: object
+properties:
+  utility_bill:
+    type: string
+    description: Base 64 encoded utility bill image
+  street:
+    type: string
+    description: User street name
+  state:
+    type: string
+    description: User state name
+  country:
+    type: string
+    description: User country name
+  city:
+    type: string
+    description: User city name
+description: POST request to verify user address

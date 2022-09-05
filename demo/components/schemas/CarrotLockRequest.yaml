@@ -1,0 +1,21 @@
+title: Carrot lock request
+required:
+  - application_user_id
+  - callbacK
+  - fee
+  - legal_url
+type: object
+properties:
+  legal_url:
+    type: string
+    description: url to Bamboo contract doc signed by carrot user
+  fee:
+    type: number
+    description: '% daily fee charged by carrot for a loan'
+  callbacK:
+    $ref: ./Callback.yaml
+  application_user_id:
+    type: number
+    description: User's application_user_id provided for carrot
+  amount:
+    $ref: ./Amount.yaml

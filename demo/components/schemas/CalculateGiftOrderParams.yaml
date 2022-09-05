@@ -1,0 +1,16 @@
+title: Calculate gift params
+required:
+  - amount
+  - phone_number
+  - stock_symbol
+type: object
+properties:
+  stock_symbol:
+    type: string
+    description: Stock symbol
+  phone_number:
+    type: string
+    description: Receiver phone number
+  amount:
+    type: number
+    description: Gift amount in USD

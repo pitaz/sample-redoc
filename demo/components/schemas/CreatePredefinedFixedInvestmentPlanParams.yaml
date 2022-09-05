@@ -1,0 +1,11 @@
+title: Predefined fixed investment plan create params
+required:
+  - timeframe_in_days
+type: object
+properties:
+  timeframe_in_days:
+    type: integer
+    description: fixed investment plan length in days
+  active:
+    type: boolean
+    description: 'Predefined fixed investment plan status, default: false'

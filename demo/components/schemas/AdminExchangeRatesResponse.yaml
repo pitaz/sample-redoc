@@ -1,0 +1,9 @@
+title: Exchange Rates List
+type: object
+properties:
+  exchange_rates:
+    type: array
+    description: ExchangeRate
+    items:
+      $ref: ./AdminExchangeRateResponse.yaml
+description: Result of GET request

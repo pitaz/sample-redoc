@@ -1,0 +1,28 @@
+title: Manager Stats
+required:
+  - aum
+  - clients_number
+  - total_allocated
+  - total_clients_down_count
+  - total_clients_up_count
+  - total_unallocated
+type: object
+properties:
+  total_unallocated:
+    type: number
+    description: Total unallocated for manager
+  total_clients_up_count:
+    type: number
+    description: Count of clients which portfolio is up
+  total_clients_down_count:
+    type: number
+    description: Count of clients which portfolio is down
+  total_allocated:
+    type: number
+    description: Total unallocated for manager
+  clients_number:
+    type: number
+    description: Manager clients number
+  aum:
+    type: number
+    description: Assets under management

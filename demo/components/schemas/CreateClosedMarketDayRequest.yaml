@@ -1,0 +1,9 @@
+title: Create request
+required:
+  - day
+type: object
+properties:
+  day:
+    type: string
+    description: Day in format YYYY-MM-DD
+description: Post request for creating closed market day

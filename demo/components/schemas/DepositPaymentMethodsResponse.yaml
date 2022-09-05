@@ -1,0 +1,8 @@
+title: List of deposit payment options
+type: object
+properties:
+  payment_methods:
+    type: array
+    description: Fixed investment Payment Methods
+    items:
+      $ref: ./DepositPaymentMethod.yaml

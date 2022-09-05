@@ -1,0 +1,30 @@
+title: Parameters to create high network fixed investment
+required:
+  - amount
+  - annual_percent_interest
+  - predefined_plan_id
+  - timeframe_in_days
+  - user_id
+type: object
+properties:
+  user_id:
+    type: integer
+    description: The user's id
+  timeframe_in_days:
+    type: integer
+    description: Length of fixed investment plan in days
+  predefined_plan_id:
+    type: integer
+    description: >-
+      Identification number of predefined fixed investment plan made available
+      by admin
+  bvn:
+    type: string
+    description: User bvn
+  annual_percent_interest:
+    type: number
+    description: Plan's annual percent interest
+  amount:
+    type: number
+    description: Money amount in USD to invest
+    format: float

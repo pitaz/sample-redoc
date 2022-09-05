@@ -1,0 +1,10 @@
+title: List of trades
+required:
+  - trades
+type: object
+properties:
+  trades:
+    type: array
+    description: Trade response
+    items:
+      $ref: ./AdminTradeResponse.yaml

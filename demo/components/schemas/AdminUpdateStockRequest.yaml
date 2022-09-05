@@ -1,0 +1,13 @@
+title: Update request
+type: object
+properties:
+  logo:
+    type: string
+    description: Logo URL
+  background_color:
+    type: string
+    description: HEX color value (e.g. `FFFFFF`)
+  avatar:
+    type: string
+    description: Avatar URL
+description: Updates stock avatar and background color

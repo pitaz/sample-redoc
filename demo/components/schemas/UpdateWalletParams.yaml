@@ -1,0 +1,20 @@
+title: Update Wallet Params
+type: object
+properties:
+  unavailable_in_countries:
+    type: array
+    description: >-
+      List of countries where wallet is unavailable. . Country code from
+      /wallet_dictionary endpoint.
+  terms_and_service_link:
+    type: string
+    description: URL for terms and services
+  name:
+    type: string
+    description: Wallet's name
+  enabled:
+    type: boolean
+    description: Wallet enabled
+  description:
+    type: string
+    description: Wallet's description

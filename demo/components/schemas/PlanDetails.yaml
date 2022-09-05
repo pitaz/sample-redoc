@@ -1,0 +1,41 @@
+title: Fixed investment plan details
+required:
+  - cash_due
+  - currency_symbol
+  - due_date_utc_unix_timestamp
+  - final_interest
+  - fixed_cash
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: status Active/Finished
+  fixed_cash:
+    type: number
+    description: Money put in fixed investement
+    format: float
+  final_interest:
+    type: number
+    description: Money earned when the plan is finished
+    format: float
+  due_date_utc_unix_timestamp:
+    type: integer
+    description: >-
+      Due date - finish date for fixed investment plan in UTC unix timestamp.
+      Available for all statuses.
+  current_interest:
+    type: number
+    description: Current interest. Only for Active
+    format: float
+  current_cash_due:
+    type: number
+    description: Current cash due. Only for Active.
+    format: float
+  currency_symbol:
+    type: string
+    description: Currency symbol ($)
+  cash_due:
+    type: number
+    description: Cash due for fixed investment plan. Available for all statuses.
+    format: float

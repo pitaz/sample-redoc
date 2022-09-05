@@ -1,0 +1,11 @@
+title: Deposit status change timestamp
+required:
+  - date
+type: object
+properties:
+  status:
+    type: string
+    description: Deposit status in relation to the timestamp
+  date:
+    type: integer
+    description: Unix timestamp when the deposit entered current status.

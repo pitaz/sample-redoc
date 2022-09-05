@@ -1,0 +1,17 @@
+title: Account report response
+type: object
+properties:
+  updated_at:
+    type: integer
+  resolved:
+    type: boolean
+  reporter_id:
+    type: integer
+  reported_account_id:
+    type: integer
+  reason:
+    type: string
+  inserted_at:
+    type: integer
+  id:
+    type: integer

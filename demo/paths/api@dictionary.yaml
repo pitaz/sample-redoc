@@ -1,0 +1,13 @@
+get:
+  tags:
+    - Registration
+  summary: Dictionary
+  description: This provides the accepted data when filling the investment profile.
+  operationId: Web.Api.RegisterController.dictionary
+  responses:
+    '200':
+      description: Dictionary response
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/DictionaryResponse.yaml

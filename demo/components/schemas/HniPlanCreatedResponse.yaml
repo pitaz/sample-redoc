@@ -1,0 +1,48 @@
+title: Create a fixed investment plan for High network individual
+required:
+  - amount
+  - annual_percent_interest
+  - due_date
+  - paid_amount
+  - payment_status
+  - phone_number
+  - plan_status
+  - predefined_plan_id
+  - timeframe_in_days
+  - user_id
+type: object
+properties:
+  user_id:
+    type: integer
+    description: The user's id
+  timeframe_in_days:
+    type: integer
+    description: Length of fixed investment plan in days
+  predefined_plan_id:
+    type: integer
+    description: id for predefine plan
+  plan_status:
+    type: string
+    description: status Active/Pending/Finished
+  phone_number:
+    type: string
+    description: User's phone number
+  payment_status:
+    type: string
+    description: payment status Pending/Paid
+  paid_amount:
+    type: number
+    description: Money returned after investment
+  due_date:
+    type: integer
+    description: Due date
+  bvn:
+    type: string
+    description: User bvn
+  annual_percent_interest:
+    type: number
+    description: Plan's annual percent interest
+  amount:
+    type: number
+    description: Money to invest
+    format: float

@@ -1,0 +1,8 @@
+title: Report user profile request
+required:
+  - reason
+type: object
+properties:
+  reason:
+    type: string
+    description: Reason of report

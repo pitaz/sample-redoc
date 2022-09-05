@@ -1,0 +1,19 @@
+title: basic profile
+type: object
+properties:
+  user_id:
+    type: string
+    description: user id
+  surname:
+    type: string
+    description: surname
+  name:
+    type: string
+    description: user email
+  email:
+    type: string
+    description: user email
+  date_of_birth:
+    type: string
+    description: date of birth
+description: user basic profiles details

@@ -1,0 +1,10 @@
+title: Carrot get lock response
+required:
+  - application_loan_id
+type: object
+properties:
+  application_loan_id:
+    type: array
+    description: List of application loan details for a particular user
+    items:
+      $ref: ./LoanDetails.yaml

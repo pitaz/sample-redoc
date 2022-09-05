@@ -1,0 +1,9 @@
+title: Update comment params
+required:
+  - body
+type: object
+properties:
+  body:
+    type: string
+    description: Comment body
+description: Contains update comment params

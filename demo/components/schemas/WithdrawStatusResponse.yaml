@@ -1,0 +1,16 @@
+title: Withdraw status
+type: object
+properties:
+  status:
+    type: string
+    description: Withdraw status
+  reference:
+    type: string
+    description: Withdraw reference
+  currency:
+    type: string
+    description: Withdraw currency
+  amount:
+    type: number
+    description: Withdraw amount
+description: Withdraw status

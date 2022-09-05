@@ -1,0 +1,51 @@
+title: Order status response
+type: object
+properties:
+  update_reason:
+    type: string
+    description: Update reason if order was Rejected
+  type:
+    type: string
+    description: 'Type: Market, Stop, Limit'
+  symbol:
+    type: string
+    description: Symbol
+  stop_price:
+    type: number
+    description: Stop price
+  side:
+    type: string
+    description: Side Buy/Sell
+  quantity:
+    type: number
+    description: Quantity requested
+  price:
+    type: number
+    description: Price
+  order_status:
+    type: string
+    description: Order status
+  name:
+    type: string
+    description: Stock name
+  logo:
+    type: string
+    description: Stock logo
+  limit_price:
+    type: number
+    description: Limit price
+  id:
+    type: string
+    description: DriveWealth order ID
+  created_when:
+    type: string
+    description: Date in ISO 8601
+  commision:
+    type: string
+    description: Orderd commision
+  background_color:
+    type: string
+    description: Background color of stock in hex
+  avatar:
+    type: string
+    description: Stock avatar url

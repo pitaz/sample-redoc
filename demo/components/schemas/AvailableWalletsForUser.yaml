@@ -1,0 +1,10 @@
+title: Available Wallets For User Response
+required:
+  - available_wallets
+type: object
+properties:
+  available_wallets:
+    type: array
+    description: List of all available wallets.
+    items:
+      $ref: ./AvailableWalletForUser.yaml

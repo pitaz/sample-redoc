@@ -1,0 +1,21 @@
+title: General user stats
+type: object
+properties:
+  total_users:
+    type: number
+    description: Total users
+  rejected:
+    type: number
+    description: rejected accounts
+  pending_review:
+    type: number
+    description: accounts pending review
+  investment_profile:
+    type: number
+    description: users with investment profiels
+  funded:
+    type: number
+    description: Funded accounts
+  completed:
+    type: number
+    description: completed accounts

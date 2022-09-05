@@ -1,0 +1,14 @@
+title: List of manager_user trades wuth pagination
+required:
+  - manager_user_trades
+  - next_token
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination
+  manager_user_trades:
+    type: array
+    description: manager_user Trade response
+    items:
+      $ref: ./AdminManagerUserTradeResponse.yaml

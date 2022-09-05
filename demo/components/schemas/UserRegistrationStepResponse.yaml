@@ -1,0 +1,8 @@
+title: Verify address response
+required:
+  - registration_step
+type: object
+properties:
+  registration_step:
+    type: string
+    description: Registration step

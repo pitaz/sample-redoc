@@ -1,0 +1,32 @@
+title: manager_user Trade response
+required:
+  - created_at
+  - email
+  - full_name
+  - phone_number
+  - side
+  - stock_symbol
+  - type
+type: object
+properties:
+  type:
+    type: string
+    description: Transaction type
+  stock_symbol:
+    type: string
+    description: Stock symbol
+  side:
+    type: string
+    description: BUY or SELL
+  phone_number:
+    type: string
+    description: ManagerUser's phone
+  full_name:
+    type: string
+    description: ManagerUser's full name
+  email:
+    type: string
+    description: ManagerUser's email
+  created_at:
+    type: integer
+    description: Creation timestamp in seconds

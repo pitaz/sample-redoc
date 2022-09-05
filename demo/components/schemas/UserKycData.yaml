@@ -1,0 +1,22 @@
+title: Response data for user kyc
+type: object
+properties:
+  residence_country:
+    type: string
+    description: residence_country
+  phone_number:
+    type: string
+    description: phone_number
+  last_name:
+    type: string
+    description: last_name
+  first_name:
+    type: string
+    description: first_name
+  email:
+    type: string
+    description: email
+  address:
+    type: string
+    description: address
+description: Response data for user kyc

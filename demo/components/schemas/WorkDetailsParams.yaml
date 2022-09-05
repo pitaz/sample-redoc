@@ -1,0 +1,17 @@
+title: Work details params
+required:
+  - employment_status
+type: object
+properties:
+  position:
+    type: string
+    description: 'Customer position, available from API'
+  employment_type:
+    type: string
+    description: 'Customer employment type, available from API'
+  employment_status:
+    type: string
+    description: 'Customer employment status, available from API'
+  company:
+    type: string
+    description: Customer company

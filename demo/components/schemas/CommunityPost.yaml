@@ -1,0 +1,35 @@
+title: Community post
+required:
+  - id
+  - inserted_at
+  - post_photos
+  - updated_at
+type: object
+properties:
+  updated_at:
+    type: integer
+    description: Post update time
+  post_photos:
+    type: array
+    description: List of photos that belong to the post
+    items:
+      $ref: ./CommunityPostPhoto.yaml
+  inserted_at:
+    type: integer
+    description: Post creation time
+  id:
+    type: string
+    description: Post uuid
+  body:
+    type: string
+    description: Post Text content
+  author_profile_id:
+    type: integer
+    description: ID of author Community Profile
+  author_full_name:
+    type: string
+    description: Full name of post author
+  author_avatar_url:
+    type: string
+    description: URL to author's avatar
+description: Community Post

@@ -1,0 +1,9 @@
+title: Reset transaction pin request
+required:
+  - password
+type: object
+properties:
+  password:
+    type: string
+    description: Password
+description: POST request body parameters

@@ -1,0 +1,78 @@
+title: Bamboo report
+required:
+  - best_performer
+  - bought_stocks
+  - bought_stocks_amount
+  - deposits_number_ranking
+  - favorite_deposits_time
+  - favorite_deposits_week
+  - favorite_industry
+  - new_stocks
+  - new_stocks_amount
+  - old_stocks
+  - old_stocks_amount
+  - portfolio_performance
+  - purchases_number_ranking
+  - purchases_value_ranking
+  - worst_performer
+type: object
+properties:
+  worst_performer:
+    type: integer
+    description: "[not specified yet] Worst performing stock in user's portfolio"
+  purchases_value_ranking:
+    type: integer
+    description: >-
+      Group in ranking by purchases values sum (1- top10%, 2- next30%, 3-
+      next30%, 4- last30%)
+  purchases_number_ranking:
+    type: integer
+    description: >-
+      Group in ranking by purchases number (1- top10%, 2- next30%, 3- next30%,
+      4- last30%)
+  portfolio_performance:
+    type: string
+    description: '[not specified yet] Portolio performance'
+  old_stocks_amount:
+    type: integer
+    description: 'Amount of stocks bought this year, already bought before'
+  old_stocks:
+    type: array
+    description: 'List of stocks bought this year, already bought before'
+    items:
+      $ref: ./StockResponse.yaml
+  new_stocks_amount:
+    type: integer
+    description: Amount of new stocks bought this year
+  new_stocks:
+    type: array
+    description: List of new stocks bought this year
+    items:
+      $ref: ./StockResponse.yaml
+  favorite_industry:
+    type: string
+    description: Most common industry of stocks in portfolio
+  favorite_deposits_week:
+    type: integer
+    description: Favorite week of month for deposits (0 if no data)
+  favorite_deposits_time:
+    type: integer
+    description: >-
+      Favorite time for deposits (0<- no_data, 1<- 0-4, 2<- 5-9, 3<- 10-11, 4<-
+      12-15, 5<- 16-18, 6<- 19-21, 7<- 22-23)
+  deposits_number_ranking:
+    type: integer
+    description: >-
+      Group in ranking by deposits number (1- top10%, 2- next30%, 3- next30%, 4-
+      last30%)
+  bought_stocks_amount:
+    type: integer
+    description: Amount of stocks bought this year
+  bought_stocks:
+    type: array
+    description: List of stocks bought this year
+    items:
+      $ref: ./StockResponse.yaml
+  best_performer:
+    type: string
+    description: "[not specified yet] Best performing stock in user's portfolio"

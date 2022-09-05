@@ -1,0 +1,28 @@
+title: Account Portfolio Response
+required:
+  - cash
+  - currency_symbol
+  - value
+  - value_change
+  - value_percent_change
+  - withdrawal_cash
+type: object
+properties:
+  withdrawal_cash:
+    type: number
+    description: Withdrawal cash
+  value_percent_change:
+    type: number
+    description: Equity value percent change
+  value_change:
+    type: number
+    description: Equity value change
+  value:
+    type: number
+    description: Portfolio value cash + equity value
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+  cash:
+    type: number
+    description: Cash available to invest aka buying power

@@ -1,0 +1,7 @@
+title: Get report reasons response
+type: object
+properties:
+  standard:
+    type: array
+  other:
+    type: string

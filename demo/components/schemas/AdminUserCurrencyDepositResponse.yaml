@@ -1,0 +1,52 @@
+title: User currency deposit response
+required:
+  - amount
+  - amount_paid
+  - created_at
+  - currency
+  - id
+  - source
+  - status
+  - updated_at
+  - user_email
+  - user_name
+  - user_phone
+  - user_surname
+type: object
+properties:
+  user_surname:
+    type: string
+    description: User surname
+  user_phone:
+    type: string
+    description: User phone number
+  user_name:
+    type: string
+    description: User name
+  user_email:
+    type: string
+    description: User email
+  updated_at:
+    type: integer
+    description: Deposit record/status update time
+  status:
+    type: string
+    description: Deposit status
+  source:
+    type: string
+    description: Deposit source
+  id:
+    type: integer
+    description: Deposit id
+  currency:
+    type: integer
+    description: Currency of deposit
+  created_at:
+    type: integer
+    description: Creation date in unix timestamp UTC
+  amount_paid:
+    type: number
+    description: 'Amount paid, including fee'
+  amount:
+    type: number
+    description: Amount of deposit

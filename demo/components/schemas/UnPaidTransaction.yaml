@@ -1,0 +1,29 @@
+title: transactions records
+required:
+  - api_consumer_id
+  - dw_order_id
+  - id
+  - paid
+  - symbol
+  - user_id
+type: object
+properties:
+  user_id:
+    type: integer
+    description: 'User id '
+  symbol:
+    type: string
+    description: Symbol of stock
+  paid:
+    type: boolean
+    description: whether this comission was paid to tenant
+  id:
+    type: integer
+    description: Id of the record
+  dw_order_id:
+    type: string
+    description: Drive wealth id for the order
+  api_consumer_id:
+    type: integer
+    description: Api consumer id
+description: Properties of the unpaid record

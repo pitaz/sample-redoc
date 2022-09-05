@@ -1,0 +1,16 @@
+title: Create Wallet To Wallet Transfer Response
+required:
+  - amount
+  - currency_symbol
+  - full_name
+type: object
+properties:
+  full_name:
+    type: string
+    description: Receiver's full name
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  amount:
+    type: number
+    description: Transfer amount

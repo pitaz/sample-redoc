@@ -1,0 +1,36 @@
+title: Updated profile response
+required:
+  - citizenship
+  - city
+  - email
+  - name
+  - postal_code
+  - province
+  - street
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Surname
+  street:
+    type: string
+    description: Street
+  province:
+    type: string
+    description: Province
+  postal_code:
+    type: string
+    description: Postal code
+  name:
+    type: string
+    description: Name
+  email:
+    type: string
+    description: Email
+  city:
+    type: string
+    description: City
+  citizenship:
+    type: string
+    description: Citizenship

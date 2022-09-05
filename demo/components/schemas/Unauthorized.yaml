@@ -1,0 +1,9 @@
+title: Unauthorized response
+required:
+  - message
+type: object
+properties:
+  message:
+    type: string
+    description: Unauthorized/Invalid Token
+description: Token is invalid or have expired

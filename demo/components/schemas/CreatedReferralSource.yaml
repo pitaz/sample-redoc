@@ -1,0 +1,8 @@
+title: Created referral source
+required:
+  - source
+type: object
+properties:
+  source:
+    type: string
+    description: Source of referral

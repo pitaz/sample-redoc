@@ -1,0 +1,13 @@
+title: collateral activation params
+required:
+  - collateral_id
+  - verification_code
+type: object
+properties:
+  verification_code:
+    type: string
+    description: OTP sent as mandate to the users after collateral initiation.
+  collateral_id:
+    type: string
+    description: Collateral identifier for identifying the collateral to activate
+description: collateral activation params

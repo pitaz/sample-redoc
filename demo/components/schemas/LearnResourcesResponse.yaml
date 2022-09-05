@@ -1,0 +1,16 @@
+title: Learn Resources Response
+required:
+  - learn_articles
+  - learn_categories
+type: object
+properties:
+  learn_categories:
+    type: array
+    description: List of learn categories
+    items:
+      $ref: ./LearnCategoryResponse.yaml
+  learn_articles:
+    type: array
+    description: List of learn articles
+    items:
+      $ref: ./LearnArticleResponse.yaml

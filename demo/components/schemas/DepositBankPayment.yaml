@@ -1,0 +1,21 @@
+title: Deposit payment bank details
+type: object
+properties:
+  txref:
+    type: string
+    description: Txref of deposit
+  transfer_note:
+    type: string
+    description: note
+  transfer_bank:
+    type: string
+    description: bank name
+  mode:
+    type: string
+    description: 'payment mode, banktransfer'
+  currency:
+    type: string
+    description: Expected deposit currency
+  account_expiration:
+    type: string
+    description: Time before the account expires

@@ -1,0 +1,8 @@
+title: Activate Wallet Params
+required:
+  - available_wallet_id
+type: object
+properties:
+  available_wallet_id:
+    type: integer
+    description: Available wallet id.

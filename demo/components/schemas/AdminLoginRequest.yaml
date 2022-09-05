@@ -1,0 +1,12 @@
+title: Admin login request
+required:
+  - email
+  - password
+type: object
+properties:
+  password:
+    type: string
+    description: Password
+  email:
+    type: string
+    description: Email

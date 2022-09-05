@@ -1,0 +1,14 @@
+title: List of temporary user info assigned to currents user entity
+required:
+  - next_token
+  - temporary_user_info
+type: object
+properties:
+  temporary_user_info:
+    type: array
+    description: List of saved user
+    items:
+      $ref: ./TemporaryUserInfoResponse.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination

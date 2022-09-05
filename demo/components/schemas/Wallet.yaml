@@ -1,0 +1,19 @@
+title: Wallet information
+type: object
+properties:
+  type:
+    type: string
+    description: wallet type
+  restricted:
+    type: boolean
+    description: wallet restriction status
+  owner_id:
+    type: integer
+    description: same as user id
+  currency:
+    type: string
+    description: wallet currency
+  available_wallet_id:
+    type: integer
+    description: available_wallet_id
+description: ' User wallet details'

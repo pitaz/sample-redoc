@@ -1,0 +1,60 @@
+title: User Data
+type: object
+properties:
+  work_details:
+    $ref: ./UserDataWorkDetails.yaml
+  restricted_account:
+    type: boolean
+    description: Restricted account
+  residence_country:
+    type: string
+    description: User's residence country
+  registration_step:
+    type: string
+    description: >-
+      BVN, Investment Profile, Afilliations, Agreements, Pending review,
+      Accepted, Rejected, Completed
+  referrals_count:
+    type: number
+    description: User referrals count
+  phone_number:
+    type: string
+    description: User phone number
+  partial_restricted:
+    type: boolean
+    description: Partial Restricted account
+  number_of_violations:
+    type: integer
+    description: Number of Good Faith Violations on a user's account
+  next_of_kin:
+    $ref: ./NextOfKin.yaml
+  investment_profile:
+    $ref: ./UserDataInvestmentProfile.yaml
+  identity_details:
+    $ref: ./UserIdentityDataDetails.yaml
+  id:
+    type: integer
+    description: User id
+  funded_account:
+    type: boolean
+    description: Account funded
+  flagged_account:
+    type: boolean
+    description: Flagged account
+  fee:
+    type: number
+    description: Fee value
+  deleted:
+    type: boolean
+    description: Shows if the user has been deleted
+  comments:
+    $ref: ./UserDataComments.yaml
+  bvn_details:
+    $ref: ./UserIdentityDataDetails.yaml
+  agreements:
+    type: boolean
+    description: Information if agreements are accepted
+  affiliations:
+    $ref: ./UserDataAffiliaitons.yaml
+  account_details:
+    $ref: ./UserDataAccountDetails.yaml

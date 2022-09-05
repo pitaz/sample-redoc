@@ -1,0 +1,44 @@
+get:
+  tags:
+    - Deposits
+  summary: Get users virtual account for deposits
+  description: This returns the virtual account details for a specific user, using the unique user_id path.
+  operationId: Web.Api.Tenant.VirtualAccountController.show
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+    - name: user_id
+      in: path
+      description: 'user id '
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: Account reponse
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/UserVirtualAccount.yaml
+    '401':
+      description: Token have expired or invalid token
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml

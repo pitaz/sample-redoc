@@ -1,0 +1,23 @@
+title: Update manager cart item params
+required:
+  - side
+  - stock_symbol
+  - transaction_value
+  - type
+type: object
+properties:
+  type:
+    type: string
+    description: 'Order type: MARKET, LIMIT or STOP'
+  transaction_value:
+    type: number
+    description: Transaction value
+  stock_symbol:
+    type: string
+    description: Stock symbol
+  side:
+    type: string
+    description: Order's side. BUY or SELL
+  price:
+    type: number
+    description: Price for only LIMIT and STOP order

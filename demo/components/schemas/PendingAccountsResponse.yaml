@@ -1,0 +1,10 @@
+title: Pending Accounts Response
+required:
+  - accounts
+type: object
+properties:
+  accounts:
+    type: array
+    description: List of pending accounts
+    items:
+      $ref: ./PendingAccountResponse.yaml

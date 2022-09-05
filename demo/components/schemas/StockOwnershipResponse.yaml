@@ -1,0 +1,17 @@
+title: Stock ownership info for user
+required:
+  - currency_symbol
+type: object
+properties:
+  pending_orders:
+    type: array
+    description: >-
+      Pending orders for given symbol for user. Empty array if there are no
+      pending order
+    items:
+      $ref: ./StockPendingOrders.yaml
+  ownership:
+    $ref: ./StockOwnershipInfo.yaml
+  currency_symbol:
+    type: string
+    description: Currency symbol for given currency

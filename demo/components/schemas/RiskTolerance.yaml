@@ -1,0 +1,15 @@
+title: Risk tolerance  stats
+type: object
+properties:
+  speculative:
+    type: number
+    description: Number of users with speculative risk tolerance
+  moderate:
+    type: number
+    description: Number of users with moderate risk tolerance
+  low:
+    type: number
+    description: Number of users wit low risk tolerance
+  high:
+    type: number
+    description: Number of users with high risk torelance

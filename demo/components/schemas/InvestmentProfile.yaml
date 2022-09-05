@@ -1,0 +1,11 @@
+title: Investment status stats
+type: object
+properties:
+  source_of_wealth:
+    $ref: ./SourceOfWealth.yaml
+  risk_tolerance:
+    $ref: ./RiskTolerance.yaml
+  goal:
+    $ref: ./Goal.yaml
+  experience:
+    $ref: ./Experience.yaml

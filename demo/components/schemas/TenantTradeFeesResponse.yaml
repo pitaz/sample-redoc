@@ -1,0 +1,13 @@
+title: Tenant trade fees response
+type: object
+properties:
+  tenant_fee_value:
+    type: string
+    description: String value of the tenants set trade fees
+  bamboo_fee_value:
+    type: string
+    description: String value of the Bamboo  trade fees
+  api_consumer_id:
+    type: string
+    description: 'The id of the api consumer '
+description: Result of GET request

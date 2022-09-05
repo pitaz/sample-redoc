@@ -1,0 +1,12 @@
+title: Deposit status details
+type: object
+properties:
+  txref:
+    type: string
+    description: Txref of deposit
+  status:
+    type: string
+    description: status of deposit
+  currency:
+    type: string
+    description: Expected deposit currency

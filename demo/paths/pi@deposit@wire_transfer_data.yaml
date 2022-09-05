@@ -1,0 +1,51 @@
+get:
+  tags:
+    - Deposits
+  summary: Get wire transfer data
+  operationId: Web.Api.TransactionController.wire_transfer_data
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: authorization
+      in: header
+      description: Bearer JWT
+      required: true
+      schema:
+        type: string
+    - name: x_subject_type
+      in: header
+      description: >-
+        If standard user -> 'standard', if manager -> 'manager'. Replace '_'
+        with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Payment methods
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/WireTransferDataResponse.yaml
+    '401':
+      description: Token have expired or invalid token
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml

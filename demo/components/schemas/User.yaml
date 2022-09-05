@@ -1,0 +1,13 @@
+title: User account information
+type: object
+properties:
+  registration_step:
+    type: string
+    description: registration step
+  phone_number:
+    type: string
+    description: user phonenumber
+  drive_wealth_account_id:
+    type: string
+    description: user  DW account
+description: Deatils of user account

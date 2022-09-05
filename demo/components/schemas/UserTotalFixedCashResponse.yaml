@@ -1,0 +1,28 @@
+title: Returns user total value in fixed investment
+required:
+  - currency_symbol
+  - current_interest
+  - earliest_due_date
+  - final_interest
+  - fixed_cash_amount
+  - latest_due_date
+type: object
+properties:
+  latest_due_date:
+    type: number
+    description: User's fixed investment earliest due date in unix timestamp
+  fixed_cash_amount:
+    type: number
+    description: User's total fixed cash amount
+  final_interest:
+    type: number
+    description: User's expected final interest
+  earliest_due_date:
+    type: number
+    description: User's fixed investment earliest due date in unix timestamp
+  current_interest:
+    type: number
+    description: User's current accrued interest
+  currency_symbol:
+    type: string
+    description: User currency symbol

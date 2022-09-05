@@ -1,0 +1,14 @@
+title: Stocks response
+type: object
+properties:
+  stocks:
+    type: array
+    description: List of stocks
+    items:
+      $ref: ./MyStockResponse.yaml
+  equity_value:
+    type: number
+    description: Current equity value
+  currency_symbol:
+    type: string
+    description: Prices currency symbol

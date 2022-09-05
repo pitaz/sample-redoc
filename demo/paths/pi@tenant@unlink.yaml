@@ -1,0 +1,38 @@
+post:
+  tags:
+    - Account Linking and unlinking
+  summary: User Unlinking endpoint
+  description: This endpoint is for unlinking a user’s bamboo account from the tenant.
+  operationId: Web.Api.Tenant.CollateralController.unlink
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: success
+      content: {}
+    '401':
+      description: Token has expired or invalid token
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '404':
+      description: Resource not found
+      content: {}

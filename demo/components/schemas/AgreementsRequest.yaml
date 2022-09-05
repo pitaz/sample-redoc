@@ -1,0 +1,9 @@
+title: Agreements request
+required:
+  - full_name
+type: object
+properties:
+  full_name:
+    type: string
+    description: Full name ex. `John Doe`
+description: POST request to agree legal right

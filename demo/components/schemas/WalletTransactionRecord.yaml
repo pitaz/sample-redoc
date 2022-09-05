@@ -1,0 +1,24 @@
+title: Wallet Transaction Record Response
+required:
+  - amount
+  - inserted_at
+  - reference
+  - type
+  - updated_at
+type: object
+properties:
+  updated_at:
+    type: integer
+    description: The transaction record last update date as a UTC timestamp
+  type:
+    type: string
+    description: The transaction type
+  reference:
+    type: string
+    description: The transaction record reference
+  inserted_at:
+    type: integer
+    description: The transaction record creation date as a UTC timestamp
+  amount:
+    type: number
+    description: The transaction record amount

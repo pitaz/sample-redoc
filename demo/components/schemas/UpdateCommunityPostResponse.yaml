@@ -1,0 +1,6 @@
+title: Update post response
+type: object
+properties:
+  result:
+    $ref: ./CommunityPost.yaml
+description: Update post response

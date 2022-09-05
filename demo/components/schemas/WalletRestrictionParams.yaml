@@ -1,0 +1,13 @@
+title: Required params for wallet restriction
+type: object
+properties:
+  wallet_id:
+    type: integer
+    description: users wallet id to restrict
+  user_id:
+    type: integer
+    description: user whose wallet to restrict
+  reason:
+    type: string
+    description: Reason for wallet restriction
+description: 'Body for wallet restriction '

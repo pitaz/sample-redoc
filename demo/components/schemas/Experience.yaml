@@ -1,0 +1,18 @@
+title: Investment exrperience stats
+type: object
+properties:
+  yrs_5_10:
+    type: number
+    description: Number of users with 5 to 10 year investment experience
+  yrs_3_5:
+    type: number
+    description: Number of users with 3 to 5 year investment experience
+  yrs_1_2:
+    type: number
+    description: Number of users wuth 1 to 2 year investment experience
+  yrs_10_:
+    type: number
+    description: Number of users with over 10 years investment experience
+  none:
+    type: number
+    description: Number of users with none investment experience

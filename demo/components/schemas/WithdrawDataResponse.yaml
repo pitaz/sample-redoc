@@ -1,0 +1,38 @@
+title: Withdraw informations
+required:
+  - account_number
+  - avatar
+  - banks_list
+  - fees_dollar
+  - fees_naira
+  - name
+  - timeline
+  - withdrawal_cash
+type: object
+properties:
+  withdrawal_cash:
+    type: string
+    description: Withdrawal cash
+  timeline:
+    type: string
+    description: Timeline of withdraw
+  name:
+    type: string
+    description: Withdraw name
+  fees_naira:
+    type: string
+    description: Fees information - naira
+  fees_dollar:
+    type: string
+    description: Fees information - dollar
+  banks_list:
+    type: array
+    description: List of available banks to withdraw in naira
+    items:
+      $ref: ./BanksList.yaml
+  avatar:
+    type: string
+    description: Withdraw avatar
+  account_number:
+    type: string
+    description: DW account number

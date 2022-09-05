@@ -1,0 +1,14 @@
+title: Tenant account information for request identifier
+required:
+  - data
+type: object
+properties:
+  status:
+    type: string
+    description: stutus of request
+  message:
+    type: string
+    description: success message
+  data:
+    $ref: ./TenantInfo.yaml
+description: Returns tenant information to display on linking page

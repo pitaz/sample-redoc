@@ -1,0 +1,27 @@
+title: Stock response
+type: object
+properties:
+  symbol:
+    type: string
+    description: Stock symbol
+  short_description:
+    type: string
+    description: Stock short description
+  name:
+    type: string
+    description: Stock name
+  logo:
+    type: string
+    description: Stock logo
+  description:
+    $ref: ./AdminStockDescription.yaml
+  background_color:
+    type: string
+    description: Background color in hex
+  avatar:
+    type: string
+    description: Stock avatar
+  active:
+    type: boolean
+    description: Defines stock status
+description: Stock details

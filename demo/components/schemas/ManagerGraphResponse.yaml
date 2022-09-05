@@ -1,0 +1,18 @@
+title: Manager graph response
+required:
+  - data
+  - percent_change
+  - value_change
+type: object
+properties:
+  value_change:
+    type: number
+    description: Value change in given period of time
+  percent_change:
+    type: number
+    description: Percent change in given period of time
+  data:
+    type: array
+    description: Graph day
+    items:
+      $ref: ./PortfolioGraphDay.yaml

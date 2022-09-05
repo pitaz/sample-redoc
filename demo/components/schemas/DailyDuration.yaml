@@ -1,0 +1,15 @@
+title: Aggregation of the data for the selected daily.
+type: object
+properties:
+  sixth:
+    type: number
+    description: sum of data in the first 6 hours
+  ninth:
+    type: number
+    description: sum of data in the first 9 hours
+  first:
+    type: number
+    description: sum of data in first 3 hours
+  above:
+    type: number
+    description: sum of data above 9 hours of the day

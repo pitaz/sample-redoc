@@ -1,0 +1,12 @@
+title: Graph data
+type: object
+properties:
+  price:
+    type: number
+    description: Price on close of the day
+  minute:
+    type: string
+    description: When asking for 1day hour and minute are returned
+  date:
+    type: string
+    description: Date in form YYYY-MM-DD

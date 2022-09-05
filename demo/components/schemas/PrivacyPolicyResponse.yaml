@@ -1,0 +1,5 @@
+title: Get privacy policy response
+type: object
+properties:
+  privacy_policy_link:
+    type: string

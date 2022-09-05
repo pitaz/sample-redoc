@@ -1,0 +1,23 @@
+title: Super Admin Graph Data Response
+type: object
+properties:
+  updated_at:
+    type: string
+    description: 'Record updated at timestamp '
+  stats:
+    $ref: ./GraphDataResponse.yaml
+  id:
+    type: number
+    description: Record id for returned result
+  duration:
+    type: string
+    description: "duration requested for, '1d', '1w', '1m', '3m', '1y', '5y'"
+  currency:
+    type: string
+    description: currency of the data requested for
+  created_at:
+    type: string
+    description: 'Record created at timestamp '
+  api_consumer_id:
+    type: number
+    description: API Consumer whose stats are requested

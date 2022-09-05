@@ -1,0 +1,9 @@
+title: Response payload from intermediary service  table
+type: object
+properties:
+  data:
+    type: array
+    description: service transactions
+    items:
+      $ref: ./ServiceTransactionDataResponse.yaml
+description: Body results from intermediary service table

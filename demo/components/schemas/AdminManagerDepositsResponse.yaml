@@ -1,0 +1,8 @@
+title: List of searched deposit
+type: object
+properties:
+  deposits:
+    type: array
+    description: Deposit response
+    items:
+      $ref: ./AdminManagerDepositResponse.yaml

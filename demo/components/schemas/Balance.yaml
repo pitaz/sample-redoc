@@ -1,0 +1,10 @@
+title: Portfolio value response
+type: object
+properties:
+  value:
+    type: number
+    description: Users actual value
+  collateralized_account_id:
+    type: string
+    description: users collateralized account id
+description: Portfolio value response

@@ -1,0 +1,55 @@
+title: Identity response
+required:
+  - application_id
+  - date_of_birth
+  - email
+  - first_name
+  - full_name
+  - job_status
+  - last_name
+  - name
+  - phone_number
+  - registration_step
+  - residence_country
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: User surname
+  residence_country:
+    type: string
+    description: User residence country
+  registration_step:
+    type: string
+    description: User registration step
+  phone_number:
+    type: string
+    description: User phone number
+  name:
+    type: string
+    description: User name
+  last_name:
+    type: string
+    description: User last name
+  job_status:
+    type: boolean
+    description: job success status
+  identity_api_fail:
+    type: boolean
+    description: Field only if BVN api fails
+  full_name:
+    type: string
+    description: User full name
+  first_name:
+    type: string
+    description: User first name
+  email:
+    type: string
+    description: User email
+  date_of_birth:
+    type: string
+    description: User date of birth
+  application_id:
+    type: integer
+    description: Application id

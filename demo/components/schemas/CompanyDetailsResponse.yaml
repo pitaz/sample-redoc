@@ -1,0 +1,12 @@
+title: Company details response
+type: object
+properties:
+  sector:
+    type: string
+    description: Company sector
+  description:
+    type: string
+    description: Company description
+  ceo:
+    type: string
+    description: CEO

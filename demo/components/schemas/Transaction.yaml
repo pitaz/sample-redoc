@@ -1,0 +1,37 @@
+title: 'service '
+type: object
+properties:
+  wallet_txn:
+    type: string
+    description: 'type of wallet transaction,spend, trade'
+  user_wallet_id:
+    type: integer
+    description: users wallet id affected by transaction
+  user_id:
+    type: integer
+    description: user id that initiated the transaction
+  txref:
+    type: string
+    description: bamboo generated transaction references
+  status:
+    type: string
+    description: 'status of the transaction, default: Requested'
+  provider:
+    type: string
+    description: 'servic provider, fw, dw..'
+  processed_amount:
+    type: integer
+    description: verified amount processed after verification
+  ext_txref:
+    type: string
+    description: external service provider transaction reference
+  currency:
+    type: string
+    description: currecy of the transaction
+  api_consumer_id:
+    type: integer
+    description: api consumer id
+  amount:
+    type: integer
+    description: transaction amount
+description: user basic profiles details

@@ -1,0 +1,9 @@
+title: List of all avialable tenant fees
+type: object
+properties:
+  tenant_trade_fee:
+    type: array
+    description: Tenant trade fees Response
+    items:
+      $ref: ./TenantTradeFeesResponse.yaml
+description: List of trade fees set by tenants

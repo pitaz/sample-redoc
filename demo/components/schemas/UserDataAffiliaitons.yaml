@@ -1,0 +1,9 @@
+title: Affiliations
+type: object
+properties:
+  director_of:
+    type: string
+    description: Company name and symbol when user have 10% of shares or is Director
+  broker:
+    type: boolean
+    description: Information if user is affilated with broker

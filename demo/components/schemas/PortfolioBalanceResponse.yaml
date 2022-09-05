@@ -1,0 +1,36 @@
+title: Portfolio balance response in $
+required:
+  - cash
+  - held_trades_value
+  - pending_deposit
+  - processing_withdrawal
+  - total_cash
+  - unsettled_cash
+  - value
+  - withdrawal_cash
+type: object
+properties:
+  withdrawal_cash:
+    type: number
+    description: Withdrawable cash
+  value:
+    type: number
+    description: Portfolio value
+  unsettled_cash:
+    type: number
+    description: Unsettled cash
+  total_cash:
+    type: number
+    description: Total cash
+  processing_withdrawal:
+    type: number
+    description: Processing withdrawals
+  pending_deposit:
+    type: number
+    description: Pending deposit
+  held_trades_value:
+    type: number
+    description: Held trades value
+  cash:
+    type: number
+    description: Available to invest cash

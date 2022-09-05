@@ -1,0 +1,15 @@
+title: Work Details
+type: object
+properties:
+  position:
+    type: string
+    description: 'Position, available from API'
+  employment_type:
+    type: string
+    description: 'Employment type, available from API'
+  employment_status:
+    type: string
+    description: 'Employment status, available from API'
+  company:
+    type: string
+    description: Company name

@@ -1,0 +1,20 @@
+title: Registration Todo List Step
+required:
+  - active
+  - completed
+  - index
+  - name
+type: object
+properties:
+  name:
+    type: string
+    description: The name of the todo list step
+  index:
+    type: number
+    description: The zero-based index in the todo list (first step starts at 0)
+  completed:
+    type: boolean
+    description: 'Returns true if the step has been completed, else returns false'
+  active:
+    type: boolean
+    description: 'Returns true if the step is next to be completed, else returns false'

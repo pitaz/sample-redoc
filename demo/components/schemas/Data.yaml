@@ -1,0 +1,7 @@
+title: data
+type: object
+properties:
+  message:
+    type: string
+    description: success message
+description: data

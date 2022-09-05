@@ -1,0 +1,8 @@
+title: Predefined fixed investment plan update params
+required:
+  - timeframe_in_days
+type: object
+properties:
+  timeframe_in_days:
+    type: integer
+    description: fixed investment plan length in days

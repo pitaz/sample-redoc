@@ -1,0 +1,1 @@
+This is similar to the [registration API endpoint](https://docs.investbamboo.com/api/user_registration). Its difference from the registration API endpoint is that it combines all the registration steps into a single API endpoint. To use this endpoint, you have to provide all fields in the defined payload, and also ensure that the user’s ID has been verified.

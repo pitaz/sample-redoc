@@ -1,0 +1,12 @@
+title: 'aggregation of the data by day, week, month, year'
+type: object
+properties:
+  yearly:
+    $ref: ./YearlyDuration.yaml
+  weekly:
+    $ref: ./WeeklyDuration.yaml
+  monthly:
+    $ref: ./MonthlyDuration.yaml
+  daily:
+    $ref: ./DailyDuration.yaml
+description: the data returned will be based on query passed  '1d'

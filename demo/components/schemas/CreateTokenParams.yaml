@@ -1,0 +1,13 @@
+title: Create token params
+required:
+  - password
+  - username
+type: object
+properties:
+  username:
+    type: string
+    description: User name - readable identifier for an API Consumer
+  password:
+    type: string
+    description: Password - API Consumers password
+description: API Consumers create token params

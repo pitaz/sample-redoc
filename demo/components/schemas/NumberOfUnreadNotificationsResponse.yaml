@@ -1,0 +1,8 @@
+title: Number of unread notifications response
+required:
+  - number
+type: object
+properties:
+  number:
+    type: string
+    description: Number of unread notifications

@@ -1,0 +1,14 @@
+title: Error changeset response
+required:
+  - errors
+  - message
+type: object
+properties:
+  message:
+    type: string
+    description: Message why request didn't suceed
+  errors:
+    type: object
+    properties: {}
+    description: Map of errors
+description: Error response for request which manipulates data

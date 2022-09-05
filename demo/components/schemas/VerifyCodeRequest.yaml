@@ -1,0 +1,13 @@
+title: Verify code
+required:
+  - phone_number
+  - verification_code
+type: object
+properties:
+  verification_code:
+    type: string
+    description: Verification code
+  phone_number:
+    type: string
+    description: Phone number
+description: POST request to verify reset password code

@@ -1,0 +1,9 @@
+title: Create request
+required:
+  - symbol
+type: object
+properties:
+  symbol:
+    type: string
+    description: Symbol of instrument
+description: Post request for creating featured theme stock

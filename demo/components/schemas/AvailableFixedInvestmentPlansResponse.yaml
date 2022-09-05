@@ -1,0 +1,12 @@
+title: predefined available fixed investment plans
+required:
+  - id
+  - timeframe_in_days
+type: object
+properties:
+  timeframe_in_days:
+    type: integer
+    description: Timeframe in days for fixed investment plan
+  id:
+    type: integer
+    description: fixed imnvestment plan id

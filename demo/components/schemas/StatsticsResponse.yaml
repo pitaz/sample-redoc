@@ -1,0 +1,9 @@
+title: Super Admin Stats Response
+type: object
+properties:
+  work_details:
+    $ref: ./WorkDetails.yaml
+  users:
+    $ref: ./UsersStas.yaml
+  investment_profile:
+    $ref: ./InvestmentProfile.yaml

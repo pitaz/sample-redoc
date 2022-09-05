@@ -1,0 +1,8 @@
+title: verify email request
+required:
+  - verification_hash
+type: object
+properties:
+  verification_hash:
+    type: string
+    description: Verification hash

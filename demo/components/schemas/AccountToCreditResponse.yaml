@@ -1,0 +1,11 @@
+title: Account to credit
+required:
+  - amount
+type: object
+properties:
+  dw_account_number:
+    type: string
+    description: DW account number
+  amount:
+    type: number
+    description: Amount to credit

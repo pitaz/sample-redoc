@@ -1,0 +1,10 @@
+title: Update notification settings
+type: object
+properties:
+  watchlist:
+    $ref: ./UpdateNotificationsSettingsParams.yaml
+  holdings:
+    $ref: ./UpdateNotificationsSettingsParams.yaml
+  account_activity_enabled:
+    type: boolean
+    description: Account activity enabled

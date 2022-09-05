@@ -1,0 +1,12 @@
+title: Allowed Countries
+required:
+  - country_code
+  - flag_url
+type: object
+properties:
+  flag_url:
+    type: string
+    description: Link to country flag image
+  country_code:
+    type: string
+    description: Country code

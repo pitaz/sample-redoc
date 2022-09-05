@@ -1,0 +1,8 @@
+title: Horizon subscription request payload
+required:
+  - phone_number
+type: object
+properties:
+  phone_number:
+    type: string
+    description: Bamboo-registered subscriber phone number

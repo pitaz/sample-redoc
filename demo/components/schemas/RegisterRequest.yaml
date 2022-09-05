@@ -1,0 +1,48 @@
+title: Register request
+required:
+  - citizenship
+  - country_code
+  - date_of_birth
+  - email
+  - gender
+  - name
+  - password
+  - phone_number
+  - residence_country_code
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Surname
+  residence_country_code:
+    type: string
+    description: "'GHA' for Ghana, 'NGA' for Nigeria and 'KEN' for Kenya"
+  referral_code:
+    type: string
+    description: Referral code
+  phone_number:
+    type: string
+    description: Phone number
+  password:
+    type: string
+    description: Password
+  name:
+    type: string
+    description: Name
+  gender:
+    type: string
+    description: 'Gender options: Man/Woman'
+  email:
+    type: string
+    description: Email
+  date_of_birth:
+    type: string
+    description: Date in format YYYY-MM-DD
+  country_code:
+    type: string
+    description: 'Country Code: `USA`'
+  citizenship:
+    type: string
+    description: Citizenship
+description: POST request to create user

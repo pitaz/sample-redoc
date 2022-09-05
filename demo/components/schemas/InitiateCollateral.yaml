@@ -1,0 +1,21 @@
+title: collateral initiation params
+required:
+  - collateral_amount
+  - collateral_currency
+  - duration
+  - linked_account_id
+type: object
+properties:
+  linked_account_id:
+    type: string
+    description: identifier of linked account
+  duration:
+    type: integer
+    description: duration / tenure of collateral in days
+  collateral_currency:
+    type: string
+    description: currency of collateral e.g USD
+  collateral_amount:
+    type: integer
+    description: Collateral amount in unit of currency. e.g cents
+description: collateral initiation params

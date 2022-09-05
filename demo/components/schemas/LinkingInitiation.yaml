@@ -1,0 +1,12 @@
+title: Dynamic linking page url
+type: object
+properties:
+  linking_request_identifier:
+    type: string
+    description: unique identifier to track linking request
+  linking_page:
+    type: string
+    description: url to a bamboo linking page
+description: >-
+  The url to a page where the user inputs their bamboo credentials for linking
+  and validation

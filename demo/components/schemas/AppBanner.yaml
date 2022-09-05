@@ -1,0 +1,32 @@
+title: Fields in the app banner object
+required:
+  - active
+  - activity_name
+  - description
+  - destination_type
+  - image
+  - load_in_webview
+  - position
+type: object
+properties:
+  position:
+    type: integer
+    description: Position of the banner
+  load_in_webview:
+    type: boolean
+    description: "'true' for in app webview 'false' for external browser"
+  image:
+    type: string
+    description: firebase image url
+  destination_type:
+    type: string
+    description: mobile activity or external webview
+  description:
+    type: string
+    description: extra information to show if not null
+  activity_name:
+    type: string
+    description: In app activity/view to load
+  active:
+    type: boolean
+    description: status of the banner

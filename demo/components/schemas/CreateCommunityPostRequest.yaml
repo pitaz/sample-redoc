@@ -1,0 +1,15 @@
+title: Create community post request body
+required:
+  - photo_uuids
+type: object
+properties:
+  photo_uuids:
+    uniqueItems: true
+    type: array
+    description: List of upto 4 Photo uuids returned from calling /api/community/images
+    items:
+      type: string
+  body:
+    type: string
+    description: Post Text content
+description: Create community post request body

@@ -1,0 +1,24 @@
+title: Aggregation of the data for the week peroid.
+type: object
+properties:
+  day7:
+    type: number
+    description: Sum of data in day 7 of the 7 days period
+  day6:
+    type: number
+    description: Sum of data in day 6 of the 7 days period
+  day5:
+    type: number
+    description: Sum of data in day 5 of the 7 days period
+  day4:
+    type: number
+    description: Sum of data in day 4 of the 7 days period
+  day3:
+    type: number
+    description: Sum of data in day 3 of the 7 days period
+  day2:
+    type: number
+    description: Sum of data in day 2 of the 7 days period
+  day1:
+    type: number
+    description: Sum of data in day 1  of the 7 days period

@@ -1,0 +1,14 @@
+title: List of active plans
+required:
+  - currency_symbol
+  - plans
+type: object
+properties:
+  plans:
+    type: array
+    description: List of active plans
+    items:
+      $ref: ./PlanResponse.yaml
+  currency_symbol:
+    type: string
+    description: Currency symbol ($)

@@ -1,0 +1,11 @@
+title: List of manager accounts
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination
+  accounts:
+    type: array
+    description: Manager accounts response
+    items:
+      $ref: ./ManagerAccountResponse.yaml

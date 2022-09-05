@@ -1,0 +1,12 @@
+title: API Consumers
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination
+  api_consumers:
+    type: array
+    description: API Consumers
+    items:
+      $ref: ./APIConsumerListEntry.yaml
+description: API Consumers body

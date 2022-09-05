@@ -1,0 +1,16 @@
+title: Verify manager
+required:
+  - email
+  - password
+  - verification_code
+type: object
+properties:
+  verification_code:
+    type: integer
+    description: Verification code
+  password:
+    type: string
+    description: Manager's password
+  email:
+    type: string
+    description: Manager's email

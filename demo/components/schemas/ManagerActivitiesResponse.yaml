@@ -1,0 +1,10 @@
+title: Manager Activity
+required:
+  - activities
+type: object
+properties:
+  activities:
+    type: array
+    description: Daily activity response
+    items:
+      $ref: ./DailyActivityResponse.yaml

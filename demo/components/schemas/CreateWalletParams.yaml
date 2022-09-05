@@ -1,0 +1,34 @@
+title: Create Wallet Params
+required:
+  - currency
+  - currency_symbol
+  - description
+  - name
+  - terms_and_service_link
+  - type
+  - unavailable_in_countries
+type: object
+properties:
+  unavailable_in_countries:
+    type: array
+    description: >-
+      List of countries where wallet is unavailable. Country code from
+      /wallet_dictionary endpoint.
+  type:
+    type: string
+    description: "Wallet's type: [internal, external]"
+  terms_and_service_link:
+    type: string
+    description: URL for terms and services
+  name:
+    type: string
+    description: Wallet's name
+  description:
+    type: string
+    description: Wallet's description
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  currency:
+    type: string
+    description: Currency of wallet

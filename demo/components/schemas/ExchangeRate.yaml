@@ -1,0 +1,25 @@
+title: List of current exchange rates
+type: object
+properties:
+  sell_rate:
+    type: number
+    description: sell rate for the currency
+  residence_country:
+    type: string
+    description: 'residence country '
+  id:
+    type: number
+    description: record id
+  flag_image:
+    type: string
+    description: flag for currency
+  currency_symbol:
+    type: string
+    description: symbol
+  currency:
+    type: string
+    description: currency
+  buy_rate:
+    type: number
+    description: Buy rate for the currency
+description: System exchange rates GET request

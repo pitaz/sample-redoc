@@ -1,0 +1,9 @@
+title: Body for creating virtual account
+type: object
+properties:
+  user_id:
+    type: integer
+    description: Users bamboo id
+  bvn:
+    type: string
+    description: 'User verified bvn '

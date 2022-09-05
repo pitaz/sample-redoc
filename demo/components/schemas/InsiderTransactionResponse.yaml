@@ -1,0 +1,33 @@
+title: Insider Transaction
+required:
+  - avatar
+  - currency_symbol
+  - individual_full_name
+  - individual_title
+  - stock_symbol
+  - transaction_date
+  - transaction_type
+type: object
+properties:
+  transaction_type:
+    type: string
+    description: Transaction type. Direct or Indirect
+  transaction_date:
+    type: integer
+    description: Date of transaction in unix timestamp UTC
+  stock_symbol:
+    type: string
+    description: Stock symbol
+  individual_title:
+    type: string
+    description: Title of individual who made transaction.
+  individual_full_name:
+    type: string
+    description: Full name of individual who made transaction.
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  avatar:
+    type: string
+    description: Stock avatar
+description: "Dividend body. 'https://iexcloud.io/docs/api/#insider-transactions'"

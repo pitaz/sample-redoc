@@ -1,0 +1,12 @@
+title: Carrot specified Amounts
+required:
+  - loan
+  - redline
+type: object
+properties:
+  redline:
+    type: number
+    description: carrot redline for Bamboo User
+  loan:
+    type: number
+    description: carrot loan amount for Bamboo User

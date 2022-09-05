@@ -1,0 +1,25 @@
+title: ExchangeRate
+required:
+  - country_code
+  - currency
+  - currency_symbol
+  - flag_image
+  - id
+type: object
+properties:
+  id:
+    type: integer
+    description: Id of exchange rate
+  flag_image:
+    type: string
+    description: url to country flag
+  currency_symbol:
+    type: string
+    description: Currency symbol
+  currency:
+    type: string
+    description: Currency
+  country_code:
+    type: string
+    description: Country Code
+description: Exchange Rate body

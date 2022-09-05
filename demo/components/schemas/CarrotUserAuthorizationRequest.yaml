@@ -1,0 +1,12 @@
+title: Carrot user authorization
+required:
+  - mobile
+  - password
+type: object
+properties:
+  password:
+    type: string
+    description: User's password
+  mobile:
+    type: string
+    description: User's phone number

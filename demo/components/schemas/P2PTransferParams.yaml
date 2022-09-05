@@ -1,0 +1,12 @@
+title: Peer-to-peer transfer Params
+required:
+  - amount
+  - receiver_id
+type: object
+properties:
+  receiver_id:
+    type: integer
+    description: The receiver's user_id
+  amount:
+    type: number
+    description: The amount in USD to be transferred

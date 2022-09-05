@@ -1,0 +1,12 @@
+title: List of all deposits with pagination
+type: object
+properties:
+  next_token:
+    type: integer
+    description: Next token for pagination
+  deposits:
+    type: array
+    description: Deposit response
+    items:
+      $ref: ./TenantDepositResponse.yaml
+description: List of deposits and next_token

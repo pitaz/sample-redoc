@@ -1,0 +1,15 @@
+title: Stock Description
+type: object
+properties:
+  story:
+    type: string
+    description: Stock story so far
+  opinion_text:
+    type: string
+    description: Stock opinion text
+  opinion_points:
+    type: array
+    description: Stock opinion points list
+    items:
+      type: string
+description: Stock description schema

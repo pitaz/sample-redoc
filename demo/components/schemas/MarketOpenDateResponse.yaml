@@ -1,0 +1,12 @@
+title: Market Open Date Response
+required:
+  - date
+  - market_open
+type: object
+properties:
+  market_open:
+    type: boolean
+    description: True/False depending on market status
+  date:
+    type: integer
+    description: Open date in unix timestamp UTC (available if market_open is false)

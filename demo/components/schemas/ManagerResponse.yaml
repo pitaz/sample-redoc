@@ -1,0 +1,36 @@
+title: Manager Response
+required:
+  - department_name
+  - email
+  - id
+  - job_title
+  - name
+  - number_prefix
+  - phone_number
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Manager's surname
+  phone_number:
+    type: string
+    description: Manager's phone number
+  number_prefix:
+    type: string
+    description: Manager's number prfix. Must start with '+'
+  name:
+    type: string
+    description: Manager's name
+  job_title:
+    type: string
+    description: Manager's job_title
+  id:
+    type: integer
+    description: Manager's id
+  email:
+    type: string
+    description: Manager's email
+  department_name:
+    type: string
+    description: Manager's department_name

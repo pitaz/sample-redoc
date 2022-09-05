@@ -1,0 +1,17 @@
+title: Mobile money Details request
+required:
+  - name
+  - network
+  - phone_number
+type: object
+properties:
+  phone_number:
+    type: string
+    description: User's phone number
+  network:
+    type: string
+    description: User's mobile money network provider
+  name:
+    type: string
+    description: 'Name of user, e.g. John Doe'
+description: POST request to store ghana and kenya users mobile money details

@@ -1,0 +1,8 @@
+title: BVN params
+required:
+  - bvn
+type: object
+properties:
+  bvn:
+    type: string
+    description: BVN number

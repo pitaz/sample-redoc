@@ -1,0 +1,103 @@
+get:
+  tags:
+    - Bank details
+  summary: Fetch bank details
+  operationId: Web.Api.Tenant.BankInfoController.show
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: 'user id '
+      required: true
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: success
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/BankDetailsResponse.yaml
+    '401':
+      description: Token has expired or invalid token
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '404':
+      description: Not found
+      content: {}
+    '422':
+      description: Unprocessible Entinty
+      content: {}
+put:
+  tags:
+    - Bank details
+  summary: Update bank details
+  operationId: Web.Api.Tenant.BankInfoController.update
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+    - name: id
+      in: path
+      description: 'user id '
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    description: Tenant Bank Details payload
+    content:
+      '*/*':
+        schema:
+          $ref: ../components/schemas/BankDetailsResponse.yaml
+    required: true
+  responses:
+    '200':
+      description: success
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/BankDetailsResponse.yaml
+    '401':
+      description: Token has expired or invalid token
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+    '422':
+      description: Unprocessible Entinty
+      content: {}
+  x-codegen-request-body-name: body

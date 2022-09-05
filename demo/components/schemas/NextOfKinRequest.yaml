@@ -1,0 +1,47 @@
+title: Next of Kin params
+required:
+  - address
+  - city
+  - country
+  - date_of_birth
+  - email
+  - name
+  - phone_number
+  - relationship
+  - state
+  - surname
+type: object
+properties:
+  surname:
+    type: string
+    description: Surname
+  state:
+    type: string
+    description: State
+  relationship_description:
+    type: string
+    description: Relationship description
+  relationship:
+    type: string
+    description: Relationship
+  phone_number:
+    type: string
+    description: Phone number
+  name:
+    type: string
+    description: Name
+  email:
+    type: string
+    description: Email
+  date_of_birth:
+    type: string
+    description: 'DOB, YYYY-MM-DD'
+  country:
+    type: string
+    description: Country
+  city:
+    type: string
+    description: City
+  address:
+    type: string
+    description: Address

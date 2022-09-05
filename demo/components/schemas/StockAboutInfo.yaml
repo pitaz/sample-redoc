@@ -1,0 +1,18 @@
+title: Stock About Info
+type: object
+properties:
+  story:
+    type: string
+    description: Stock story
+  short_description:
+    type: string
+    description: Short description
+  opinion:
+    $ref: ./StockOpinion.yaml
+  categories:
+    type: array
+    description: List of categories where stock belongs to
+    items:
+      $ref: ./ThemeResponse.yaml
+  about:
+    $ref: ./CompanyDetailsResponse.yaml

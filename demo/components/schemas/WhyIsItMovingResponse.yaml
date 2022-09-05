@@ -1,0 +1,7 @@
+title: Why Is It Moving
+type: object
+properties:
+  title:
+    type: string
+    description: Title
+description: Result of GET request

@@ -1,0 +1,6 @@
+title: Brokerage withdrawal request params
+type: object
+properties:
+  amount:
+    type: number
+    description: The amount to withdraw in USD

@@ -1,0 +1,12 @@
+title: Commnets
+type: object
+properties:
+  inserted_at:
+    type: string
+    description: Creation date
+  id:
+    type: number
+    description: ID
+  body:
+    type: string
+    description: Body

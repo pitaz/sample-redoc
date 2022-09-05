@@ -1,0 +1,40 @@
+title: Deposit response
+type: object
+properties:
+  user_surname:
+    type: string
+    description: User surname
+  user_name:
+    type: string
+    description: User name
+  user_id:
+    type: integer
+    description: User id
+  txref:
+    type: string
+    description: transaction id from flutterwave for the deposit
+  status:
+    type: string
+    description: Deposit status
+  phone_number:
+    type: string
+    description: Tenant users phonenumber
+  id:
+    type: integer
+    description: Deposit id
+  email:
+    type: string
+    description: User email
+  created_at:
+    type: integer
+    description: Creation date in unix timestamp UTC
+  api_consumer_name:
+    type: string
+    description: api consumer name
+  api_consumer_id:
+    type: integer
+    description: api consumer id
+  account:
+    type: string
+    description: virtual account
+description: Deposit parameters

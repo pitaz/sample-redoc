@@ -1,0 +1,8 @@
+title: Accept agreement response
+required:
+  - message
+type: object
+properties:
+  message:
+    type: string
+    description: Agreement successfully signed

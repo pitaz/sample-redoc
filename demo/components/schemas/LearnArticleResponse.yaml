@@ -1,0 +1,20 @@
+title: Learn article
+required:
+  - body
+  - cover_photo
+  - id
+  - title
+type: object
+properties:
+  title:
+    type: string
+    description: Article's title
+  id:
+    type: integer
+    description: Id of learn article
+  cover_photo:
+    type: string
+    description: Cover photo url
+  body:
+    type: string
+    description: Body of article

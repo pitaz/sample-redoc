@@ -1,0 +1,8 @@
+title: Deposit update params
+required:
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: "Deposit new status, 'Sent to DW', 'Rejected by admin', or 'Settlemented'"

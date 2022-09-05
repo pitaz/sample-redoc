@@ -1,0 +1,9 @@
+title: List of stocks matching query
+type: object
+properties:
+  stocks:
+    type: array
+    description: Stock response
+    items:
+      $ref: ./AdminStockResponse.yaml
+description: List of active and inactive stocks

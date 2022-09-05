@@ -1,0 +1,15 @@
+title: Earnings of given stock company aka EPS
+type: object
+properties:
+  quarter:
+    type: string
+    description: Defines quarter like Q2 2018
+  expected_eps:
+    type: number
+    description: Expected EPS
+  date:
+    type: string
+    description: Date in format YYYY-MM-DD
+  actual_eps:
+    type: number
+    description: Actual EPS

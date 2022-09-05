@@ -1,0 +1,13 @@
+title: Login request
+required:
+  - password
+  - phone_number
+type: object
+properties:
+  phone_number:
+    type: string
+    description: Phone number
+  password:
+    type: string
+    description: User password
+description: POST request body parameters

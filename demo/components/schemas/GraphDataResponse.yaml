@@ -1,0 +1,15 @@
+title: graph data
+type: object
+properties:
+  user_currency_deposits:
+    $ref: ./UserCurrencyDepositGraphResponse.yaml
+  trades:
+    $ref: ./TradeGraphResponse.yaml
+  start_date:
+    type: string
+    description: Data duration start date
+  end_date:
+    type: string
+    description: Data duration end date
+  deposits:
+    $ref: ./DepositGraphResponse.yaml

@@ -1,0 +1,8 @@
+title: Update User Phone Number
+required:
+  - new_phone_number
+type: object
+properties:
+  new_phone_number:
+    type: string
+    description: New phone number for user

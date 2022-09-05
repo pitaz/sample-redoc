@@ -1,0 +1,24 @@
+title: Account to debit
+required:
+  - amount
+  - dollar_amount
+  - dollar_fees
+  - dw_account_number
+  - fees
+type: object
+properties:
+  fees:
+    type: number
+    description: Fees
+  dw_account_number:
+    type: string
+    description: DW account number
+  dollar_fees:
+    type: number
+    description: Fees in dollar
+  dollar_amount:
+    type: number
+    description: Amount in dollar
+  amount:
+    type: number
+    description: Amount

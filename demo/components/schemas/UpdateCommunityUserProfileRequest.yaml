@@ -1,0 +1,21 @@
+title: Update user profile request
+type: object
+properties:
+  middle_name:
+    type: string
+    description: User middle name to be displayed
+  last_name:
+    type: string
+    description: User last name to be displayed
+  href:
+    type: string
+    description: Handle to user profile - must be unique
+  first_name:
+    type: string
+    description: User first name to be displayed
+  bio:
+    type: string
+    description: User bio
+  avatar_uuid:
+    type: string
+    description: 'UUID of avatar stored in GS. When not provided, points to default avatar.'

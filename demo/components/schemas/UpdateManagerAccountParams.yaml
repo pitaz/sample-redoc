@@ -1,0 +1,12 @@
+title: Update maanger account request
+type: object
+properties:
+  scopes:
+    type: array
+    description: Manager's scopes. Available scopes are in /manager/manager_scopes endpoint
+  job_title:
+    type: string
+    description: Manager's job_title
+  department_name:
+    type: string
+    description: Manager's department name

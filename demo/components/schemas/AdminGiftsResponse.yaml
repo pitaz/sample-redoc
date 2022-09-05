@@ -1,0 +1,30 @@
+title: Gifts response
+required:
+  - accepted_gift
+  - completed_gift
+  - id
+  - receiver
+  - sender
+  - timestamps
+type: object
+properties:
+  transaction:
+    $ref: ./TransactionResponse.yaml
+  timestamps:
+    $ref: ./GiftTimestampsResponse.yaml
+  stock_symbol:
+    type: string
+    description: Symbol of gifted stock
+  sender:
+    $ref: ./UserDataResponse.yaml
+  receiver:
+    $ref: ./UserDataResponse.yaml
+  id:
+    type: integer
+    description: ID of stock
+  completed_gift:
+    type: boolean
+    description: Gift completed
+  accepted_gift:
+    type: boolean
+    description: Gift accepted

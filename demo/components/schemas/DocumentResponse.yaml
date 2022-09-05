@@ -1,0 +1,12 @@
+title: Document
+required:
+  - file_key
+  - name
+type: object
+properties:
+  name:
+    type: string
+    description: Document name
+  file_key:
+    type: string
+    description: Document file key

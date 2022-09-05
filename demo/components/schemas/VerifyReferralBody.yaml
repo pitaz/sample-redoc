@@ -1,0 +1,8 @@
+title: Verify referral request
+required:
+  - referral_code
+type: object
+properties:
+  referral_code:
+    type: string
+    description: Referral code

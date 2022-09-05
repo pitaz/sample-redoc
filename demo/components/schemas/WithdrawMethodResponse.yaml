@@ -1,0 +1,32 @@
+title: Withdraw method response
+required:
+  - currency
+  - fees
+  - logo
+  - name
+  - timeline
+type: object
+properties:
+  timeline:
+    type: string
+    description: Timeline of method
+  name:
+    type: string
+    description: Method name
+  logo:
+    type: string
+    description: Method's logo
+  fees:
+    type: number
+    description: Fees of withdraw method
+  exchange_rate:
+    type: string
+    description: Exchange rate - when currency isn't USD
+  currency:
+    type: string
+    description: Currency of method
+  banks_list:
+    type: array
+    description: List of available banks to withdraw in naira
+    items:
+      $ref: ./BanksList.yaml

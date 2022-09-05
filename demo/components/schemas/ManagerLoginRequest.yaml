@@ -1,0 +1,12 @@
+title: Manager login request
+required:
+  - email
+  - password
+type: object
+properties:
+  password:
+    type: string
+    description: Manager's password
+  email:
+    type: string
+    description: Manager's email

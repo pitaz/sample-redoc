@@ -1,0 +1,46 @@
+post:
+  tags:
+    - Account Linking and unlinking
+  summary: Link user account
+  description: 'Initiate Linking: This is the endpoint to initiate the linking of a user’s Bamboo account with a tenant'
+  operationId: Web.Api.Tenant.CollateralController.initiate_linking
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: Linking request payload
+    content:
+      '*/*':
+        schema:
+          $ref: ../components/schemas/LinkingRequest.yaml
+    required: true
+  responses:
+    '200':
+      description: success
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/LinkingInitiation.yaml
+    '401':
+      description: Token has expired or invalid token
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/Unauthorized.yaml
+  x-codegen-request-body-name: body

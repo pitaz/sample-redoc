@@ -1,0 +1,13 @@
+title: API Consumer change statu param
+required:
+  - api_consumer_id
+  - new_status
+type: object
+properties:
+  new_status:
+    type: string
+    description: "Status to change to, 'enabled', 'disabled'"
+  api_consumer_id:
+    type: integer
+    description: 'API consumer whose status is to be changed  '
+description: API Consumer params

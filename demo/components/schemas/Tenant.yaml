@@ -1,0 +1,10 @@
+title: Tenant basic info
+type: object
+properties:
+  status:
+    type: string
+    description: stutus of request
+  message:
+    type: string
+    description: success message
+description: Tenant basic info

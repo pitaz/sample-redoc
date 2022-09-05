@@ -1,0 +1,13 @@
+title: Brokerage withdrawals response payload
+required:
+  - withdrawal_requests
+type: object
+properties:
+  withdrawal_requests:
+    type: array
+    description: Withdrawal request
+    items:
+      $ref: ./BrokerageWithdrawalResponse.yaml
+  next_token:
+    type: integer
+    description: The next token for pagination or null if none

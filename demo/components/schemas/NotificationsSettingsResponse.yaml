@@ -1,0 +1,12 @@
+title: Notification settings response
+required:
+  - account_activity_enabled
+type: object
+properties:
+  watchlist:
+    $ref: ./NotificationsSettings.yaml
+  holdings:
+    $ref: ./NotificationsSettings.yaml
+  account_activity_enabled:
+    type: boolean
+    description: Account activity enabled

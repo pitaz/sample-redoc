@@ -1,0 +1,10 @@
+title: Document List
+required:
+  - documents
+type: object
+properties:
+  documents:
+    type: array
+    description: Document
+    items:
+      $ref: ./DocumentResponse.yaml

@@ -1,0 +1,12 @@
+title: Stock opinion
+type: object
+properties:
+  update_date:
+    type: string
+    description: Update date
+  text:
+    type: string
+    description: Opinion text
+  points:
+    type: array
+    description: Array of strings - bullet points

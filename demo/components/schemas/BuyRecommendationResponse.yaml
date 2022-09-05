@@ -1,0 +1,13 @@
+title: BUY Recommendation response
+type: object
+properties:
+  top_purchased_stocks:
+    type: array
+    description: List of top purchased stocks
+    items:
+      $ref: ./BuyRecommendationStock.yaml
+  top_performing_stocks:
+    type: array
+    description: List of top performing stocks
+    items:
+      $ref: ./BuyRecommendationStock.yaml

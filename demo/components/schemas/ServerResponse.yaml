@@ -1,0 +1,12 @@
+title: Server credentials
+type: object
+properties:
+  password:
+    type: string
+    description: API Consumer's password
+  login:
+    type: string
+    description: API Consumer's login
+  app_key:
+    type: string
+    description: API Consumer's app key

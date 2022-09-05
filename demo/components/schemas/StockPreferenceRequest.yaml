@@ -1,0 +1,8 @@
+title: Stock preference request
+required:
+  - us_stocks
+type: object
+properties:
+  us_stocks:
+    type: boolean
+    description: 'True if user prefer us stocks, false otherwise'

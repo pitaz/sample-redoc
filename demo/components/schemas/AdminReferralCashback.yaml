@@ -1,0 +1,12 @@
+title: Referral Cashback
+required:
+  - referrent_dollar_cashback
+  - user_dollar_cashback
+type: object
+properties:
+  user_dollar_cashback:
+    type: number
+    description: The referrer's cashback in USD
+  referrent_dollar_cashback:
+    type: number
+    description: The referent's cashback in USD

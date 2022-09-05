@@ -1,0 +1,27 @@
+title: Approve Hni Plan Request
+required:
+  - amount
+  - id
+  - payment_reference
+  - timeframe_in_days
+  - user_id
+type: object
+properties:
+  user_id:
+    type: integer
+    description: user id
+  timeframe_in_days:
+    type: string
+    description: tenor
+  start_date:
+    type: string
+    description: start date
+  payment_reference:
+    type: string
+    description: payment reference
+  id:
+    type: integer
+    description: plan id
+  amount:
+    type: string
+    description: amount

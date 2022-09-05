@@ -1,0 +1,29 @@
+title: User stock price alert response
+required:
+  - alert_price
+  - alert_price_direction
+  - alert_type
+  - id
+  - initial_price
+  - stock_symbol
+type: object
+properties:
+  stock_symbol:
+    type: string
+    description: Stock symbol e.g. APPL
+  initial_price:
+    type: number
+    description: Initial price (current stock price)
+  id:
+    type: integer
+    description: Id of user stock price alert
+  alert_type:
+    type: string
+    description: 'Alert type, one of [price, percent, week_52]'
+  alert_price_direction:
+    type: string
+    description: 'Alert direction: up or down'
+  alert_price:
+    type: number
+    description: Alert price value
+description: User stock price alert response body

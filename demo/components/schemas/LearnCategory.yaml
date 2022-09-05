@@ -1,0 +1,12 @@
+title: Learn Category Params
+required:
+  - id
+  - name
+type: object
+properties:
+  name:
+    type: string
+    description: Name of learn category
+  id:
+    type: integer
+    description: Learn category Id

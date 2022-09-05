@@ -1,0 +1,8 @@
+title: Account isn't completed
+required:
+  - message
+type: object
+properties:
+  message:
+    type: string
+    description: User hasn't completed registration yet.

@@ -1,0 +1,112 @@
+title: Portfolio response
+required:
+  - account_restricted
+  - actual_value
+  - base_wallet_balance
+  - carrot_held_value
+  - cash
+  - currency_code
+  - currency_name
+  - currency_symbol
+  - dollar_cash
+  - naira_to_usd
+  - pending_deposit
+  - processing_gift_received
+  - processing_gift_sent
+  - processing_withdrawal
+  - referral_cashback_blocked_value
+  - reserved_cash
+  - residence_country
+  - total_cash
+  - unsettled_cash
+  - usd_to_naira
+  - usd_to_user_currency
+  - user_currency_symbol
+  - user_currency_to_usd
+  - value
+  - value_change
+  - value_percent_change
+  - withdrawal_cash
+type: object
+properties:
+  withdrawal_cash:
+    type: number
+    description: Withdrawal cash
+  value_percent_change:
+    type: number
+    description: Equity value percent change
+  value_change:
+    type: number
+    description: Equity value change
+  value:
+    type: number
+    description: Portfolio value cash + equity value
+  user_currency_to_usd:
+    type: number
+    description: User currency to USD exchange rate
+  user_currency_symbol:
+    type: string
+    description: User currency symbol based on residence country
+  usd_to_user_currency:
+    type: number
+    description: USD to user currency exchange rate
+  usd_to_naira:
+    type: number
+    description: USD to Naira exchange rate
+  unsettled_cash:
+    type: number
+    description: Unsettled cash
+  total_cash:
+    type: number
+    description: Total cash
+  residence_country:
+    type: string
+    description: 'Residence country of user: GHA, NGA or KEN'
+  reserved_cash:
+    type: number
+    description: Reserved cash (mostly unsettled cash)
+  referral_cashback_blocked_value:
+    type: number
+    description: Non-withdrawal referral cashback until after 30 days
+  processing_withdrawal:
+    type: number
+    description: Processing withdrawal money
+  processing_gift_sent:
+    type: number
+    description: Processing gift sent
+  processing_gift_received:
+    type: number
+    description: Processing gift received
+  pending_deposit:
+    type: number
+    description: Pending deposit money
+  naira_to_usd:
+    type: number
+    description: Naira to USD exchange rate
+  dollar_cash:
+    type: number
+    description: Cash available to invest aka buying power always in $
+  currency_symbol:
+    type: string
+    description: Prices currency symbol
+  currency_name:
+    type: string
+    description: 'Naira, Shilling or Cedi'
+  currency_code:
+    type: string
+    description: 'NGN, KES or GHS'
+  cash:
+    type: number
+    description: Cash available to invest aka buying power
+  carrot_held_value:
+    type: number
+    description: Carrot held value most likely for liquidation
+  base_wallet_balance:
+    type: number
+    description: Base wallet Balance
+  actual_value:
+    type: number
+    description: Actual portfolio value excluding unsettled cash
+  account_restricted:
+    type: boolean
+    description: Account restricted

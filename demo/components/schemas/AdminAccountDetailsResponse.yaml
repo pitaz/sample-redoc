@@ -1,0 +1,24 @@
+title: Tenant admin account details
+type: object
+properties:
+  surname:
+    type: string
+    description: Admin surname
+  name:
+    type: string
+    description: Admin name
+  job_position:
+    type: string
+    description: Job position
+  id:
+    type: integer
+    description: Admin id
+  email:
+    type: string
+    description: Admin email
+  api_consumer_id:
+    type: integer
+    description: API Consumer id
+  api_consumer:
+    type: string
+    description: Api consumer name to which admin belongs

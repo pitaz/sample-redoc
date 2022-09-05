@@ -1,0 +1,36 @@
+title: Entity
+required:
+  - authorized_signatory_email
+  - authorized_signatory_name
+  - bamboo_fee
+  - entity_fee
+  - fund_name
+  - id
+  - name
+type: object
+properties:
+  name:
+    type: string
+    description: Name of entity
+  id:
+    type: integer
+    description: Id of entity
+  fund_name:
+    type: string
+    description: Name of fund
+  fees_type:
+    type: string
+    description: Fees type. `percent` or `amount`
+  entity_fee:
+    type: number
+    description: Entity Fee
+  bamboo_fee:
+    type: number
+    description: Bamboo Fee for entity
+  authorized_signatory_name:
+    type: string
+    description: Name of autorized signatory
+  authorized_signatory_email:
+    type: string
+    description: Email of autorized signatory
+description: Entity body

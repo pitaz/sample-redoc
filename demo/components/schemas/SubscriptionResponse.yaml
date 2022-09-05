@@ -1,0 +1,8 @@
+title: Horizon subscription response data
+required:
+  - payment_link
+type: object
+properties:
+  payment_link:
+    type: string
+    description: Payment link to complete subscription

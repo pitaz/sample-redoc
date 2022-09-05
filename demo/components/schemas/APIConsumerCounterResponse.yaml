@@ -1,0 +1,7 @@
+title: APIConsumer Counter Response
+type: object
+properties:
+  counter:
+    type: integer
+    description: Counter
+description: APIConsumer Counter Response

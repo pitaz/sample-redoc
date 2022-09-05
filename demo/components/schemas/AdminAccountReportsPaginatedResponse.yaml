@@ -1,0 +1,11 @@
+title: Paginated admin account reports
+type: object
+properties:
+  reports:
+    type: array
+    description: Admin account reports response
+    items:
+      $ref: ./AdminAccountReportResponse.yaml
+  next_token:
+    type: integer
+    description: Next token for pagination

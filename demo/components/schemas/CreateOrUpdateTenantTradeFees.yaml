@@ -1,0 +1,3 @@
+title: Create tenant withdraw fees
+type: object
+description: POST request for creating tenant withdraw fees

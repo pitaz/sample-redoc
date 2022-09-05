@@ -1,0 +1,10 @@
+title: Fetch wallet ledger history
+required:
+  - wallets
+type: object
+properties:
+  wallets:
+    type: array
+    description: List of wallet ledger histories.
+    items:
+      $ref: ./WalletLedgerHostories.yaml

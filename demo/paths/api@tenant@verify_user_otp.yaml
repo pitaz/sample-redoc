@@ -1,0 +1,46 @@
+post:
+  tags:
+    - Account Linking and unlinking
+  summary: Verify  user otp from linking page
+  description: Endpoint to validate user otp on tenant linking page
+  operationId: Web.Api.Tenant.VerificationController.verify_user_otp
+  parameters:
+    - name: accept_language
+      in: header
+      description: Language. For example 'en'. Replace '_' with '-'
+      required: true
+      schema:
+        type: string
+    - name: x_client_token
+      in: header
+      description: "api consumer authorisation token, replace '_' with '-'"
+      required: true
+      schema:
+        type: string
+    - name: x_request_source
+      in: header
+      description: The name of the requesting tenant
+      required: true
+      schema:
+        type: string
+  requestBody:
+    description: OTP request payload
+    content:
+      '*/*':
+        schema:
+          $ref: ../components/schemas/OTPRequestBody.yaml
+    required: true
+  responses:
+    '200':
+      description: success
+      content:
+        '*/*':
+          schema:
+            $ref: ../components/schemas/LinkedAccount.yaml
+    '400':
+      description: Invalid OTP
+      content: {}
+    '422':
+      description: Unprocessible Entinty
+      content: {}
+  x-codegen-request-body-name: body

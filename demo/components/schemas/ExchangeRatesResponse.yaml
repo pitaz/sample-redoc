@@ -1,0 +1,10 @@
+title: Exchange rates response
+required:
+  - exchange_rates
+type: object
+properties:
+  exchange_rates:
+    type: array
+    description: list of exchange rates
+    items:
+      $ref: ./ExchangeRateResponse.yaml

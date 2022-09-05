@@ -1,0 +1,23 @@
+type: object
+properties:
+  txref:
+    type: string
+    description: Txref
+  status:
+    type: string
+    description: Accepted/Rejected
+  receiver_surname:
+    type: string
+    description: Surname of receiver
+  receiver_name:
+    type: string
+    description: Name of receiver
+  currency_symbol:
+    type: string
+    description: Symbol of currency
+  currency:
+    type: string
+    description: Currency
+  amount:
+    type: number
+    description: Amount

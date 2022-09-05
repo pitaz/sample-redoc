@@ -1,0 +1,16 @@
+title: User currency withdrawal create request
+required:
+  - account_number
+  - amount
+  - bank_id
+type: object
+properties:
+  bank_id:
+    type: integer
+    description: Bank ID from user_currency/withdrawal/calculate endpoint
+  amount:
+    type: number
+    description: Amount to withdrawn
+  account_number:
+    type: string
+    description: Bank account number to withdraw money

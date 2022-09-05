@@ -1,0 +1,20 @@
+title: Calculate gift response
+required:
+  - fee
+  - order_price
+  - quantity
+  - total_price
+type: object
+properties:
+  total_price:
+    type: number
+    description: Order total price -> order price + fee
+  quantity:
+    type: number
+    description: Quantity (rounded to 6 decimal places)
+  order_price:
+    type: number
+    description: Calculated order price
+  fee:
+    type: number
+    description: Fee value

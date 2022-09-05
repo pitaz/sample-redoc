@@ -1,0 +1,28 @@
+title: Notifications settings
+required:
+  - breaking_news_enabled
+  - corporate_actions_enabled
+  - price_movement_enabled
+  - price_movement_threshold
+  - statistic_52_weeks_enabled
+  - why_is_it_moving_enabled
+type: object
+properties:
+  why_is_it_moving_enabled:
+    type: boolean
+    description: Price movement enabled
+  statistic_52_weeks_enabled:
+    type: boolean
+    description: Price movement enabled
+  price_movement_threshold:
+    type: number
+    description: Value of threshold
+  price_movement_enabled:
+    type: boolean
+    description: Price movement enabled
+  corporate_actions_enabled:
+    type: boolean
+    description: Corporate actions enabled
+  breaking_news_enabled:
+    type: boolean
+    description: Breaking news enabled

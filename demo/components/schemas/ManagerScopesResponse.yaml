@@ -1,0 +1,12 @@
+title: List of managers scopes
+required:
+  - label
+  - name
+type: object
+properties:
+  name:
+    type: string
+    description: Name of scope
+  label:
+    type: string
+    description: Label to display

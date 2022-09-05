@@ -1,0 +1,12 @@
+title: Carrot authorization request
+required:
+  - callback
+  - mobile
+type: object
+properties:
+  mobile:
+    type: string
+    description: User's phone number
+  callback:
+    type: string
+    description: Carrot callback for Bamboo to use

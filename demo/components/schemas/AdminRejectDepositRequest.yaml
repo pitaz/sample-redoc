@@ -1,0 +1,12 @@
+title: Deposit rejection params
+required:
+  - comment
+  - status
+type: object
+properties:
+  status:
+    type: string
+    description: "Deposit new status, 'Sent to DW', 'Rejected by admin', or 'Settlemented'"
+  comment:
+    type: string
+    description: Admin's comment

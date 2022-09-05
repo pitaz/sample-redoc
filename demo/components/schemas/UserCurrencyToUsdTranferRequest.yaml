@@ -1,0 +1,8 @@
+title: User currency to usd transfer request
+required:
+  - amount
+type: object
+properties:
+  amount:
+    type: number
+    description: Amount in user currency

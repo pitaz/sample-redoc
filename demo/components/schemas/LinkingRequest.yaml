@@ -1,0 +1,6 @@
+title: Linking request
+type: object
+properties:
+  redirect_url:
+    type: string
+    description: url to a tenant after otp validation

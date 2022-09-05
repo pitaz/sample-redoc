@@ -1,0 +1,17 @@
+title: OTP verification body
+required:
+  - phone_number
+  - request_identifier
+  - verification_code
+type: object
+properties:
+  verification_code:
+    type: string
+    description: user otp shared via mobile
+  request_identifier:
+    type: string
+    description: 'tenant request identifier from linking request '
+  phone_number:
+    type: string
+    description: user phone number that received the otp
+description: Request Payload for verification of OTP

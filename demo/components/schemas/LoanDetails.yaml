@@ -1,0 +1,18 @@
+title: Carrot loan details
+type: object
+properties:
+  redline:
+    type: integer
+    description: The loan's redline amount
+  id:
+    type: integer
+    description: Bamboo Loan ID
+  fee:
+    type: number
+    description: '% daily fee charged by carrot for a loan'
+  application_user_id:
+    type: integer
+    description: User's application_user_id provided for carrot
+  amount:
+    type: integer
+    description: Loan amount

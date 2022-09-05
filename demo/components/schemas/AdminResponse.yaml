@@ -1,0 +1,16 @@
+title: Admin info
+required:
+  - id
+  - scopes
+type: object
+properties:
+  scopes:
+    type: array
+    description: >-
+      List of admin scopes. Possible scopes are: action, admin, api_consumers,
+      application_acceptance, bvn_management, deposits, exchange_rate,
+      fee_discount, gifts, kyc, learn, managers, news, read_only,
+      reject_deposits_and_withdrawals, stocks, trades, withdrawals.
+  id:
+    type: integer
+    description: Admin ID

@@ -1,0 +1,13 @@
+title: Carrot lock update request
+required:
+  - application_loan_id
+  - callbacK
+type: object
+properties:
+  callbacK:
+    $ref: ./Callback.yaml
+  application_loan_id:
+    type: number
+    description: User's application_loan_id provided for carrot
+  amount:
+    $ref: ./Amount.yaml

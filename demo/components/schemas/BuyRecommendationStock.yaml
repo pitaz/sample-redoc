@@ -1,0 +1,28 @@
+title: Stock details
+required:
+  - avatar
+  - logo
+  - market_price
+  - name
+  - price
+  - symbol
+type: object
+properties:
+  symbol:
+    type: string
+    description: Symbol
+  price:
+    type: number
+    description: Stock price
+  name:
+    type: string
+    description: Stock name
+  market_price:
+    type: number
+    description: Market price for stock
+  logo:
+    type: string
+    description: URL for logo
+  avatar:
+    type: string
+    description: URL for avatar
